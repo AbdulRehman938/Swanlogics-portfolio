@@ -1,7 +1,19 @@
 import React from 'react';
 import { Navbar } from '../components/layout/Navbar';
 import { Footer as FooterSimple } from '../components/layout/footer';
-import { Puzzle } from 'lucide-react'
+import { 
+    Palette, 
+    Code2, 
+    Terminal, 
+    Smartphone, 
+    ShoppingBag, 
+    Zap,
+    Music,
+    Play,
+    FastForward,
+    User,
+    FileText
+} from 'lucide-react'
 
 /**
  * Landing page composition.
@@ -37,8 +49,8 @@ export default function Services() {
                                 {/* Left Content */}
                                 <div>
                                     {/* Icon */}
-                                    <div className="w-16 h-16 bg-lime-300 rounded-xl flex items-center justify-center mb-8">
-                                        <Puzzle className="w-8 h-8 text-white" />
+                                    <div className="w-16 h-16 bg-gradient-to-br from-lime-400 to-lime-500 rounded-xl flex items-center justify-center mb-8 shadow-lg">
+                                        <Palette className="w-8 h-8 text-white" />
                                     </div>
 
                                     <h3 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
@@ -64,7 +76,7 @@ export default function Services() {
 
                                 {/* Right Illustration */}
                                 <div className="relative">
-                                    <div className="relative bg-gradient-to-br from-purple-900 via-purple-800 to-blue-900 rounded-3xl p-8 h-96 overflow-hidden">
+                                    <div className="relative bg-gradient-to-br from-purple-900 via-purple-800 to-blue-900 rounded-3xl p-8 h-96 overflow-hidden shadow-xl">
                                         {/* Background Elements */}
                                         <div className="absolute inset-0 opacity-20">
                                             <div className="absolute top-4 right-4 w-32 h-8 bg-white rounded-full"></div>
@@ -74,12 +86,10 @@ export default function Services() {
                                         {/* Main UI Elements */}
                                         <div className="relative z-10 h-full flex flex-col justify-center items-center space-y-4">
                                             {/* Music Player Card */}
-                                            <div className="bg-gradient-to-r from-pink-400 to-orange-400 rounded-2xl p-4 w-48 h-24 flex items-center justify-center shadow-lg transform -rotate-6">
+                                            <div className="bg-gradient-to-r from-pink-400 to-orange-400 rounded-2xl p-4 w-48 h-24 flex items-center justify-center shadow-xl transform -rotate-6">
                                                 <div className="flex items-center space-x-3">
                                                     <div className="w-8 h-8 bg-white bg-opacity-30 rounded-lg flex items-center justify-center">
-                                                        <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                                            <path d="M18 3a1 1 0 00-1.196-.98l-10 2A1 1 0 006 5v9.114A4.369 4.369 0 005 14c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2V7.82l8-1.6v5.894A4.369 4.369 0 0015 12c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2V3z"></path>
-                                                        </svg>
+                                                        <Music className="w-4 h-4 text-white" />
                                                     </div>
                                                     <div className="text-white">
                                                         <div className="w-16 h-1 bg-white bg-opacity-60 rounded mb-1"></div>
@@ -89,42 +99,35 @@ export default function Services() {
                                             </div>
 
                                             {/* Center UI/UX Badge */}
-                                            <div className="bg-gradient-to-r from-purple-500 to-blue-500 rounded-2xl px-6 py-3 shadow-lg">
+                                            <div className="bg-gradient-to-r from-purple-500 to-blue-500 rounded-2xl px-6 py-3 shadow-xl">
                                                 <span className="text-white font-bold text-lg">UI/UX</span>
                                             </div>
 
                                             {/* Profile Card */}
-                                            <div className="bg-gradient-to-r from-blue-400 to-purple-400 rounded-2xl p-4 w-32 h-20 flex items-center justify-center shadow-lg transform rotate-12">
-                                                <div className="w-8 h-8 bg-white bg-opacity-30 rounded-full"></div>
+                                            <div className="bg-gradient-to-r from-blue-400 to-purple-400 rounded-2xl p-4 w-32 h-20 flex items-center justify-center shadow-xl transform rotate-12">
+                                                <User className="w-8 h-8 text-white" />
                                             </div>
 
                                             {/* Document Card */}
-                                            <div className="absolute bottom-4 right-4 bg-gradient-to-r from-blue-300 to-cyan-300 rounded-xl p-3 w-28 h-20 shadow-lg">
+                                            <div className="absolute bottom-4 right-4 bg-gradient-to-r from-blue-300 to-cyan-300 rounded-xl p-3 w-28 h-20 shadow-xl">
+                                                <FileText className="w-5 h-5 text-white mb-2" />
                                                 <div className="space-y-1">
                                                     <div className="w-16 h-1 bg-white bg-opacity-60 rounded"></div>
                                                     <div className="w-12 h-1 bg-white bg-opacity-40 rounded"></div>
                                                     <div className="w-14 h-1 bg-white bg-opacity-40 rounded"></div>
                                                 </div>
-                                                <div className="mt-2 flex space-x-1">
-                                                    <div className="w-3 h-3 bg-white bg-opacity-60 rounded-full"></div>
-                                                    <div className="w-3 h-3 bg-white bg-opacity-40 rounded-full"></div>
-                                                </div>
                                             </div>
 
                                             {/* Media Controls */}
                                             <div className="absolute bottom-8 left-4 flex space-x-2">
-                                                <div className="w-8 h-8 bg-pink-400 rounded-lg flex items-center justify-center">
+                                                <div className="w-8 h-8 bg-pink-400 rounded-lg flex items-center justify-center shadow-lg">
                                                     <div className="w-3 h-3 bg-white rounded-full"></div>
                                                 </div>
-                                                <div className="w-8 h-8 bg-purple-400 rounded-lg flex items-center justify-center">
-                                                    <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                                        <path d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"></path>
-                                                    </svg>
+                                                <div className="w-8 h-8 bg-purple-400 rounded-lg flex items-center justify-center shadow-lg">
+                                                    <Play className="w-4 h-4 text-white fill-white" />
                                                 </div>
-                                                <div className="w-8 h-8 bg-blue-400 rounded-lg flex items-center justify-center">
-                                                    <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                                        <path d="M4.555 5.168A1 1 0 003 6v8a1 1 0 001.555.832L8 12.202V14a1 1 0 001.555.832l6-4a1 1 0 000-1.664l-6-4A1 1 0 008 6v1.798l-3.445-2.63z"></path>
-                                                    </svg>
+                                                <div className="w-8 h-8 bg-blue-400 rounded-lg flex items-center justify-center shadow-lg">
+                                                    <FastForward className="w-4 h-4 text-white" />
                                                 </div>
                                             </div>
                                         </div>
@@ -145,7 +148,7 @@ export default function Services() {
                             <div className="grid lg:grid-cols-2 gap-16 items-center">
                                 {/* Left Illustration */}
                                 <div className="relative">
-                                    <div className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 rounded-3xl p-8 h-80 overflow-hidden">
+                                    <div className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 rounded-3xl p-8 h-80 overflow-hidden shadow-xl">
                                         {/* Background Code Elements */}
                                         <div className="absolute inset-0 opacity-30">
                                             {/* Floating Code Snippets */}
@@ -191,19 +194,19 @@ export default function Services() {
                                         </div>
 
                                         {/* Code Blocks */}
-                                        <div className="absolute top-6 left-6 bg-black bg-opacity-40 rounded-lg p-2 backdrop-blur-sm">
+                                        <div className="absolute top-6 left-6 bg-black bg-opacity-40 rounded-lg p-2 backdrop-blur-sm shadow-lg">
                                             <div className="text-green-300 text-xs font-mono">console.log</div>
                                         </div>
 
-                                        <div className="absolute bottom-6 right-6 bg-black bg-opacity-40 rounded-lg p-2 backdrop-blur-sm">
+                                        <div className="absolute bottom-6 right-6 bg-black bg-opacity-40 rounded-lg p-2 backdrop-blur-sm shadow-lg">
                                             <div className="text-yellow-300 text-xs font-mono">{ } function</div>
                                         </div>
 
-                                        <div className="absolute top-20 right-6 bg-black bg-opacity-40 rounded-lg p-2 backdrop-blur-sm">
+                                        <div className="absolute top-20 right-6 bg-black bg-opacity-40 rounded-lg p-2 backdrop-blur-sm shadow-lg">
                                             <div className="text-pink-300 text-xs font-mono">async/await</div>
                                         </div>
 
-                                        <div className="absolute bottom-20 left-6 bg-black bg-opacity-40 rounded-lg p-2 backdrop-blur-sm">
+                                        <div className="absolute bottom-20 left-6 bg-black bg-opacity-40 rounded-lg p-2 backdrop-blur-sm shadow-lg">
                                             <div className="text-blue-300 text-xs font-mono">const data</div>
                                         </div>
 
@@ -226,10 +229,8 @@ export default function Services() {
                                 {/* Right Content */}
                                 <div>
                                     {/* Icon */}
-                                    <div className="w-16 h-16 bg-lime-300 rounded-xl flex items-center justify-center mb-8">
-                                        <svg className="w-8 h-8 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-                                        </svg>
+                                    <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-8 shadow-lg">
+                                        <Code2 className="w-8 h-8 text-white" />
                                     </div>
 
                                     <h3 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
@@ -262,10 +263,8 @@ export default function Services() {
                                 {/* Left Content */}
                                 <div>
                                     {/* Icon */}
-                                    <div className="w-16 h-16 bg-lime-300 rounded-xl flex items-center justify-center mb-8">
-                                        <svg className="w-8 h-8 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                                        </svg>
+                                    <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-xl flex items-center justify-center mb-8 shadow-lg">
+                                        <Terminal className="w-8 h-8 text-white" />
                                     </div>
 
                                     <h3 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
@@ -291,7 +290,7 @@ export default function Services() {
 
                                 {/* Right Illustration */}
                                 <div className="relative">
-                                    <div className="relative bg-gradient-to-br from-purple-600 via-blue-700 to-cyan-600 rounded-3xl p-8 h-80 overflow-hidden">
+                                    <div className="relative bg-gradient-to-br from-purple-600 via-blue-700 to-cyan-600 rounded-3xl p-8 h-80 overflow-hidden shadow-xl">
                                         {/* Background Code Elements */}
                                         <div className="absolute inset-0 opacity-30">
                                             <div className="absolute top-4 left-4 text-purple-200 text-xs font-mono">
@@ -325,7 +324,7 @@ export default function Services() {
                                         </div>
 
                                         {/* Code Terminal Windows */}
-                                        <div className="absolute top-8 left-8 bg-gray-900 rounded-lg p-3 w-32 h-20 opacity-80">
+                                        <div className="absolute top-8 left-8 bg-gray-900 rounded-lg p-3 w-32 h-20 opacity-80 shadow-lg">
                                             <div className="flex space-x-1 mb-2">
                                                 <div className="w-2 h-2 bg-red-400 rounded-full"></div>
                                                 <div className="w-2 h-2 bg-yellow-400 rounded-full"></div>
@@ -334,7 +333,7 @@ export default function Services() {
                                             <div className="text-green-300 text-xs font-mono">{">>>"} print("Hello")</div>
                                         </div>
 
-                                        <div className="absolute bottom-8 right-8 bg-gray-900 rounded-lg p-3 w-36 h-24 opacity-80">
+                                        <div className="absolute bottom-8 right-8 bg-gray-900 rounded-lg p-3 w-36 h-24 opacity-80 shadow-lg">
                                             <div className="flex space-x-1 mb-2">
                                                 <div className="w-2 h-2 bg-red-400 rounded-full"></div>
                                                 <div className="w-2 h-2 bg-yellow-400 rounded-full"></div>
@@ -345,7 +344,7 @@ export default function Services() {
                                         </div>
 
                                         {/* Data Visualization Elements */}
-                                        <div className="absolute top-16 right-16 w-16 h-16 bg-gradient-to-br from-pink-400 to-purple-500 rounded-lg opacity-70 flex items-center justify-center">
+                                        <div className="absolute top-16 right-16 w-16 h-16 bg-gradient-to-br from-pink-400 to-purple-500 rounded-lg opacity-70 flex items-center justify-center shadow-lg">
                                             <div className="grid grid-cols-2 gap-1">
                                                 <div className="w-2 h-4 bg-white rounded-sm"></div>
                                                 <div className="w-2 h-6 bg-white rounded-sm"></div>
@@ -370,7 +369,7 @@ export default function Services() {
                             <div className="grid lg:grid-cols-2 gap-16 items-center">
                                 {/* Left Illustration */}
                                 <div className="relative order-2 lg:order-1">
-                                    <div className="relative bg-gradient-to-br from-gray-900 via-blue-900 to-teal-800 rounded-3xl p-8 h-80 overflow-hidden">
+                                    <div className="relative bg-gradient-to-br from-gray-900 via-blue-900 to-teal-800 rounded-3xl p-8 h-80 overflow-hidden shadow-xl">
                                         {/* Network/Circuit Background */}
                                         <div className="absolute inset-0 opacity-20">
                                             <svg className="w-full h-full">
@@ -386,26 +385,20 @@ export default function Services() {
 
                                         {/* Shopping Cart Elements */}
                                         <div className="absolute top-8 left-8">
-                                            <div className="bg-gradient-to-r from-blue-500 to-cyan-400 rounded-xl p-4 w-20 h-20 flex items-center justify-center shadow-lg">
-                                                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5M7 13l2.5 5m6-5v6a2 2 0 01-2 2H9a2 2 0 01-2-2v-6m6 0V9a2 2 0 00-2-2H9a2 2 0 00-2 2v4.01" />
-                                                </svg>
+                                            <div className="bg-gradient-to-r from-blue-500 to-cyan-400 rounded-xl p-4 w-20 h-20 flex items-center justify-center shadow-xl">
+                                                <ShoppingBag className="w-8 h-8 text-white" />
                                             </div>
                                         </div>
 
                                         <div className="absolute top-20 right-16">
-                                            <div className="bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl p-3 w-16 h-16 flex items-center justify-center shadow-lg">
-                                                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5M7 13l2.5 5m6-5v6a2 2 0 01-2 2H9a2 2 0 01-2-2v-6m6 0V9a2 2 0 00-2-2H9a2 2 0 00-2 2v4.01" />
-                                                </svg>
+                                            <div className="bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl p-3 w-16 h-16 flex items-center justify-center shadow-xl">
+                                                <ShoppingBag className="w-6 h-6 text-white" />
                                             </div>
                                         </div>
 
                                         <div className="absolute bottom-8 left-16">
-                                            <div className="bg-gradient-to-r from-teal-400 to-blue-500 rounded-xl p-3 w-16 h-16 flex items-center justify-center shadow-lg">
-                                                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5M7 13l2.5 5m6-5v6a2 2 0 01-2 2H9a2 2 0 01-2-2v-6m6 0V9a2 2 0 00-2-2H9a2 2 0 00-2 2v4.01" />
-                                                </svg>
+                                            <div className="bg-gradient-to-r from-teal-400 to-blue-500 rounded-xl p-3 w-16 h-16 flex items-center justify-center shadow-xl">
+                                                <ShoppingBag className="w-6 h-6 text-white" />
                                             </div>
                                         </div>
 
@@ -413,7 +406,7 @@ export default function Services() {
                                         <div className="absolute inset-0 flex items-center justify-center">
                                             <div className="bg-gradient-to-b from-gray-800 to-gray-900 rounded-2xl p-2 w-24 h-40 shadow-2xl">
                                                 <div className="bg-gradient-to-b from-blue-600 to-purple-700 rounded-xl h-full w-full flex flex-col items-center justify-center">
-                                                    <div className="w-8 h-8 bg-white bg-opacity-20 rounded-lg mb-2"></div>
+                                                    <Smartphone className="w-8 h-8 text-white bg-opacity-20 mb-2" />
                                                     <div className="space-y-1">
                                                         <div className="w-12 h-1 bg-white bg-opacity-40 rounded"></div>
                                                         <div className="w-8 h-1 bg-white bg-opacity-30 rounded"></div>
@@ -440,10 +433,8 @@ export default function Services() {
                                 {/* Right Content */}
                                 <div className="order-1 lg:order-2">
                                     {/* Icon */}
-                                    <div className="w-16 h-16 bg-lime-300 rounded-xl flex items-center justify-center mb-8">
-                                        <svg className="w-8 h-8 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
-                                        </svg>
+                                    <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-8 shadow-lg">
+                                        <Smartphone className="w-8 h-8 text-white" />
                                     </div>
 
                                     <h3 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
@@ -476,10 +467,8 @@ export default function Services() {
                                 {/* Left Content */}
                                 <div>
                                     {/* Icon */}
-                                    <div className="w-16 h-16 bg-lime-300 rounded-xl flex items-center justify-center mb-8">
-                                        <svg className="w-8 h-8 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
-                                        </svg>
+                                    <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-600 rounded-xl flex items-center justify-center mb-8 shadow-lg">
+                                        <ShoppingBag className="w-8 h-8 text-white" />
                                     </div>
 
                                     <h3 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
@@ -505,7 +494,7 @@ export default function Services() {
 
                                 {/* Right Illustration */}
                                 <div className="relative">
-                                    <div className="relative bg-gradient-to-br from-gray-900 via-blue-900 to-teal-700 rounded-3xl p-8 h-80 overflow-hidden">
+                                    <div className="relative bg-gradient-to-br from-gray-900 via-blue-900 to-teal-700 rounded-3xl p-8 h-80 overflow-hidden shadow-xl">
                                         {/* Digital Network Background */}
                                         <div className="absolute inset-0 opacity-20">
                                             <svg className="w-full h-full">
@@ -524,33 +513,25 @@ export default function Services() {
                                         {/* Shopping Cart Icons */}
                                         <div className="absolute top-8 left-8">
                                             <div className="bg-gradient-to-r from-blue-500 to-cyan-400 rounded-xl p-4 w-20 h-20 flex items-center justify-center shadow-2xl">
-                                                <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5M7 13l2.5 5m6-5v6a2 2 0 01-2 2H9a2 2 0 01-2-2v-6m6 0V9a2 2 0 00-2-2H9a2 2 0 00-2 2v4.01" />
-                                                </svg>
+                                                <ShoppingBag className="w-10 h-10 text-white" />
                                             </div>
                                         </div>
 
                                         <div className="absolute top-16 right-8">
                                             <div className="bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl p-3 w-16 h-16 flex items-center justify-center shadow-2xl">
-                                                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5M7 13l2.5 5m6-5v6a2 2 0 01-2 2H9a2 2 0 01-2-2v-6m6 0V9a2 2 0 00-2-2H9a2 2 0 00-2 2v4.01" />
-                                                </svg>
+                                                <ShoppingBag className="w-8 h-8 text-white" />
                                             </div>
                                         </div>
 
                                         <div className="absolute bottom-8 left-16">
                                             <div className="bg-gradient-to-r from-teal-400 to-blue-500 rounded-xl p-3 w-16 h-16 flex items-center justify-center shadow-2xl">
-                                                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5M7 13l2.5 5m6-5v6a2 2 0 01-2 2H9a2 2 0 01-2-2v-6m6 0V9a2 2 0 00-2-2H9a2 2 0 00-2 2v4.01" />
-                                                </svg>
+                                                <ShoppingBag className="w-8 h-8 text-white" />
                                             </div>
                                         </div>
 
                                         <div className="absolute bottom-16 right-16">
                                             <div className="bg-gradient-to-r from-orange-400 to-red-500 rounded-xl p-3 w-14 h-14 flex items-center justify-center shadow-2xl">
-                                                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5M7 13l2.5 5m6-5v6a2 2 0 01-2 2H9a2 2 0 01-2-2v-6m6 0V9a2 2 0 00-2-2H9a2 2 0 00-2 2v4.01" />
-                                                </svg>
+                                                <ShoppingBag className="w-6 h-6 text-white" />
                                             </div>
                                         </div>
 
@@ -595,7 +576,7 @@ export default function Services() {
                             <div className="grid lg:grid-cols-2 gap-16 items-center">
                                 {/* Left Illustration */}
                                 <div className="relative order-2 lg:order-1">
-                                    <div className="relative bg-gradient-to-br from-orange-400 via-purple-600 to-blue-700 rounded-3xl p-8 h-80 overflow-hidden">
+                                    <div className="relative bg-gradient-to-br from-orange-400 via-purple-600 to-blue-700 rounded-3xl p-8 h-80 overflow-hidden shadow-xl">
                                         {/* Question Mark Background Elements */}
                                         <div className="absolute inset-0 opacity-20">
                                             <div className="absolute top-8 left-8 text-6xl text-red-300 font-bold">?</div>
@@ -653,11 +634,11 @@ export default function Services() {
                                         </div>
 
                                         {/* Floating UI Elements */}
-                                        <div className="absolute top-12 left-20 bg-white bg-opacity-20 rounded-lg p-2 w-12 h-8">
+                                        <div className="absolute top-12 left-20 bg-white bg-opacity-20 rounded-lg p-2 w-12 h-8 shadow-lg">
                                             <div className="bg-white bg-opacity-60 rounded w-full h-full"></div>
                                         </div>
 
-                                        <div className="absolute top-20 right-20 bg-white bg-opacity-20 rounded-lg p-2 w-10 h-6">
+                                        <div className="absolute top-20 right-20 bg-white bg-opacity-20 rounded-lg p-2 w-10 h-6 shadow-lg">
                                             <div className="bg-white bg-opacity-60 rounded w-full h-full"></div>
                                         </div>
 
@@ -671,10 +652,8 @@ export default function Services() {
                                 {/* Right Content */}
                                 <div className="order-1 lg:order-2">
                                     {/* Icon */}
-                                    <div className="w-16 h-16 bg-lime-300 rounded-xl flex items-center justify-center mb-8">
-                                        <svg className="w-8 h-8 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
-                                        </svg>
+                                    <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-orange-500 rounded-xl flex items-center justify-center mb-8 shadow-lg">
+                                        <Zap className="w-8 h-8 text-white" />
                                     </div>
 
                                     <h3 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
@@ -699,8 +678,6 @@ export default function Services() {
                             </div>
                         </div>
                     </section>
-
-
                 </div>
             </main>
             <FooterSimple />
