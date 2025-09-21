@@ -19,16 +19,27 @@ import {
  * Landing page composition.
  */
 export default function Services() {
+    const handleSectionClick = (sectionName) => {
+        // You can customize this navigation logic based on your routing setup
+        // For example, using React Router:
+        // navigate(`/services/${sectionName}`);
+        
+        // Or using Next.js router:
+        // router.push(`/services/${sectionName}`);
+        
+        // For now, using window.location (replace with your preferred routing method)
+        window.location.href = `/services/${sectionName.toLowerCase().replace(/\s+/g, '-')}`;
+    };
+
     return (
         <div className="min-h-screen bg-white">
             <Navbar />
             <main>
                 {/* Services section */}
                 <div id="services" className="pt-10">
-                    {/* UI/UX Design Workflow Section */}
-                    <section className="py-16 px-6">
+                    {/* Header */}
+                    <section className="py-14 px-6">
                         <div className="max-w-7xl mx-auto">
-                            {/* Header */}
                             <div className="mb-16">
                                 <p className="text-sm text-gray-600 mb-4 font-medium">Our Services</p>
                                 <div className="grid lg:grid-cols-2 gap-8 items-start">
@@ -43,13 +54,19 @@ export default function Services() {
                                     </p>
                                 </div>
                             </div>
+                        </div>
+                    </section>
+
+                    {/* UI/UX Design Workflow Section */}
+                    <section className="py-16 px-6 cursor-pointer transition-all duration-300 " onClick={() => handleSectionClick('UI/UX Design Workflow')}>
+                        <div className="max-w-7xl mx-auto">
 
                             {/* Content Grid */}
                             <div className="grid lg:grid-cols-2 gap-16 items-center">
                                 {/* Left Content */}
                                 <div>
                                     {/* Icon */}
-                                    <div className="w-16 h-16 bg-gradient-to-br from-lime-400 to-lime-500 rounded-xl flex items-center justify-center mb-8 shadow-lg">
+                                    <div className="w-16 h-16 bg-lime-400 rounded-xl flex items-center justify-center mb-8 shadow-lg">
                                         <Palette className="w-8 h-8 text-white" />
                                     </div>
 
@@ -96,7 +113,7 @@ export default function Services() {
                     </section>
 
                     {/* JavaScript Workflow Section */}
-                    <section className="py-16 px-6">
+                    <section className="py-16 px-6 cursor-pointer transition-all duration-300 " onClick={() => handleSectionClick('JavaScript Workflow')}>
                         <div className="max-w-7xl mx-auto">
                             <div className="grid lg:grid-cols-2 gap-16 items-center">
                                 {/* Left Illustration */}
@@ -120,7 +137,7 @@ export default function Services() {
                                 {/* Right Content */}
                                 <div>
                                     {/* Icon */}
-                                    <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-8 shadow-lg">
+                                    <div className="w-16 h-16 bg-lime-400 rounded-xl flex items-center justify-center mb-8 shadow-lg">
                                         <Code2 className="w-8 h-8 text-white" />
                                     </div>
 
@@ -148,13 +165,13 @@ export default function Services() {
                     </section>
 
                     {/* Python Workflow Section */}
-                    <section className="py-16 px-6">
+                    <section className="py-16 px-6 cursor-pointer transition-all duration-300 " onClick={() => handleSectionClick('Python Workflow')}>
                         <div className="max-w-7xl mx-auto">
                             <div className="grid lg:grid-cols-2 gap-16 items-center">
                                 {/* Left Content */}
                                 <div>
                                     {/* Icon */}
-                                    <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-xl flex items-center justify-center mb-8 shadow-lg">
+                                    <div className="w-16 h-16 bg-lime-400 rounded-xl flex items-center justify-center mb-8 shadow-lg">
                                         <Terminal className="w-8 h-8 text-white" />
                                     </div>
 
@@ -200,7 +217,7 @@ export default function Services() {
                     </section>
 
                     {/* Mobile App Section */}
-                    <section className="py-16 px-6">
+                    <section className="py-16 px-6 cursor-pointer transition-all duration-300 " onClick={() => handleSectionClick('Mobile App')}>
                         <div className="max-w-7xl mx-auto">
                             <div className="grid lg:grid-cols-2 gap-16 items-center">
                                 {/* Left Illustration */}
@@ -224,7 +241,7 @@ export default function Services() {
                                 {/* Right Content */}
                                 <div className="order-1 lg:order-2">
                                     {/* Icon */}
-                                    <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-8 shadow-lg">
+                                    <div className="w-16 h-16 bg-lime-400 rounded-xl flex items-center justify-center mb-8 shadow-lg">
                                         <Smartphone className="w-8 h-8 text-white" />
                                     </div>
 
@@ -252,13 +269,13 @@ export default function Services() {
                     </section>
 
                     {/* Ecommerce Section */}
-                    <section className="py-16 px-6">
+                    <section className="py-16 px-6 cursor-pointer transition-all duration-300 " onClick={() => handleSectionClick('Ecommerce')}>
                         <div className="max-w-7xl mx-auto">
                             <div className="grid lg:grid-cols-2 gap-16 items-center">
                                 {/* Left Content */}
                                 <div>
                                     {/* Icon */}
-                                    <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-600 rounded-xl flex items-center justify-center mb-8 shadow-lg">
+                                    <div className="w-16 h-16 bg-lime-400 rounded-xl flex items-center justify-center mb-8 shadow-lg">
                                         <ShoppingBag className="w-8 h-8 text-white" />
                                     </div>
 
@@ -305,7 +322,7 @@ export default function Services() {
                     </section>
 
                     {/* No-Code Workflow Section */}
-                    <section className="py-16 px-6">
+                    <section className="py-16 px-6 cursor-pointer transition-all duration-300 " onClick={() => handleSectionClick('No-Code Workflow')}>
                         <div className="max-w-7xl mx-auto">
                             <div className="grid lg:grid-cols-2 gap-16 items-center">
                                 {/* Left Illustration */}
@@ -329,7 +346,7 @@ export default function Services() {
                                 {/* Right Content */}
                                 <div className="order-1 lg:order-2">
                                     {/* Icon */}
-                                    <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-orange-500 rounded-xl flex items-center justify-center mb-8 shadow-lg">
+                                    <div className="w-16 h-16 bg-lime-400 rounded-xl flex items-center justify-center mb-8 shadow-lg">
                                         <Zap className="w-8 h-8 text-white" />
                                     </div>
 
