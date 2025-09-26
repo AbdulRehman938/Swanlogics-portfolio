@@ -76,7 +76,7 @@ export function Navbar() {
           {links.map((link, i) => (
             <button
               key={link.label}
-              ref={(el) => (linkRefs.current[i] = el)}
+              ref={(el) => { linkRefs.current[i] = el; }}
               onClick={() => {
                 // Navigate to root for Home, otherwise use the href
                 const targetPath = link.label === "Home" ? "/" : link.href;
