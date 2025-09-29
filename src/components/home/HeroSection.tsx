@@ -42,21 +42,21 @@ export function HeroSection() {
         {/* Video within rectangle frame */}
         <div className="relative mt-4 sm:mt-8">
           {/* Desktop Action Buttons - Floating above video */}
-          <div className="hidden sm:flex gap-4 md:gap-6 lg:gap-14 mb-2 relative top-8 sm:top-12 md:top-16 lg:top-24 left-4 sm:left-8 md:left-32 lg:left-48">
+          <div className="hidden sm:flex gap-4 md:gap-6 lg:gap-10 mb-2 relative top-8 sm:top-12 md:top-16 lg:top-22 left-4 sm:left-8 md:left-32 lg:left-44">
             <a
               href="#projects"
-              className="inline-flex items-center gap-2 rounded-full bg-brand-purple px-3 sm:px-4 md:px-5 lg:px-6 py-2 sm:py-2.5 md:py-3 font-dewi text-xs sm:text-sm md:text-base text-white shadow hover:bg-brand-purple/90 transition-colors whitespace-nowrap"
+              className="inline-flex items-center gap-2 rounded-full bg-brand-purple px-3 sm:px-4 md:px-5 lg:px-4 py-2 sm:py-2.5 md:py-3 font-dewi text-xs sm:text-sm md:text-base text-white shadow hover:bg-brand-purple/90 transition-colors whitespace-nowrap"
             >
               View Our Work
             </a>
             <img 
               src="/Arrow white.svg" 
               alt="arrow" 
-              className="rounded-full bg-brand-purple  absolute p-2 sm:p-3 md:p-4 lg:p-5 left-24 sm:left-28 md:left-32 lg:left-36 top-0" 
+              className="rounded-full bg-brand-purple  absolute p-2 sm:p-3 md:p-4 lg:p-5 left-24 sm:left-28 md:left-32 lg:left-32 top-0" 
             />
             <a 
               href="#team" 
-              className="inline-flex items-center gap-2 rounded-full border border-black/20 bg-white px-3 sm:px-4 md:px-5 lg:px-6 py-2 sm:py-2.5 md:py-3 hover:border-black/30 hover:bg-gray-50 transition-colors whitespace-nowrap"
+              className="inline-flex items-center gap-1 rounded-full border border-black/20 bg-white px-3 sm:px-4 md:px-5 lg:px-6 py-2 sm:py-2.5 md:py-3 hover:border-black/30 hover:bg-gray-50 transition-colors whitespace-nowrap"
             >
               <span className="font-dewi text-xs sm:text-sm md:text-base text-brand-ink px-2 sm:px-3 md:px-4 lg:px-2">
                 Meet The Team
