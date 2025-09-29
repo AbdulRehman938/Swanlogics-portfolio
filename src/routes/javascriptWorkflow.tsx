@@ -31,15 +31,12 @@ import uiuxWorkflow09 from '../images/uiux-11.png';
 import project01 from '../images/uiux-project-01.png';
 import project02 from '../images/uiux-project 02.png';
 import project03 from '../images/uiux-project-03.png';
-import { Button } from "@/components/ui/button";
-import { useNavigate } from 'react-router-dom';
 
 
 import { motion } from "framer-motion";
 
 export default function JavascriptWorkflow() {
 
-  const navigate = useNavigate();
   // Reusable row component
   const Row = ({ direction = "left" }) => {
     return (
@@ -54,7 +51,7 @@ export default function JavascriptWorkflow() {
               key={i}
               className="text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold text-gray-900" // 📈 larger than before
             >
-              Lets work together.
+              Let’s Work Together.
             </div>
           ))}
         </div>
@@ -67,38 +64,38 @@ export default function JavascriptWorkflow() {
   const webServices = [
     {
       icon: Monitor,
-      title: "Frontend Development",
-      description: "We build dynamic, interactive user interfaces using modern JavaScript frameworks like React, Vue, and Angular that deliver exceptional performance and user experience.",
+      title: "Web Design",
+      description: "We craft visually stunning and strategically effective websites that capture your brand's unique identity and captivate your audience from the first click.",
       color: "bg-lime-400"
     },
     {
       icon: ShoppingCart,
-      title: "Node.js Backend",
-      description: "Create robust server-side applications with Node.js, building scalable APIs, real-time features, and efficient data processing for your web applications.",
+      title: "ECommerce",
+      description: "Transform your online store into a powerful sales engine with intuitive product discovery, seamless checkout flows, and a shopping experience built for conversion.",
       color: "bg-lime-400"
     },
     {
       icon: Heart,
-      title: "Full-Stack JS",
-      description: "End-to-end JavaScript development using the MEAN/MERN stack, providing seamless integration between frontend and backend for complete web solutions.",
+      title: "UX Design",
+      description: "Our user-centered approach focuses on creating intuitive, efficient, and enjoyable journeys that keep users engaged and coming back for more.",
       color: "bg-lime-400"
     },
     {
       icon: Smartphone,
-      title: "Progressive Web Apps",
-      description: "Build fast, reliable PWAs that work offline and provide native app-like experiences across all devices using modern JavaScript technologies.",
+      title: "Responsive",
+      description: "Your website will provide a flawless experience on any device, from desktops to smartphones, ensuring you reach and engage every customer.",
       color: "bg-lime-400"
     },
     {
       icon: FileText,
-      title: "API Development",
-      description: "Design and develop RESTful and GraphQL APIs with proper authentication, documentation, and testing to power your JavaScript applications.",
+      title: "Wireframes",
+      description: "We build clear, structural blueprints to strategically map out user journeys and functionality, establishing a solid foundation before visual design begins.",
       color: "bg-lime-400"
     },
     {
       icon: Target,
-      title: "Performance Optimization",
-      description: "Optimize your JavaScript applications for speed and efficiency through code splitting, lazy loading, and advanced performance monitoring techniques.",
+      title: "Strategy",
+      description: "We go beyond aesthetics by defining clear goals, understanding your audience, and aligning your website's design with your overarching business objectives.",
       color: "bg-lime-400"
     }
   ];
@@ -203,21 +200,21 @@ export default function JavascriptWorkflow() {
             {/* 1. Header Section */}
             <div className="px-8 pt-8 pb-4">
               <div className="text-sm text-gray-500 bg-slate-50 p-4 w-fit rounded-full uppercase tracking-wider mb-4">
-                JavaScript Development Workflow
+                UI/UX Design Workflow
               </div>
 
               <div className="grid lg:grid-cols-2 gap-12 items-start">
                 {/* Left Content: Title */}
                 <div>
                   <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-8">
-                    A JavaScript Development Studio In Manchester
+                    A UI/UX Design Studio In Manchester
                   </h1>
                 </div>
 
                 {/* Right Content: Short Description */}
                 <div className="text-gray-600 leading-relaxed">
                   <p className="mb-6">
-                    We specialize in crafting powerful web applications using modern JavaScript technologies. From interactive frontends to scalable backends, we leverage the full JavaScript ecosystem to build solutions that are fast, reliable, and perfectly tailored to your business needs.
+                    We believe great design goes beyond visuals—it's about creating smooth, meaningful interactions. By blending creativity with strategy, we ensure every project not only looks stunning but also provides an effortless user journey.
                   </p>
                 </div>
               </div>
@@ -229,324 +226,447 @@ export default function JavascriptWorkflow() {
               {/* Long Description */}
               <div className="mb-12">
                 <p className="text-lg text-gray-600 leading-relaxed">
-                  Our Manchester-based JavaScript development studio transforms ideas into dynamic web applications that engage users and drive business growth. We begin every project by analyzing your requirements, choosing the right tech stack, and architecting scalable solutions. From React and Vue.js frontends to Node.js backends, our development process emphasizes clean code, performance optimization, and modern best practices. Each application is built with responsive design principles, API integration capabilities, and robust testing frameworks. By combining cutting-edge JavaScript technologies with proven development methodologies, we deliver applications that are not only feature-rich but also maintainable and future-proof.
+                  {/* Increased text size for better reading flow */}
+                  Our Manchester-based UI/UX design studio is committed to transforming ideas into digital experiences that truly connect with people. We begin every project by understanding user behavior, business objectives, and market trends to ensure the foundation is strong. From research and wireframing to prototyping and usability testing, our process is designed to create intuitive and visually compelling interfaces. Each design is carefully crafted to provide seamless navigation, consistent branding, and accessibility across all devices. By blending creativity with strategy, we deliver solutions that are not only aesthetically pleasing but also practical and results-driven.
                 </p>
               </div>
 
-              {/* Hero Image & Button Container */}
+              {/* Hero Image & Button Container FIX */}
               <div className="rounded-2xl overflow-hidden shadow-2xl relative">
-                <div className='absolute top-0 left-0 w-44 h-16 bg-white z-10 rounded-br-3xl'></div>
-                <button className="inline-flex items-center gap-2 bg-lime-300 hover:bg-lime-400 transition-colors px-6 py-3 rounded-full font-medium text-gray-900 group absolute top-0 z-10">
+
+                <div className='absolute top-0 left-0 w-44 h-16 bg-white z-10  rounded-br-3xl'>
+
+                </div>
+
+                {/* Button placed on top of the image (Adjusted positioning) */}
+                <button
+                  className="inline-flex items-center gap-2 bg-lime-300 hover:bg-lime-400 transition-colors px-6 py-3 rounded-full font-medium text-gray-900 group absolute top-0  z-10"
+                >
                   Tell Me More
                   <ArrowUpRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </button>
+
+
+                {/* Image */}
                 <img
                   src={uiuxWorkflowBannerImg}
-                  alt="JavaScript Developer working with multiple monitors and code"
+                  alt="UI/UX Designer working at desk with multiple monitors"
+                  // Added 'block' to the image to ensure it behaves correctly
                   className="w-full h-full object-cover transform transition-transform duration-[2000ms] ease-in-out hover:scale-110 block"
+                // Reduced hover scale for a more controlled effect (from 125 to 110)
                 />
               </div>
             </div>
           </div>
         </div>
 
-        {/* Requirements Analysis Section */}
+        {/* Placeholder for future sections like workflow steps, etc. */}
         <div className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="px-8">
               <div className="grid lg:grid-cols-2 gap-16 items-center">
+
+                {/* Left Content */}
                 <div>
                   <div className="text-sm text-gray-500 uppercase tracking-wider mb-4">
-                    Requirements Analysis
+                    Requirement Gathering
                   </div>
+
                   <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-6">
-                    Define Features & Technical Specifications
+                    Understand Client Goals & Target Audience
                   </h2>
+
                   <p className="text-gray-600 leading-relaxed mb-8">
-                    Comprehensive requirements analysis forms the backbone of successful JavaScript development. We work closely with stakeholders to identify core functionalities, performance requirements, and technical constraints. This phase ensures we select the optimal JavaScript frameworks and libraries while establishing clear development milestones and success criteria.
+                    Effective requirement gathering is the foundation of any successful project. It involves in-depth discussions with stakeholders to identify business objectives, user needs, and functional expectations. This phase ensures that the final product aligns with the client's vision and delivers tangible value to the end-users.
                   </p>
+
                   <div className="space-y-4">
                     <div className="flex items-start gap-3">
                       <div className="flex-shrink-0 w-6 h-6 bg-purple-100 rounded-full flex items-center justify-center mt-1">
                         <Check className="w-4 h-4 text-purple-600" />
                       </div>
                       <p className="text-gray-700">
-                        Analyze functional requirements and user stories
+                        Conduct stakeholder interviews to identify key objectives
                       </p>
                     </div>
+
                     <div className="flex items-start gap-3">
                       <div className="flex-shrink-0 w-6 h-6 bg-purple-100 rounded-full flex items-center justify-center mt-1">
                         <Check className="w-4 h-4 text-purple-600" />
                       </div>
                       <p className="text-gray-700">
-                        Define technical stack and framework selection
+                        Define user personas and their specific needs
                       </p>
                     </div>
+
                     <div className="flex items-start gap-3">
                       <div className="flex-shrink-0 w-6 h-6 bg-purple-100 rounded-full flex items-center justify-center mt-1">
                         <Check className="w-4 h-4 text-purple-600" />
                       </div>
                       <p className="text-gray-700">
-                        Document API requirements and data flow
+                        Document functional and non-functional requirements
                       </p>
                     </div>
+
                     <div className="flex items-start gap-3">
                       <div className="flex-shrink-0 w-6 h-6 bg-purple-100 rounded-full flex items-center justify-center mt-1">
                         <Check className="w-4 h-4 text-purple-600" />
                       </div>
                       <p className="text-gray-700">
-                        Establish performance benchmarks and testing criteria
+                        Establish measurable success criteria and project KPIs
                       </p>
                     </div>
                   </div>
                 </div>
 
-                {/* Image section remains the same */}
+                {/* Right Image with Animation */}
                 <div className="relative overflow-hidden rounded-2xl group cursor-pointer">
                   <div className="aspect-[4/3] relative">
+                    {/* First (default) image */}
                     <div className="absolute inset-0">
                       <img
                         src={uiuxWorkflow2ndImg}
-                        alt="Team analyzing JavaScript requirements and technical specifications"
+                        alt="Team meeting discussing client goals"
                         className="w-full h-full object-fit rounded-2xl transition-opacity duration-0 group-hover:opacity-0 group-hover:delay-0 delay-700"
                       />
                     </div>
+
+                    {/* Second (hover) image */}
                     <div className="absolute inset-0 transform -translate-x-full translate-y-full group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-700 ease-out">
                       <img
                         src={uiuxWorkflow2ndImg}
-                        alt="Team analyzing JavaScript requirements and technical specifications"
+                        alt="Team meeting discussing client goals"
                         className="w-full h-full object-fit rounded-2xl"
                       />
                     </div>
-                    <div className="absolute bottom-0 right-0 w-[110px] h-[55px] bg-white rounded-tl-xl"></div>
-                    <div className="absolute bottom-0 right-0 h-10 w-24 bg-violet-600 rounded-lg py-6 px-10 shadow-lg z-10"></div>
+                    {/* Corner box - now properly clipped with the container */}
+                    <div className="absolute bottom-0 right-0 w-[110px] h-[55px] bg-white rounded-tl-xl">
+                    </div>
+                    <div className="absolute bottom-0 right-0 h-10 w-24 bg-violet-600 rounded-lg py-6 px-10 shadow-lg z-10">
+                    </div>
                   </div>
                 </div>
+
               </div>
             </div>
           </div>
         </div>
+
 
         {/* Scrolling Text Rows */}
         <div className="py-16 bg-white overflow-hidden">
+          {/* First row (left scroll) */}
           <Row direction="left" />
+
+          {/* Second row (right scroll) */}
           <Row direction="right" />
         </div>
 
-        {/* Technology Stack & Architecture Section */}
-        <div className="py-16 px-4 sm:px-6 lg:px-8">
+
+        {/* Research & Analysis Section */}
+        <div className="py-16 px-4 sm:px-6 lg:px-8 ">
           <div className="max-w-7xl mx-auto">
             <div className="px-8">
               <div className="grid lg:grid-cols-2 gap-16 items-center">
+
+                {/* Left Illustration */}
                 <div className="relative">
-                  <div className="relative rounded-3xl overflow-hidden">
+                  <div className="relative rounded-3xl overflow-hidden ">
+                    {/* Main Background Image */}
                     <img
                       src={uiuxWorkflow3rdImg}
-                      alt="JavaScript technology stack and architecture planning"
+                      alt="Research and Analysis Illustration"
                       className="w-full h-full object-cover transform transition-transform duration-[2000ms] ease-in-out hover:scale-125"
                     />
-                    <div className="absolute bottom-0 right-0 w-[105px] h-[60px] bg-white rounded-tl-xl"></div>
+                    <div className="absolute bottom-0 right-0 w-[105px] h-[60px] bg-white rounded-tl-xl">
+                    </div>
+
                   </div>
-                  <div className="absolute bottom-0 right-0 h-12 w-24 bg-lime-400 rounded-lg p-4 shadow-lg z-10"></div>
+                  {/* Corner box - now properly clipped with the container */}
+                  <div className="absolute bottom-0 right-0 h-12 w-24 bg-lime-400 rounded-lg p-4 shadow-lg z-10">
+                  </div>
                 </div>
+
+                {/* Right Content */}
                 <div>
                   <div className="text-sm bg-slate-50 w-fit p-3 rounded-full text-gray-500 uppercase tracking-wider mb-4">
-                    Technology Stack & Architecture
+                    Research & Analysis
                   </div>
+
                   <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-6">
-                    Framework Selection, Database Design, API Planning
+                    Competitor Study, User Personas, Design Trends
                   </h2>
+
                   <p className="text-gray-600 leading-relaxed mb-8">
-                    Strategic technology selection and architecture planning are crucial for building scalable JavaScript applications. This phase involves choosing the optimal frontend frameworks (React, Vue, Angular), backend technologies (Node.js, Express), databases (MongoDB, PostgreSQL), and designing robust API architectures that support current needs while accommodating future growth and feature expansions.
+                    Through research and analysis are critical for making informed design decisions. This phase involves a deep dive into the market landscape to understand competitor strengths and weaknesses, creating detailed profiles of target users, and identifying current and emerging design trends to ensure the final product is both competitive and user-centric.
                   </p>
+
                   <div className="space-y-4">
                     <div className="flex items-start gap-3">
                       <div className="flex-shrink-0 w-6 h-6 bg-purple-100 rounded-full flex items-center justify-center mt-1">
                         <Check className="w-4 h-4 text-purple-600" />
                       </div>
                       <p className="text-gray-700">
-                        Evaluate and select optimal JavaScript frameworks and libraries
+                        Conduct a SWOT analysis of key competitors
                       </p>
                     </div>
+
                     <div className="flex items-start gap-3">
                       <div className="flex-shrink-0 w-6 h-6 bg-purple-100 rounded-full flex items-center justify-center mt-1">
                         <Check className="w-4 h-4 text-purple-600" />
                       </div>
                       <p className="text-gray-700">
-                        Design scalable database schemas and data models
+                        Develop detailed user personas based on real data and interviews
                       </p>
                     </div>
+
                     <div className="flex items-start gap-3">
                       <div className="flex-shrink-0 w-6 h-6 bg-purple-100 rounded-full flex items-center justify-center mt-1">
                         <Check className="w-4 h-4 text-purple-600" />
                       </div>
                       <p className="text-gray-700">
-                        Plan RESTful API endpoints and GraphQL schemas
+                        Audit and document relevant UI/UX design patterns and trends
                       </p>
                     </div>
+
                     <div className="flex items-start gap-3">
                       <div className="flex-shrink-0 w-6 h-6 bg-purple-100 rounded-full flex items-center justify-center mt-1">
                         <Check className="w-4 h-4 text-purple-600" />
                       </div>
                       <p className="text-gray-700">
-                        Establish development environment and CI/CD pipelines
+                        Synthesize findings into actionable insights for the strategy phase
                       </p>
                     </div>
                   </div>
                 </div>
+
               </div>
             </div>
           </div>
         </div>
 
-        {/* Frontend Development Section */}
+        {/* Information Architecture Section */}
         <div className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="px-8">
               <div className="grid lg:grid-cols-2 gap-16 items-center">
+
+                {/* Left Content */}
                 <div>
                   <div className="text-sm bg-slate-50 w-fit p-3 rounded-full text-gray-500 uppercase tracking-wider mb-4">
-                    Frontend Development
+                    Information Architecture
                   </div>
+
                   <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-6">
-                    Component Architecture, State Management, UI Implementation
+                    Sitemap, Navigation, And Content Flow
                   </h2>
+
                   <p className="text-gray-600 leading-relaxed mb-8">
-                    Frontend development focuses on creating responsive, interactive user interfaces using modern JavaScript frameworks. This phase involves building reusable components, implementing efficient state management solutions, integrating with APIs, and ensuring optimal performance across all devices. We prioritize clean code architecture and user experience optimization.
+                    This phase focuses on structuring the product's information architecture. It involves creating a clear sitemap outlining all pages and content sections, designing intuitive navigation systems for seamless user experience, and mapping the content flow to ensure users can complete their tasks efficiently and find information without friction.
                   </p>
+
                   <div className="space-y-4">
                     <div className="flex items-start gap-3">
                       <div className="flex-shrink-0 w-6 h-6 bg-purple-100 rounded-full flex items-center justify-center mt-1">
                         <Check className="w-4 h-4 text-purple-600" />
                       </div>
                       <p className="text-gray-700">
-                        Build modular, reusable React/Vue/Angular components
+                        Develop a hierarchical sitemap outlining all pages and content sections
                       </p>
                     </div>
+
                     <div className="flex items-start gap-3">
                       <div className="flex-shrink-0 w-6 h-6 bg-purple-100 rounded-full flex items-center justify-center mt-1">
                         <Check className="w-4 h-4 text-purple-600" />
                       </div>
                       <p className="text-gray-700">
-                        Implement state management with Redux, Vuex, or Context API
+                        Define primary and secondary global navigation menus
                       </p>
                     </div>
+
                     <div className="flex items-start gap-3">
                       <div className="flex-shrink-0 w-6 h-6 bg-purple-100 rounded-full flex items-center justify-center mt-1">
                         <Check className="w-4 h-4 text-purple-600" />
                       </div>
                       <p className="text-gray-700">
-                        Integrate APIs and handle asynchronous data operations
+                        Map user journeys and key task flows for critical user goals
                       </p>
                     </div>
+
                     <div className="flex items-start gap-3">
                       <div className="flex-shrink-0 w-6 h-6 bg-purple-100 rounded-full flex items-center justify-center mt-1">
                         <Check className="w-4 h-4 text-purple-600" />
                       </div>
                       <p className="text-gray-700">
-                        Optimize performance with code splitting and lazy loading
+                        Establish a clear content strategy and inventory for each page
                       </p>
                     </div>
                   </div>
                 </div>
+
+                {/* Right Illustration */}
                 <div className="relative">
-                  <div className="relative rounded-3xl overflow-hidden">
+                  <div className="relative rounded-3xl overflow-hidden ">
+                    {/* Main Background Image */}
                     <img
                       src={uiuxWorkflow4thImg}
-                      alt="Frontend JavaScript development with component architecture"
+                      alt="Information Architecture Illustration"
                       className="w-full h-full object-cover transform transition-transform duration-[2000ms] ease-in-out hover:scale-125"
                     />
-                    <div className="absolute top-0 left-0 w-[105px] h-[60px] bg-white rounded-br-xl"></div>
+                    <div className="absolute top-0 left-0 w-[105px] h-[60px] bg-white rounded-br-xl">
+                    </div>
+
                   </div>
-                  <div className="absolute top-0 left-0 h-12 w-24 bg-violet-600 rounded-lg p-4 shadow-lg z-10"></div>
+                  {/* Corner box - now properly clipped with the container */}
+                  <div className="absolute top-0 left-0 h-12 w-24 bg-violet-600 rounded-lg p-4 shadow-lg z-10">
+                  </div>
                 </div>
+
               </div>
             </div>
           </div>
         </div>
 
-        {/* Backend Development & API Design Section */}
+        {/* Wireframing & User Flow Section */}
         <div className="py-16 px-4 sm:px-6 lg:px-8 bg-black rounded-t-3xl">
           <div className="max-w-7xl mx-auto">
             <div className="px-8">
               <div className="grid lg:grid-cols-2 gap-8 items-stretch">
-                <div className="rounded-2xl p-8 relative overflow-hidden">
+
+                {/* Left Content - Wireframing */}
+                <div className=" rounded-2xl p-8 relative overflow-hidden">
+                  {/* Small label */}
                   <div className="text-sm text-lime-400 uppercase text-center tracking-wider mb-4 font-medium">
-                    Backend Development
+                    Wireframing
                   </div>
+
+                  {/* Title */}
                   <h3 className="text-5xl font-bold text-white leading-tight mb-4 text-center">
-                    Node.js Server<br />Architecture
+                    Low-Fidelity Screen<br />Layouts
                   </h3>
+
+                  {/* Description */}
                   <p className="text-gray-300 leading-relaxed mb-8 text-sm text-center">
-                    Backend development with Node.js involves creating robust server-side applications that handle business logic, data processing, and API endpoints. We build scalable architectures using Express.js, implement authentication systems, design efficient database operations, and ensure proper error handling and security measures for reliable application performance.
+                    Low-fidelity layouts, such as wireframes, are used to establish the basic
+                    structure and layout of key screens without visual design details. This
+                    allows the team to focus on functionality, user flow, and element
+                    placement ensuring a solid foundational experience before investing in
+                    visual design and content.
                   </p>
+
+                  {/* User Flow Image */}
                   <div className="relative flex justify-center overflow-hidden rounded-xl">
                     <img
                       src={wireframe01}
-                      alt="Node.js backend architecture and server development"
+                      alt="Low-fidelity wireframe layouts"
                       className="w-full h-auto object-cover transform transition-transform duration-[2000ms] ease-in-out hover:scale-125"
                     />
-                    <div className="absolute bottom-0 left-0 w-[95px] h-[60px] bg-black rounded-tr-xl"></div>
-                    <div className="absolute bottom-0 right-0 w-[95px] h-[60px] bg-black rounded-tl-xl"></div>
+
+                    {/* Parents for coner divs */}
+                    <div className="absolute bottom-0 left-0 w-[95px] h-[60px] bg-black rounded-tr-xl">
+                    </div>
+                    <div className="absolute bottom-0 right-0 w-[95px] h-[60px] bg-black rounded-tl-xl">
+                    </div>
+
+                    {/* Corner boxes */}
                     <div className="absolute bottom-0 left-0 h-12 w-20 bg-lime-400 rounded-lg p-4 shadow-lg z-10"></div>
                     <div className="absolute bottom-0 right-0 h-12 w-20 bg-lime-400 rounded-lg p-4 shadow-lg z-10"></div>
                   </div>
                 </div>
 
+                {/* Right Content - User Flow Mapping */}
                 <div className="rounded-2xl p-8 container relative overflow-hidden">
+                  {/* Small label */}
                   <div className="text-sm text-lime-400 uppercase text-center tracking-wider mb-4 font-medium">
-                    API Design & Integration
+                    User Flow Mapping
                   </div>
+
+                  {/* Title */}
                   <h3 className="text-5xl font-bold text-white leading-tight mb-4 text-center">
-                    RESTful & GraphQL<br />APIs
+                    Define Journeys For<br />Smooth Navigation
                   </h3>
+
+                  {/* Description */}
                   <p className="text-gray-300 leading-relaxed mb-8 text-sm text-center">
-                    API design and integration are essential for modern JavaScript applications. We create well-documented RESTful endpoints and GraphQL schemas that provide efficient data access, implement proper authentication and authorization, ensure data validation, and design APIs that are scalable, maintainable, and easy to consume by frontend applications.
+                    Mapping user journeys is essential for creating an intuitive experience.
+                    This process involves outlining the step-by-step paths users will take to
+                    complete key tasks, identifying potential pain points, and ensuring the
+                    navigation is logical and efficient. This helps in creating a seamless flow
+                    that guides users effortlessly to their goals.
                   </p>
+
+                  {/* User Flow Image */}
                   <div className="relative flex justify-center overflow-hidden rounded-xl">
                     <img
                       src={wireframe02}
-                      alt="RESTful and GraphQL API design and integration"
+                      alt="User flow mapping and journey definition"
                       className="w-full h-auto object-cover transform transition-transform duration-[2000ms] ease-in-out hover:scale-125"
                     />
-                    <div className="absolute bottom-0 left-0 w-[95px] h-[60px] bg-black rounded-tr-xl"></div>
-                    <div className="absolute bottom-0 right-0 w-[95px] h-[60px] bg-black rounded-tl-xl"></div>
+
+                    {/* Parents for coner divs */}
+                    <div className="absolute bottom-0 left-0 w-[95px] h-[60px] bg-black rounded-tr-xl">
+                    </div>
+                    <div className="absolute bottom-0 right-0 w-[95px] h-[60px] bg-black rounded-tl-xl">
+                    </div>
+
+                    {/* Corner boxes */}
                     <div className="absolute bottom-0 left-0 h-12 w-20 bg-lime-400 rounded-lg p-4 shadow-lg z-10"></div>
                     <div className="absolute bottom-0 right-0 h-12 w-20 bg-lime-400 rounded-lg p-4 shadow-lg z-10"></div>
                   </div>
                 </div>
+
+
               </div>
             </div>
           </div>
         </div>
 
-        {/* Testing & Quality Assurance Section */}
+        {/* Prototyping*/}
         <div className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
+
+            {/* 1. Header Section */}
             <div className="px-8 pt-8 pb-4">
               <div className="text-sm bg-slate-50 w-fit p-3 rounded-full text-gray-500 uppercase tracking-wider mb-4">
-                Testing & Quality Assurance
+                Prototyping
               </div>
+
               <div className="grid lg:grid-cols-2 gap-12 items-start">
+                {/* Left Content: Title */}
                 <div>
                   <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-8">
-                    Unit Testing, Integration Testing & Code Quality
+                    Clickable mid/high-fidelity prototypes
                   </h1>
                 </div>
+
+                {/* Right Content: Short Description */}
                 <div className="text-gray-600 leading-relaxed">
                   <p className="mb-6">
-                    Comprehensive testing ensures your JavaScript applications are reliable, maintainable, and bug-free. We implement automated testing suites using Jest, Cypress, and other modern testing frameworks to validate functionality, performance, and user interactions before deployment.
-                  </p>
+                    Clickable mid and high-fidelity prototypes transform static designs into dynamic, interactive models that closely mimic the final product. They are essential for validating complex user flows, conducting effective usability testing to gather actionable feedback, and clearly communicating the intended functionality and experience to stakeholders and developers before committing to costly development.                  </p>
                 </div>
               </div>
             </div>
+
+            {/* 2. Description and Hero Image Section */}
             <div className="px-8 pb-8">
+              {/* Hero Image & Button Container FIX */}
               <div className="rounded-2xl overflow-hidden relative">
-                <div className='absolute top-0 left-0 w-48 h-16 bg-white z-10 rounded-br-3xl'></div>
-                <div className="inline-flex items-center gap-2 bg-lime-400 transition-colors px-6 py-3 rounded-2xl font-medium text-gray-900 group absolute top-0 z-10 h-12 w-40"></div>
+
+                <div className='absolute top-0 left-0 w-48 h-16 bg-white z-10  rounded-br-3xl'>
+
+                </div>
+
+                {/* Button placed on top of the image (Adjusted positioning) */}
+                <div
+                  className="inline-flex items-center gap-2 bg-lime-400 transition-colors px-6 py-3 rounded-2xl font-medium text-gray-900 group absolute top-0  z-10 h-12 w-40"
+                >
+                </div>
+
+
+                {/* Image */}
                 <img
                   src={uiuxWorkflow05}
-                  alt="JavaScript testing and quality assurance processes"
+                  alt="UI/UX Designer working at desk with multiple monitors"
                   className="w-full h-full object-cover transform transition-transform duration-[2000ms] ease-in-out hover:scale-110 block"
                 />
               </div>
@@ -554,155 +674,193 @@ export default function JavascriptWorkflow() {
           </div>
         </div>
 
-        {/* Database Integration & Data Management Section */}
-        <div className="py-16 px-4 sm:px-6 lg:px-8">
+        {/* Visual Design */}
+        <div className="py-16 px-4 sm:px-6 lg:px-8 ">
           <div className="max-w-7xl mx-auto">
             <div className="px-8">
               <div className="grid lg:grid-cols-2 gap-16 items-center">
+
+                {/* Left Illustration */}
                 <div className="relative">
-                  <div className="relative rounded-3xl overflow-hidden">
+                  <div className="relative rounded-3xl overflow-hidden ">
+                    {/* Main Background Image */}
                     <img
                       src={uiuxWorkflow06}
-                      alt="Database integration and data management"
+                      alt="Research and Analysis Illustration"
                       className="w-full h-full object-cover transform transition-transform duration-[2000ms] ease-in-out hover:scale-125"
                     />
-                    <div className="absolute bottom-0 right-0 w-[105px] h-[60px] bg-white rounded-tl-xl"></div>
+                    <div className="absolute bottom-0 right-0 w-[105px] h-[60px] bg-white rounded-tl-xl">
+                    </div>
+
                   </div>
-                  <div className="absolute bottom-0 right-0 h-12 w-24 bg-lime-400 rounded-lg p-4 shadow-lg z-10"></div>
+                  {/* Corner box - now properly clipped with the container */}
+                  <div className="absolute bottom-0 right-0 h-12 w-24 bg-lime-400 rounded-lg p-4 shadow-lg z-10">
+                  </div>
                 </div>
+
+                {/* Right Content */}
                 <div>
                   <div className="text-sm bg-slate-50 w-fit p-3 rounded-full text-gray-500 uppercase tracking-wider mb-4">
-                    Database Integration
+                    Visual Design
                   </div>
+
                   <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-6">
-                    MongoDB, PostgreSQL, Data Models & Optimization
+                    Branding, colors, typography, components
                   </h2>
+
                   <p className="text-gray-600 leading-relaxed mb-8">
-                    Database integration and data management form the core of robust JavaScript applications. We design efficient data models, implement secure database connections, optimize queries for performance, and establish proper data validation and migration strategies. Whether using NoSQL databases like MongoDB or relational databases like PostgreSQL, we ensure data integrity and scalability.
+                    Our visual design process translates your brand's essence into a compelling and intuitive user interface. We craft pixel-perfect experiences by meticulously defining the core elements that users see and interact with. This includes establishing a cohesive color palette that reflects your brand identity and guides user behavior, selecting typography that ensures readability and personality, and building a robust library of reusable UI components.
                   </p>
+
                   <div className="space-y-4">
                     <div className="flex items-start gap-3">
                       <div className="flex-shrink-0 w-6 h-6 bg-purple-100 rounded-full flex items-center justify-center mt-1">
                         <Check className="w-4 h-4 text-purple-600" />
                       </div>
                       <p className="text-gray-700">
-                        Design efficient data schemas and relationships
+                        Brand Identity & Logo Integration.
                       </p>
                     </div>
+
                     <div className="flex items-start gap-3">
                       <div className="flex-shrink-0 w-6 h-6 bg-purple-100 rounded-full flex items-center justify-center mt-1">
                         <Check className="w-4 h-4 text-purple-600" />
                       </div>
                       <p className="text-gray-700">
-                        Implement secure database connections and queries
+                        Color Palette & Accessibility Compliance.
                       </p>
                     </div>
+
                     <div className="flex items-start gap-3">
                       <div className="flex-shrink-0 w-6 h-6 bg-purple-100 rounded-full flex items-center justify-center mt-1">
                         <Check className="w-4 h-4 text-purple-600" />
                       </div>
                       <p className="text-gray-700">
-                        Optimize database performance and indexing strategies
+                        Typography Hierarchy & Web Fonts.
                       </p>
                     </div>
+
                     <div className="flex items-start gap-3">
                       <div className="flex-shrink-0 w-6 h-6 bg-purple-100 rounded-full flex items-center justify-center mt-1">
                         <Check className="w-4 h-4 text-purple-600" />
                       </div>
                       <p className="text-gray-700">
-                        Set up data migration and backup procedures
+                        UI Component & Design System Creation.
                       </p>
                     </div>
                   </div>
                 </div>
+
               </div>
             </div>
           </div>
         </div>
 
-        {/* Performance Optimization Section */}
+        {/* Usability testing */}
         <div className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="px-8">
               <div className="grid lg:grid-cols-2 gap-16 items-center">
+
+                {/* Left Content */}
                 <div>
                   <div className="text-sm bg-slate-50 w-fit p-3 rounded-full text-gray-500 uppercase tracking-wider mb-4">
-                    Performance Optimization
+                    Usability Testing
                   </div>
+
                   <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-6">
-                    Code Splitting, Caching, Bundle Optimization
+                    Validate design with users, collect feedback
                   </h2>
+
                   <p className="text-gray-600 leading-relaxed mb-8">
-                    Performance optimization is crucial for delivering fast, responsive JavaScript applications. We implement advanced optimization techniques including code splitting, lazy loading, efficient caching strategies, and bundle size reduction. Through performance monitoring and profiling, we ensure your application delivers exceptional user experiences across all devices and network conditions.
+                    Usability testing is a crucial step that places your design directly in front of real users to identify pain points, uncover opportunities, and validate design decisions before launch. We facilitate structured tests where participants complete specific tasks while we observe their behavior, gather their feedback, and measure key metrics like success rates and task time.
                   </p>
+
                   <div className="space-y-4">
                     <div className="flex items-start gap-3">
                       <div className="flex-shrink-0 w-6 h-6 bg-purple-100 rounded-full flex items-center justify-center mt-1">
                         <Check className="w-4 h-4 text-purple-600" />
                       </div>
                       <p className="text-gray-700">
-                        Implement code splitting and lazy loading strategies
+                        Recruit target users & develop test scenarios.
                       </p>
                     </div>
+
                     <div className="flex items-start gap-3">
                       <div className="flex-shrink-0 w-6 h-6 bg-purple-100 rounded-full flex items-center justify-center mt-1">
                         <Check className="w-4 h-4 text-purple-600" />
                       </div>
                       <p className="text-gray-700">
-                        Optimize bundle sizes and eliminate unused code
+                        Conduct moderated or unmoderated testing sessions.
                       </p>
                     </div>
+
                     <div className="flex items-start gap-3">
                       <div className="flex-shrink-0 w-6 h-6 bg-purple-100 rounded-full flex items-center justify-center mt-1">
                         <Check className="w-4 h-4 text-purple-600" />
                       </div>
                       <p className="text-gray-700">
-                        Configure caching strategies and CDN integration
+                        Analyze user behavior, feedback, and performance metrics.
                       </p>
                     </div>
+
                     <div className="flex items-start gap-3">
                       <div className="flex-shrink-0 w-6 h-6 bg-purple-100 rounded-full flex items-center justify-center mt-1">
                         <Check className="w-4 h-4 text-purple-600" />
                       </div>
                       <p className="text-gray-700">
-                        Monitor performance metrics and user experience
+                        Synthesize findings into actionable insights for iteration.
                       </p>
                     </div>
                   </div>
                 </div>
+
+                {/* Right Illustration */}
                 <div className="relative">
-                  <div className="relative rounded-3xl overflow-hidden">
+                  <div className="relative rounded-3xl overflow-hidden ">
+                    {/* Main Background Image */}
                     <img
                       src={uiuxWorkflow07}
-                      alt="JavaScript performance optimization and monitoring"
+                      alt="Information Architecture Illustration"
                       className="w-full h-full object-cover transform transition-transform duration-[2000ms] ease-in-out hover:scale-125"
                     />
-                    <div className="absolute top-0 left-0 w-[105px] h-[60px] bg-white rounded-br-xl"></div>
+                    <div className="absolute top-0 left-0 w-[105px] h-[60px] bg-white rounded-br-xl">
+                    </div>
+
                   </div>
-                  <div className="absolute top-0 left-0 h-12 w-24 bg-violet-600 rounded-lg p-4 shadow-lg z-10"></div>
+                  {/* Corner box - now properly clipped with the container */}
+                  <div className="absolute top-0 left-0 h-12 w-24 bg-violet-600 rounded-lg p-4 shadow-lg z-10">
+                  </div>
                 </div>
+
               </div>
             </div>
           </div>
         </div>
 
-        {/* Web Services Section */}
+        {/* Web Services Section - Integrated */}
         <div className="relative min-h-screen bg-black text-white overflow-hidden">
+          {/* Background Pattern */}
           <div className="absolute inset-0 opacity-10">
             <div className="absolute top-20 left-10 w-72 h-72 border border-gray-800 rounded-full"></div>
             <div className="absolute top-40 right-20 w-96 h-96 border border-gray-800 rounded-full"></div>
             <div className="absolute bottom-20 left-1/4 w-64 h-64 border border-gray-800 rounded-full"></div>
             <div className="absolute bottom-40 right-1/3 w-80 h-80 border border-gray-800 rounded-full"></div>
           </div>
+
+          {/* Main Content */}
           <div className="relative z-10 max-w-7xl mx-auto px-6 py-16 lg:py-24">
+            {/* Header */}
             <div className="text-center mb-16 lg:mb-20">
               <div className="inline-flex items-center px-4 py-2 bg-lime-400/20 border border-lime-400/30 rounded-full mb-6">
                 <span className="text-lime-400 text-sm font-medium">What We Can Help You With</span>
               </div>
               <h1 className="text-4xl md:text-5xl text-white lg:text-6xl xl:text-7xl font-bold leading-tight max-w-5xl mx-auto">
-                A Team Of JavaScript Experts That Can Help You Build Modern Web Applications You're Proud Of
+                A Team Of Web Design Experts That Can Help You Design And Build A Website You're Proud Of
               </h1>
             </div>
+
+            {/* Services Grid */}
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 mb-16">
               {webServices.map((service, index) => (
                 <div
@@ -723,74 +881,94 @@ export default function JavascriptWorkflow() {
                 </div>
               ))}
             </div>
-            <div className="text-center mb-16">
-                <div className="hidden items-center gap-3 md:flex relative ">
-          <img src="/Vector.svg" alt="" className="h-5 w-5 opacity-80" />
-          <Button 
-  onClick={() => navigate("/contact")}
-  className="flex !text-brand-ink items-center gap-2 rounded-full bg-lime-300 px-6 py-5 font-bold"
->
-  Get In Touch Today
-</Button>
 
-            <img src="/Arrow 1-1.svg" alt="arrow" className="p-4 rounded-full bg-lime-300 text-brand-ink absolute left-40 " />
-        </div>
+            {/* CTA Button */}
+            <div className="text-center mb-16">
+              <button className="group inline-flex items-center gap-3 px-8 py-4 bg-lime-400 text-black font-semibold rounded-full hover:bg-lime-300 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-lime-400/25">
+                Get In Touch Today
+                <ArrowUpRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </button>
             </div>
           </div>
         </div>
 
-        {/* Code Review & Optimization Section */}
-        <div className="py-16 px-4 sm:px-6 lg:px-8">
+        {/* Iteration and refinement */}
+        <div className="py-16 px-4 sm:px-6 lg:px-8 ">
           <div className="max-w-7xl mx-auto">
             <div className="px-8">
               <div className="grid lg:grid-cols-2 gap-16 items-center">
+
+                {/* Left Illustration */}
                 <div className="relative">
                   <div className="text-sm bg-slate-50 w-fit p-3 rounded-full text-gray-500 uppercase tracking-wider mb-4">
-                    Code Review & Optimization
+                    Research & Analysis
                   </div>
-                  <div className="relative rounded-3xl overflow-hidden">
+                  <div className="relative rounded-3xl overflow-hidden ">
+                    {/* Main Background Image */}
                     <img
                       src={uiuxWorkflow08}
-                      alt="JavaScript code review and optimization process"
+                      alt="Iteration and Refinement Illustration"
                       className="w-full h-full object-cover transform transition-transform duration-[2000ms] ease-in-out hover:scale-125"
                     />
                   </div>
                 </div>
+
+                {/* Right Content */}
                 <div>
                   <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-6">
-                    Refactor Code Based On Best Practices
+                    Improve Design Based On Feedback
                   </h2>
+
                   <p className="text-gray-600 leading-relaxed mb-8">
-                    Code quality and maintainability are achieved through systematic review and optimization processes. We conduct thorough code reviews to identify performance bottlenecks, security vulnerabilities, and adherence to JavaScript best practices. This iterative process ensures your codebase remains clean, efficient, and ready for future enhancements and team collaboration.
+                    True design excellence is achieved through a cycle of creation, feedback, and refinement. We systematically gather and analyze input from users and stakeholders to identify key areas for enhancement. This iterative process ensures the final product is not only beautiful but also highly functional, intuitive, and perfectly aligned with both user needs and business goals.
                   </p>
                 </div>
+
               </div>
             </div>
           </div>
         </div>
 
-        {/* Deployment & DevOps Section */}
+        {/* Design Handoff*/}
         <div className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
+
+            {/* 1. Header Section */}
             <div className="px-8 pt-8 pb-4">
               <div className="text-sm bg-slate-50 w-fit p-3 rounded-full text-gray-500 uppercase tracking-wider mb-4">
-                Deployment & DevOps
+                Design Handoff
               </div>
+
               <div className="grid lg:grid-cols-2 gap-12 items-start">
+                {/* Left Content: Title */}
                 <div>
                   <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-8">
-                    CI/CD Pipelines, Cloud Hosting & Production Monitoring
+                    Final assets, style guide & prototypes to devs
                   </h1>
                 </div>
               </div>
             </div>
+
+            {/* 2. Description and Hero Image Section */}
             <div className="px-8 pb-8">
+              {/* Hero Image & Button Container FIX */}
               <div className="rounded-2xl overflow-hidden relative">
-                <div className='absolute top-0 left-0 w-48 h-16 bg-white z-10 rounded-br-3xl'></div>
-                <div className="inline-flex items-center gap-2 bg-lime-400 transition-colors px-6 py-3 rounded-2xl font-medium text-gray-900 group absolute top-0 z-10 h-12 w-44"></div>
+
+                <div className='absolute top-0 left-0 w-48 h-16 bg-white z-10  rounded-br-3xl'>
+
+                </div>
+
+                {/* Button placed on top of the image (Adjusted positioning) */}
+                <div
+                  className="inline-flex items-center gap-2 bg-lime-400 transition-colors px-6 py-3 rounded-2xl font-medium text-gray-900 group absolute top-0  z-10 h-12 w-44"
+                >
+                </div>
+
+
+                {/* Image */}
                 <img
                   src={uiuxWorkflow09}
-                  alt="JavaScript application deployment and DevOps infrastructure"
+                  alt="UI/UX Designer working at desk with multiple monitors"
                   className="w-full h-full object-cover transform transition-transform duration-[2000ms] ease-in-out hover:scale-110 block"
                 />
               </div>
@@ -798,12 +976,13 @@ export default function JavascriptWorkflow() {
           </div>
         </div>
 
-        {/* Projects Showcase Section */}
+
+          {/* Projects Showcase Section */}
         <div className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
           <div className="max-w-7xl mx-auto">
             <div className="flex justify-between items-center mb-6">
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
-                Our Favorite JavaScript Development Projects
+                Our Favorite Web Design Projects
               </h2>
               <div className="flex gap-4">
                 <button
@@ -837,6 +1016,7 @@ export default function JavascriptWorkflow() {
                 <article
                   key={project.id}
                   ref={idx === 0 ? firstCardRef : null}
+                  // fixed widths ensure consistent card sizing and predictable scroll steps
                   className="w-[320px] sm:w-[360px] lg:w-[420px] flex-shrink-0 group"
                   aria-hidden={false}
                 >
@@ -844,18 +1024,22 @@ export default function JavascriptWorkflow() {
                     <img
                       src={project.imageUrl}
                       alt={project.title}
+                      // image fills the fixed card width and uses object-cover to avoid stretching
                       className="w-full h-56 sm:h-64 lg:h-72 object-cover transition-transform duration-700 ease-in-out group-hover:scale-105"
                     />
                   </div>
+
                   <div className="mt-4">
                     <div className="flex items-center gap-3 text-sm text-gray-600 mb-2">
                       <span className="font-medium">{project.year}</span>
                       <span className="text-lime-400">•</span>
                       <span className="text-gray-600">{project.author}</span>
                     </div>
+
                     <h3 className="text-lg lg:text-2xl font-bold text-gray-900 leading-tight">
                       {project.title}
                     </h3>
+
                     <p className="text-gray-600 mt-2 text-sm">
                       {project.subtitle}
                     </p>
@@ -865,6 +1049,8 @@ export default function JavascriptWorkflow() {
             </div>
           </div>
         </div>
+
+
 
       {/* Testimonials Section */}
       <Testimonials/>

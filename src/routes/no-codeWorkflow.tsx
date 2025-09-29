@@ -2,7 +2,6 @@ import React from 'react';
 import {
   ArrowUpRight,
   Check,
-  CheckCircle,
   Monitor,
   ShoppingCart,
   Heart,
@@ -32,14 +31,11 @@ import uiuxWorkflow09 from '../images/uiux-11.png';
 import project01 from '../images/uiux-project-01.png';
 import project02 from '../images/uiux-project 02.png';
 import project03 from '../images/uiux-project-03.png';
-import { Button } from "@/components/ui/button";
-import { useNavigate } from 'react-router-dom';
 
 
 import { motion } from "framer-motion";
 
 export default function NoCodeWorkflow() {
-  const navigate = useNavigate();
 
   // Reusable row component
   const Row = ({ direction = "left" }) => {
@@ -204,21 +200,21 @@ export default function NoCodeWorkflow() {
             {/* 1. Header Section */}
             <div className="px-8 pt-8 pb-4">
               <div className="text-sm text-gray-500 bg-slate-50 p-4 w-fit rounded-full uppercase tracking-wider mb-4">
-                No-Code Development Workflow
+                UI/UX Design Workflow
               </div>
 
               <div className="grid lg:grid-cols-2 gap-12 items-start">
                 {/* Left Content: Title */}
                 <div>
                   <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-8">
-                    A No-Code Development Agency In Manchester
+                    A UI/UX Design Studio In Manchester
                   </h1>
                 </div>
 
                 {/* Right Content: Short Description */}
                 <div className="text-gray-600 leading-relaxed">
                   <p className="mb-6">
-                    We empower businesses to build powerful applications without traditional coding. Using cutting-edge no-code platforms, we transform your ideas into functional MVPs, automated workflows, and scalable solutions that drive real business results.
+                    We believe great design goes beyond visuals—it's about creating smooth, meaningful interactions. By blending creativity with strategy, we ensure every project not only looks stunning but also provides an effortless user journey.
                   </p>
                 </div>
               </div>
@@ -231,7 +227,7 @@ export default function NoCodeWorkflow() {
               <div className="mb-12">
                 <p className="text-lg text-gray-600 leading-relaxed">
                   {/* Increased text size for better reading flow */}
-                  Our Manchester-based no-code development agency empowers businesses to build powerful digital solutions without the complexity of traditional programming. We leverage cutting-edge no-code platforms like Bubble, Adalo, Glide, and Zapier to transform your ideas into functional applications quickly and cost-effectively. From rapid prototyping and MVP development to complex workflow automation and scalable business applications, our process eliminates technical barriers while maintaining professional quality. Each solution is built with scalability in mind, ensuring your no-code applications can grow with your business needs. By combining strategic thinking with visual development tools, we deliver solutions that are not only fast to build but also reliable, maintainable, and ready for real-world deployment.
+                  Our Manchester-based UI/UX design studio is committed to transforming ideas into digital experiences that truly connect with people. We begin every project by understanding user behavior, business objectives, and market trends to ensure the foundation is strong. From research and wireframing to prototyping and usability testing, our process is designed to create intuitive and visually compelling interfaces. Each design is carefully crafted to provide seamless navigation, consistent branding, and accessibility across all devices. By blending creativity with strategy, we deliver solutions that are not only aesthetically pleasing but also practical and results-driven.
                 </p>
               </div>
 
@@ -273,15 +269,15 @@ export default function NoCodeWorkflow() {
                 {/* Left Content */}
                 <div>
                   <div className="text-sm text-gray-500 uppercase tracking-wider mb-4">
-                    Platform Selection
+                    Requirement Gathering
                   </div>
 
                   <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-6">
-                    Choose The Right No-Code Platform For Your Project
+                    Understand Client Goals & Target Audience
                   </h2>
 
                   <p className="text-gray-600 leading-relaxed mb-8">
-                    Selecting the appropriate no-code platform is crucial for project success. We evaluate your requirements against leading platforms like Bubble, Adalo, Glide, and Webflow to determine the best fit for your specific use case, scalability needs, and integration requirements.
+                    Effective requirement gathering is the foundation of any successful project. It involves in-depth discussions with stakeholders to identify business objectives, user needs, and functional expectations. This phase ensures that the final product aligns with the client's vision and delivers tangible value to the end-users.
                   </p>
 
                   <div className="space-y-4">
@@ -290,7 +286,7 @@ export default function NoCodeWorkflow() {
                         <Check className="w-4 h-4 text-purple-600" />
                       </div>
                       <p className="text-gray-700">
-                        Assess project complexity and technical requirements
+                        Conduct stakeholder interviews to identify key objectives
                       </p>
                     </div>
 
@@ -299,7 +295,7 @@ export default function NoCodeWorkflow() {
                         <Check className="w-4 h-4 text-purple-600" />
                       </div>
                       <p className="text-gray-700">
-                        Evaluate platform capabilities and limitations
+                        Define user personas and their specific needs
                       </p>
                     </div>
 
@@ -308,7 +304,7 @@ export default function NoCodeWorkflow() {
                         <Check className="w-4 h-4 text-purple-600" />
                       </div>
                       <p className="text-gray-700">
-                        Consider scalability and integration needs
+                        Document functional and non-functional requirements
                       </p>
                     </div>
 
@@ -317,7 +313,7 @@ export default function NoCodeWorkflow() {
                         <Check className="w-4 h-4 text-purple-600" />
                       </div>
                       <p className="text-gray-700">
-                        Review pricing and deployment options
+                        Establish measurable success criteria and project KPIs
                       </p>
                     </div>
                   </div>
@@ -394,15 +390,15 @@ export default function NoCodeWorkflow() {
                 {/* Right Content */}
                 <div>
                   <div className="text-sm bg-slate-50 w-fit p-3 rounded-full text-gray-500 uppercase tracking-wider mb-4">
-                    Rapid Prototyping
+                    Research & Analysis
                   </div>
 
                   <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-6">
-                    Build Functional Prototypes In Hours, Not Weeks
+                    Competitor Study, User Personas, Design Trends
                   </h2>
 
                   <p className="text-gray-600 leading-relaxed mb-8">
-                    No-code platforms enable rapid prototyping that brings ideas to life quickly. We leverage visual development tools to create functional prototypes that demonstrate core features, user flows, and business logic. This approach allows for fast iteration and validation of concepts before investing in full development.
+                    Through research and analysis are critical for making informed design decisions. This phase involves a deep dive into the market landscape to understand competitor strengths and weaknesses, creating detailed profiles of target users, and identifying current and emerging design trends to ensure the final product is both competitive and user-centric.
                   </p>
 
                   <div className="space-y-4">
@@ -411,7 +407,7 @@ export default function NoCodeWorkflow() {
                         <Check className="w-4 h-4 text-purple-600" />
                       </div>
                       <p className="text-gray-700">
-                        Design user interface with drag-and-drop components
+                        Conduct a SWOT analysis of key competitors
                       </p>
                     </div>
 
@@ -420,7 +416,7 @@ export default function NoCodeWorkflow() {
                         <Check className="w-4 h-4 text-purple-600" />
                       </div>
                       <p className="text-gray-700">
-                        Configure workflows and business logic visually
+                        Develop detailed user personas based on real data and interviews
                       </p>
                     </div>
 
@@ -429,7 +425,7 @@ export default function NoCodeWorkflow() {
                         <Check className="w-4 h-4 text-purple-600" />
                       </div>
                       <p className="text-gray-700">
-                        Set up data structures and relationships
+                        Audit and document relevant UI/UX design patterns and trends
                       </p>
                     </div>
 
@@ -438,7 +434,7 @@ export default function NoCodeWorkflow() {
                         <Check className="w-4 h-4 text-purple-600" />
                       </div>
                       <p className="text-gray-700">
-                        Test core functionality and user flows
+                        Synthesize findings into actionable insights for the strategy phase
                       </p>
                     </div>
                   </div>
@@ -458,15 +454,15 @@ export default function NoCodeWorkflow() {
                 {/* Left Content */}
                 <div>
                   <div className="text-sm bg-slate-50 w-fit p-3 rounded-full text-gray-500 uppercase tracking-wider mb-4">
-                    Integration & Automation
+                    Information Architecture
                   </div>
 
                   <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-6">
-                    Connect Systems & Automate Workflows
+                    Sitemap, Navigation, And Content Flow
                   </h2>
 
                   <p className="text-gray-600 leading-relaxed mb-8">
-                    No-code platforms excel at connecting different systems and automating repetitive tasks. We integrate your applications with popular services like Stripe, Zapier, Google Workspace, and custom APIs to create seamless workflows that eliminate manual processes and improve efficiency.
+                    This phase focuses on structuring the product's information architecture. It involves creating a clear sitemap outlining all pages and content sections, designing intuitive navigation systems for seamless user experience, and mapping the content flow to ensure users can complete their tasks efficiently and find information without friction.
                   </p>
 
                   <div className="space-y-4">
@@ -549,17 +545,7 @@ export default function NoCodeWorkflow() {
                     Low-Fidelity Screen<br />Layouts
                   </h3>
 
-                  {/* Description */}  <div className="hidden items-center gap-3 md:flex relative ">
-          <img src="/Vector.svg" alt="" className="h-5 w-5 opacity-80" />
-          <Button 
-  onClick={() => navigate("/contact")}
-  className="flex !text-brand-ink items-center gap-2 rounded-full bg-lime-300 px-6 py-5 font-bold"
->
-  Get In Touch Today
-</Button>
-
-            <img src="/Arrow 1-1.svg" alt="arrow" className="p-4 rounded-full bg-lime-300 text-brand-ink absolute left-40 " />
-        </div>
+                  {/* Description */}
                   <p className="text-gray-300 leading-relaxed mb-8 text-sm text-center">
                     Low-fidelity layouts, such as wireframes, are used to establish the basic
                     structure and layout of key screens without visual design details. This
@@ -897,18 +883,12 @@ export default function NoCodeWorkflow() {
             </div>
 
             {/* CTA Button */}
-                       <div className="text-center mb-16 flex justify-center">
-                           <div className="hidden items-center gap-3 md:flex relative ">
-                     <Button 
-             onClick={() => navigate("/contact")}
-             className="flex !text-brand-ink items-center gap-2 rounded-full bg-lime-300 px-6 py-5 font-bold"
-           >
-             Get In Touch Today
-           </Button>
-           
-                       <img src="/Arrow 1-1.svg" alt="arrow" className="p-4 rounded-full bg-lime-300 text-brand-ink absolute left-40 " />
-                   </div>
-                       </div>
+            <div className="text-center mb-16">
+              <button className="group inline-flex items-center gap-3 px-8 py-4 bg-lime-400 text-black font-semibold rounded-full hover:bg-lime-300 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-lime-400/25">
+                Get In Touch Today
+                <ArrowUpRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </button>
+            </div>
           </div>
         </div>
 

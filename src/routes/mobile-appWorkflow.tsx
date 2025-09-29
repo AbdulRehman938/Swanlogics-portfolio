@@ -2,7 +2,6 @@ import React from 'react';
 import {
   ArrowUpRight,
   Check,
-  CheckCircle,
   Monitor,
   ShoppingCart,
   Heart,
@@ -32,15 +31,12 @@ import uiuxWorkflow09 from '../images/uiux-11.png';
 import project01 from '../images/uiux-project-01.png';
 import project02 from '../images/uiux-project 02.png';
 import project03 from '../images/uiux-project-03.png';
-import { Button } from "@/components/ui/button";
-import { useNavigate } from 'react-router-dom';
+
 
 import { motion } from "framer-motion";
 
 export default function MobileAppWorkflow() {
 
-
-  const navigate = useNavigate();
   // Reusable row component
   const Row = ({ direction = "left" }) => {
     return (
@@ -67,39 +63,39 @@ export default function MobileAppWorkflow() {
   // Services data for the web services section
   const webServices = [
     {
-      icon: Smartphone,
-      title: "iOS Development",
-      description: "Native iOS apps built with Swift and SwiftUI, optimized for performance and user experience on all Apple devices.",
-      color: "bg-lime-400"
-    },
-    {
       icon: Monitor,
-      title: "Android Development",
-      description: "Native Android applications using Kotlin and modern Android development practices for seamless user experiences.",
-      color: "bg-lime-400"
-    },
-    {
-      icon: Target,
-      title: "Cross-Platform",
-      description: "React Native and Flutter solutions that work perfectly on both iOS and Android, reducing development time and costs.",
-      color: "bg-lime-400"
-    },
-    {
-      icon: Heart,
-      title: "UI/UX Design",
-      description: "Intuitive mobile interfaces designed specifically for touch interactions and mobile user behaviors.",
-      color: "bg-lime-400"
-    },
-    {
-      icon: FileText,
-      title: "App Store Optimization",
-      description: "Strategic optimization to improve app visibility and downloads on both Apple App Store and Google Play Store.",
+      title: "Web Design",
+      description: "We craft visually stunning and strategically effective websites that capture your brand's unique identity and captivate your audience from the first click.",
       color: "bg-lime-400"
     },
     {
       icon: ShoppingCart,
-      title: "Backend Integration",
-      description: "Seamless integration with APIs, databases, and third-party services to power your mobile app functionality.",
+      title: "ECommerce",
+      description: "Transform your online store into a powerful sales engine with intuitive product discovery, seamless checkout flows, and a shopping experience built for conversion.",
+      color: "bg-lime-400"
+    },
+    {
+      icon: Heart,
+      title: "UX Design",
+      description: "Our user-centered approach focuses on creating intuitive, efficient, and enjoyable journeys that keep users engaged and coming back for more.",
+      color: "bg-lime-400"
+    },
+    {
+      icon: Smartphone,
+      title: "Responsive",
+      description: "Your website will provide a flawless experience on any device, from desktops to smartphones, ensuring you reach and engage every customer.",
+      color: "bg-lime-400"
+    },
+    {
+      icon: FileText,
+      title: "Wireframes",
+      description: "We build clear, structural blueprints to strategically map out user journeys and functionality, establishing a solid foundation before visual design begins.",
+      color: "bg-lime-400"
+    },
+    {
+      icon: Target,
+      title: "Strategy",
+      description: "We go beyond aesthetics by defining clear goals, understanding your audience, and aligning your website's design with your overarching business objectives.",
       color: "bg-lime-400"
     }
   ];
@@ -108,39 +104,39 @@ export default function MobileAppWorkflow() {
   const projects = [
     {
       id: 1,
-      title: "Fitness Tracker Mobile App",
-      subtitle: "Health & Wellness App with Real-time Tracking",
-      year: "2024",
-      author: "SwanLogics",
+      title: "Refreshing Gary Neville's Digital Presence",
+      subtitle: "Where Art Meets Emotion In Every Shot",
+      year: "2025",
+      author: "Gary Neville",
       imageUrl: project01  // No curly braces
     },
     {
       id: 2,
-      title: "E-Commerce Shopping App",
-      subtitle: "Seamless Shopping Experience with AR Try-on",
-      year: "2024",
-      author: "SwanLogics",
+      title: "Furniture Designed To The Greatest Extent",
+      subtitle: "Driving Innovative Growth",
+      year: "2025",
+      author: "Gary Neville",
       imageUrl: project02  // No curly braces
     },
     {
       id: 3,
-      title: "Food Delivery Platform",
-      subtitle: "Fast & Reliable Food Ordering App",
-      year: "2024",
-      author: "SwanLogics",
+      title: "A Workplace Consultancy Creating Inspiring Environments",
+      subtitle: "Brand, Design & Development Agency",
+      year: "2025",
+      author: "Gary Neville",
       imageUrl: project03  // No curly braces; fixed variable name
     },
      {
       id: 4,
-      title: "Social Media Networking App",
-      subtitle: "Connect & Share with Enhanced Privacy",
-      year: "2024",
-      author: "SwanLogics",
+      title: "Furniture Designed To The Greatest Extent",
+      subtitle: "Driving Innovative Growth",
+      year: "2025",
+      author: "Gary Neville",
       imageUrl: project02  // No curly braces
     },
     {
       id: 5,
-      title: "Banking & Finance App",
+      title: "A Workplace Consultancy Creating Inspiring Environments",
       subtitle: "Brand, Design & Development Agency",
       year: "2025",
       author: "Gary Neville",
@@ -204,21 +200,21 @@ export default function MobileAppWorkflow() {
             {/* 1. Header Section */}
             <div className="px-8 pt-8 pb-4">
               <div className="text-sm text-gray-500 bg-slate-50 p-4 w-fit rounded-full uppercase tracking-wider mb-4">
-                Mobile App Development Workflow
+                UI/UX Design Workflow
               </div>
 
               <div className="grid lg:grid-cols-2 gap-12 items-start">
                 {/* Left Content: Title */}
                 <div>
                   <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-8">
-                    A Mobile App Development Agency In Manchester
+                    A UI/UX Design Studio In Manchester
                   </h1>
                 </div>
 
                 {/* Right Content: Short Description */}
                 <div className="text-gray-600 leading-relaxed">
                   <p className="mb-6">
-                    We specialize in creating native and cross-platform mobile applications that deliver exceptional user experiences. From iOS and Android development to React Native solutions, our Manchester-based team builds apps that users love and businesses rely on.
+                    We believe great design goes beyond visuals—it's about creating smooth, meaningful interactions. By blending creativity with strategy, we ensure every project not only looks stunning but also provides an effortless user journey.
                   </p>
                 </div>
               </div>
@@ -229,10 +225,10 @@ export default function MobileAppWorkflow() {
 
               {/* Long Description */}
               <div className="mb-12">
-                                  <p className="text-lg text-gray-600 leading-relaxed">
-                    {/* Increased text size for better reading flow */}
-                    Our Manchester-based mobile app development agency is committed to transforming ideas into powerful mobile experiences that users can't put down. We begin every project by understanding your business goals, target audience, and technical requirements to ensure the foundation is strong. From native iOS and Android development to cross-platform solutions, our process is designed to create intuitive, performant applications that drive user engagement and business growth. Each app is carefully built with attention to platform-specific design guidelines, optimized performance, and seamless user experiences across all devices.
-                  </p>
+                <p className="text-lg text-gray-600 leading-relaxed">
+                  {/* Increased text size for better reading flow */}
+                  Our Manchester-based UI/UX design studio is committed to transforming ideas into digital experiences that truly connect with people. We begin every project by understanding user behavior, business objectives, and market trends to ensure the foundation is strong. From research and wireframing to prototyping and usability testing, our process is designed to create intuitive and visually compelling interfaces. Each design is carefully crafted to provide seamless navigation, consistent branding, and accessibility across all devices. By blending creativity with strategy, we deliver solutions that are not only aesthetically pleasing but also practical and results-driven.
+                </p>
               </div>
 
               {/* Hero Image & Button Container FIX */}
@@ -273,15 +269,15 @@ export default function MobileAppWorkflow() {
                 {/* Left Content */}
                 <div>
                   <div className="text-sm text-gray-500 uppercase tracking-wider mb-4">
-                    App Concept
+                    Requirement Gathering
                   </div>
 
                   <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-6">
-                    Define App Vision & Technical Feasibility
+                    Understand Client Goals & Target Audience
                   </h2>
 
                   <p className="text-gray-600 leading-relaxed mb-8">
-                    Every great mobile app starts with a clear vision. We work closely with you to define the app's purpose, target audience, key features, and success metrics. This strategic planning phase ensures your app concept is viable, marketable, and aligned with both user needs and business objectives.
+                    Effective requirement gathering is the foundation of any successful project. It involves in-depth discussions with stakeholders to identify business objectives, user needs, and functional expectations. This phase ensures that the final product aligns with the client's vision and delivers tangible value to the end-users.
                   </p>
 
                   <div className="space-y-4">
@@ -290,7 +286,7 @@ export default function MobileAppWorkflow() {
                         <Check className="w-4 h-4 text-purple-600" />
                       </div>
                       <p className="text-gray-700">
-                        Define app purpose, target audience, and key features
+                        Conduct stakeholder interviews to identify key objectives
                       </p>
                     </div>
 
@@ -299,7 +295,7 @@ export default function MobileAppWorkflow() {
                         <Check className="w-4 h-4 text-purple-600" />
                       </div>
                       <p className="text-gray-700">
-                        Analyze market competition and user research
+                        Define user personas and their specific needs
                       </p>
                     </div>
 
@@ -308,7 +304,7 @@ export default function MobileAppWorkflow() {
                         <Check className="w-4 h-4 text-purple-600" />
                       </div>
                       <p className="text-gray-700">
-                        Determine platform strategy (iOS, Android, or cross-platform)
+                        Document functional and non-functional requirements
                       </p>
                     </div>
 
@@ -317,7 +313,7 @@ export default function MobileAppWorkflow() {
                         <Check className="w-4 h-4 text-purple-600" />
                       </div>
                       <p className="text-gray-700">
-                        Create initial wireframes and user flow diagrams
+                        Establish measurable success criteria and project KPIs
                       </p>
                     </div>
                   </div>
@@ -394,15 +390,15 @@ export default function MobileAppWorkflow() {
                 {/* Right Content */}
                 <div>
                   <div className="text-sm bg-slate-50 w-fit p-3 rounded-full text-gray-500 uppercase tracking-wider mb-4">
-                    UI/UX Design
+                    Research & Analysis
                   </div>
 
                   <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-6">
-                    Mobile-First Design & User Experience
+                    Competitor Study, User Personas, Design Trends
                   </h2>
 
                   <p className="text-gray-600 leading-relaxed mb-8">
-                    Mobile app design requires a deep understanding of mobile user behavior and platform conventions. We create intuitive, thumb-friendly interfaces that follow iOS and Android design guidelines, ensuring your app feels native and provides exceptional user experiences across all devices and screen sizes.
+                    Through research and analysis are critical for making informed design decisions. This phase involves a deep dive into the market landscape to understand competitor strengths and weaknesses, creating detailed profiles of target users, and identifying current and emerging design trends to ensure the final product is both competitive and user-centric.
                   </p>
 
                   <div className="space-y-4">
@@ -411,7 +407,7 @@ export default function MobileAppWorkflow() {
                         <Check className="w-4 h-4 text-purple-600" />
                       </div>
                       <p className="text-gray-700">
-                        Create user personas and journey maps for mobile users
+                        Conduct a SWOT analysis of key competitors
                       </p>
                     </div>
 
@@ -420,7 +416,7 @@ export default function MobileAppWorkflow() {
                         <Check className="w-4 h-4 text-purple-600" />
                       </div>
                       <p className="text-gray-700">
-                        Design mobile-first wireframes and mockups
+                        Develop detailed user personas based on real data and interviews
                       </p>
                     </div>
 
@@ -429,7 +425,7 @@ export default function MobileAppWorkflow() {
                         <Check className="w-4 h-4 text-purple-600" />
                       </div>
                       <p className="text-gray-700">
-                        Follow platform-specific design guidelines (Material Design, Human Interface)
+                        Audit and document relevant UI/UX design patterns and trends
                       </p>
                     </div>
 
@@ -438,7 +434,7 @@ export default function MobileAppWorkflow() {
                         <Check className="w-4 h-4 text-purple-600" />
                       </div>
                       <p className="text-gray-700">
-                        Optimize for touch interactions and gesture-based navigation
+                        Synthesize findings into actionable insights for the strategy phase
                       </p>
                     </div>
                   </div>
@@ -458,15 +454,15 @@ export default function MobileAppWorkflow() {
                 {/* Left Content */}
                 <div>
                   <div className="text-sm bg-slate-50 w-fit p-3 rounded-full text-gray-500 uppercase tracking-wider mb-4">
-                    Development
+                    Information Architecture
                   </div>
 
                   <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-6">
-                    Native & Cross-Platform Development
+                    Sitemap, Navigation, And Content Flow
                   </h2>
 
                   <p className="text-gray-600 leading-relaxed mb-8">
-                    Our development process leverages the latest technologies and best practices for mobile app development. Whether building native iOS/Android apps or cross-platform solutions with React Native or Flutter, we ensure optimal performance, security, and maintainability while integrating with necessary APIs and third-party services.
+                    This phase focuses on structuring the product's information architecture. It involves creating a clear sitemap outlining all pages and content sections, designing intuitive navigation systems for seamless user experience, and mapping the content flow to ensure users can complete their tasks efficiently and find information without friction.
                   </p>
 
                   <div className="space-y-4">
@@ -475,7 +471,7 @@ export default function MobileAppWorkflow() {
                         <Check className="w-4 h-4 text-purple-600" />
                       </div>
                       <p className="text-gray-700">
-                        Set up development environment and CI/CD pipelines
+                        Develop a hierarchical sitemap outlining all pages and content sections
                       </p>
                     </div>
 
@@ -484,7 +480,7 @@ export default function MobileAppWorkflow() {
                         <Check className="w-4 h-4 text-purple-600" />
                       </div>
                       <p className="text-gray-700">
-                        Implement core features with clean, maintainable code
+                        Define primary and secondary global navigation menus
                       </p>
                     </div>
 
@@ -493,7 +489,7 @@ export default function MobileAppWorkflow() {
                         <Check className="w-4 h-4 text-purple-600" />
                       </div>
                       <p className="text-gray-700">
-                        Integrate APIs, databases, and third-party services
+                        Map user journeys and key task flows for critical user goals
                       </p>
                     </div>
 
@@ -502,7 +498,7 @@ export default function MobileAppWorkflow() {
                         <Check className="w-4 h-4 text-purple-600" />
                       </div>
                       <p className="text-gray-700">
-                        Implement push notifications and offline functionality
+                        Establish a clear content strategy and inventory for each page
                       </p>
                     </div>
                   </div>
@@ -541,17 +537,21 @@ export default function MobileAppWorkflow() {
                 <div className=" rounded-2xl p-8 relative overflow-hidden">
                   {/* Small label */}
                   <div className="text-sm text-lime-400 uppercase text-center tracking-wider mb-4 font-medium">
-                    Testing
+                    Wireframing
                   </div>
 
                   {/* Title */}
                   <h3 className="text-5xl font-bold text-white leading-tight mb-4 text-center">
-                    Quality Assurance &<br />Performance Testing
+                    Low-Fidelity Screen<br />Layouts
                   </h3>
 
                   {/* Description */}
                   <p className="text-gray-300 leading-relaxed mb-8 text-sm text-center">
-                    Comprehensive testing ensures your mobile app performs flawlessly across all devices and scenarios. We conduct rigorous testing for functionality, performance, security, and user experience, including device compatibility testing, load testing, and beta testing with real users to guarantee a polished final product.
+                    Low-fidelity layouts, such as wireframes, are used to establish the basic
+                    structure and layout of key screens without visual design details. This
+                    allows the team to focus on functionality, user flow, and element
+                    placement ensuring a solid foundational experience before investing in
+                    visual design and content.
                   </p>
 
                   {/* User Flow Image */}
@@ -572,54 +572,34 @@ export default function MobileAppWorkflow() {
                     <div className="absolute bottom-0 left-0 h-12 w-20 bg-lime-400 rounded-lg p-4 shadow-lg z-10"></div>
                     <div className="absolute bottom-0 right-0 h-12 w-20 bg-lime-400 rounded-lg p-4 shadow-lg z-10"></div>
                   </div>
-
-                  {/* Checklist */}
-                  <div className="space-y-3 mt-8">
-                    <div className="flex items-center gap-3">
-                      <CheckCircle className="w-5 h-5 text-lime-400 flex-shrink-0" />
-                      <span className="text-gray-300 text-sm">Functional Testing</span>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <CheckCircle className="w-5 h-5 text-lime-400 flex-shrink-0" />
-                      <span className="text-gray-300 text-sm">Performance Testing</span>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <CheckCircle className="w-5 h-5 text-lime-400 flex-shrink-0" />
-                      <span className="text-gray-300 text-sm">Security Testing</span>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <CheckCircle className="w-5 h-5 text-lime-400 flex-shrink-0" />
-                      <span className="text-gray-300 text-sm">Device Compatibility Testing</span>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <CheckCircle className="w-5 h-5 text-lime-400 flex-shrink-0" />
-                      <span className="text-gray-300 text-sm">User Acceptance Testing</span>
-                    </div>
-                  </div>
                 </div>
 
-                {/* Right Content - Deployment & Launch */}
+                {/* Right Content - User Flow Mapping */}
                 <div className="rounded-2xl p-8 container relative overflow-hidden">
                   {/* Small label */}
                   <div className="text-sm text-lime-400 uppercase text-center tracking-wider mb-4 font-medium">
-                    Deployment
+                    User Flow Mapping
                   </div>
 
                   {/* Title */}
                   <h3 className="text-5xl font-bold text-white leading-tight mb-4 text-center">
-                    App Store Launch &<br />Post-Launch Support
+                    Define Journeys For<br />Smooth Navigation
                   </h3>
 
                   {/* Description */}
                   <p className="text-gray-300 leading-relaxed mb-8 text-sm text-center">
-                    Successfully launching your mobile app requires careful preparation and execution. We handle the entire submission process for both iOS App Store and Google Play Store, ensuring compliance with all guidelines and requirements. Our post-launch support includes monitoring app performance, gathering user feedback, and implementing updates to keep your app competitive and user-friendly.
+                    Mapping user journeys is essential for creating an intuitive experience.
+                    This process involves outlining the step-by-step paths users will take to
+                    complete key tasks, identifying potential pain points, and ensuring the
+                    navigation is logical and efficient. This helps in creating a seamless flow
+                    that guides users effortlessly to their goals.
                   </p>
 
                   {/* User Flow Image */}
                   <div className="relative flex justify-center overflow-hidden rounded-xl">
                     <img
                       src={wireframe02}
-                      alt="App store submission and deployment process"
+                      alt="User flow mapping and journey definition"
                       className="w-full h-auto object-cover transform transition-transform duration-[2000ms] ease-in-out hover:scale-125"
                     />
 
@@ -632,30 +612,6 @@ export default function MobileAppWorkflow() {
                     {/* Corner boxes */}
                     <div className="absolute bottom-0 left-0 h-12 w-20 bg-lime-400 rounded-lg p-4 shadow-lg z-10"></div>
                     <div className="absolute bottom-0 right-0 h-12 w-20 bg-lime-400 rounded-lg p-4 shadow-lg z-10"></div>
-                  </div>
-
-                  {/* Checklist */}
-                  <div className="space-y-3 mt-8">
-                    <div className="flex items-center gap-3">
-                      <CheckCircle className="w-5 h-5 text-lime-400 flex-shrink-0" />
-                      <span className="text-gray-300 text-sm">App Store Optimization (ASO)</span>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <CheckCircle className="w-5 h-5 text-lime-400 flex-shrink-0" />
-                      <span className="text-gray-300 text-sm">Store Submission & Review</span>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <CheckCircle className="w-5 h-5 text-lime-400 flex-shrink-0" />
-                      <span className="text-gray-300 text-sm">Post-Launch Monitoring</span>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <CheckCircle className="w-5 h-5 text-lime-400 flex-shrink-0" />
-                      <span className="text-gray-300 text-sm">User Feedback Integration</span>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <CheckCircle className="w-5 h-5 text-lime-400 flex-shrink-0" />
-                      <span className="text-gray-300 text-sm">Regular Updates & Maintenance</span>
-                    </div>
                   </div>
                 </div>
 
@@ -906,41 +862,32 @@ export default function MobileAppWorkflow() {
 
             {/* Services Grid */}
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 mb-16">
-              {webServices.map((service, index) => {
-                const IconComponent = service.icon;
-                return (
-                  <div
-                    key={index}
-                    className="group cursor-pointer transition-all duration-300 hover:transform hover:scale-105"
-                  >
-                    <div className="flex items-start gap-4 mb-4">
-                      <div className={`flex-shrink-0 w-12 h-12 ${service.color} rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
-                        <IconComponent className="w-6 h-6 text-black" />
-                      </div>
-                      <h3 className="text-2xl lg:text-3xl font-bold text-white group-hover:text-lime-400 transition-colors duration-300">
-                        {service.title}
-                      </h3>
+              {webServices.map((service, index) => (
+                <div
+                  key={index}
+                  className="group cursor-pointer transition-all duration-300 hover:transform hover:scale-105"
+                >
+                  <div className="flex items-start gap-4 mb-4">
+                    <div className={`flex-shrink-0 w-12 h-12 ${service.color} rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
+                      <service.icon className="w-6 h-6 text-black" />
                     </div>
-                    <p className="text-gray-300 text-base lg:text-lg leading-relaxed ml-16 group-hover:text-gray-200 transition-colors duration-300">
-                      {service.description}
-                    </p>
+                    <h3 className="text-2xl lg:text-3xl font-bold text-white group-hover:text-lime-400 transition-colors duration-300">
+                      {service.title}
+                    </h3>
                   </div>
-                );
-              })}
+                  <p className="text-gray-300 text-base lg:text-lg leading-relaxed ml-16 group-hover:text-gray-200 transition-colors duration-300">
+                    {service.description}
+                  </p>
+                </div>
+              ))}
             </div>
 
-             {/* CTA Button */}
-            <div className="text-center mb-16 flex justify-center">
-                <div className="hidden items-center gap-3 md:flex relative ">
-          <Button 
-  onClick={() => navigate("/contact")}
-  className="flex !text-brand-ink items-center gap-2 rounded-full bg-lime-300 px-6 py-5 font-bold"
->
-  Get In Touch Today
-</Button>
-
-            <img src="/Arrow 1-1.svg" alt="arrow" className="p-4 rounded-full bg-lime-300 text-brand-ink absolute left-40 " />
-        </div>
+            {/* CTA Button */}
+            <div className="text-center mb-16">
+              <button className="group inline-flex items-center gap-3 px-8 py-4 bg-lime-400 text-black font-semibold rounded-full hover:bg-lime-300 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-lime-400/25">
+                Get In Touch Today
+                <ArrowUpRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </button>
             </div>
           </div>
         </div>

@@ -51,7 +51,10 @@ export default function Services() {
                                         We're A Digital Marketing Agency With Expertise
                                     </h2>
                                     <p className="text-gray-600 leading-relaxed">
-                                        We help businesses grow online by crafting tailored strategies that boost visibility, increase engagement, and drive real results. From SEO and social media marketing to content creation and paid campaigns, our team ensures your brand stands out in the digital space.
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                                        enim ad minim veniam, quis nostrud exercitation ullamco
+                                        laboris nisi ut aliquip ex ea commodo consequat.
                                     </p>
                                 </div>
                             </div>
@@ -59,7 +62,7 @@ export default function Services() {
                     </section>
 
                     {/* UI/UX Design Workflow Section */}
-                    <section className="pb-16 px-6 cursor-pointer transition-all duration-300 " onClick={() => handleSectionClick('UiUx-workflow')}>
+                    <section className="py-16 px-6 cursor-pointer transition-all duration-300 " onClick={() => handleSectionClick('UiUx-workflow')}>
                         <div className="max-w-7xl mx-auto">
 
                             {/* Content Grid */}

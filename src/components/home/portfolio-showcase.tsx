@@ -1,7 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ArrowUpRight } from "@/components/icons"
-import { Button } from '@/components/ui/button';
 import Project01 from '../../images/uiux-project-01.png'
 import Project02 from '../../images/uiux-project 02.png'
 import Project03 from '../../images/uiux-project-03.png'
@@ -115,7 +114,6 @@ export function PortfolioShowcase() {
               </h3>
             </div>
           </div>
-          
 
           <div className="group relative overflow-hidden top-32 xl:top-40 w-1/2">
             <div className="relative h-[400px] xl:h-[500px] w-full perspective-1000 rounded-3xl overflow-hidden">
@@ -134,7 +132,6 @@ export function PortfolioShowcase() {
               </h3>
             </div>
           </div>
-         
         </div>
 
         {/* Row 2 */}
@@ -174,17 +171,6 @@ export function PortfolioShowcase() {
               </h3>
             </div>
           </div>
-
-           {/* Desktop CTA */}
-                    <div className="hidden md:flex items-center gap-3 absolute left-10 bottom-10 transform -translate-y-1/2">
-                      <Button 
-                        onClick={() => navigate("/portfolio")}
-                        className="flex !text-brand-ink text-lg items-center gap-2 rounded-full bg-lime-300 px-12 py-8 font-bold"
-                      >
-                        View All Projects
-                      </Button>
-                      <img src="/Arrow 1-1.svg" alt="arrow" className="p-7 rounded-full bg-lime-300 text-brand-ink absolute left-44" />
-                    </div>
         </div>
       </div>
     </section>
