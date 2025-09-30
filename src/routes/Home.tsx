@@ -14,7 +14,7 @@ import { Footer as FooterSimple } from '../components/layout/footer';
  */
 export default function Home() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen  bg-white">
       <Navbar />
       <main>
         {/* Hero area with headline and video placeholder */}

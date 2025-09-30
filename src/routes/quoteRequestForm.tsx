@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react'
-import { User, FileText, DollarSign, CheckSquare, Check, X, MessageCircle, Settings, Send, Smile, Paperclip, Bot, Upload } from 'lucide-react'
+import { User, FileText, DollarSign, CheckSquare, Check, X, MessageCircle, Settings, Send, Smile, Paperclip, Bot, Upload, Mail, Phone, Building2, Calendar, Clock } from 'lucide-react'
 import { Navbar } from '../components/layout/Navbar';
 import { Footer as FooterSimple } from '../components/layout/footer';
 import uiuxWorkflowBannerImg from '../images/quotationPage.png';
@@ -12,7 +12,7 @@ export default function QuoteRequestForm() {
     email: '',
     phone: '',
     serviceType: '',
-    projectType: '',
+    projectTitle: '',
     description: '',
     budgetRange: '',
     timeline: '',
@@ -26,7 +26,7 @@ export default function QuoteRequestForm() {
   });
 
   const [showModal, setShowModal] = useState(false);
-  const [dragActive, setDragActive] = useState(false); // Add this missing state
+  const [dragActive, setDragActive] = useState(false);
 
   // Chatbot states
   const [showChatbot, setShowChatbot] = useState(false);
@@ -112,7 +112,6 @@ export default function QuoteRequestForm() {
       'email',
       'phone',
       'serviceType',
-      'projectType',
       'description',
       'budgetRange',
       'timeline'
@@ -130,8 +129,6 @@ export default function QuoteRequestForm() {
     }
 
     console.log('Form submitted:', formData);
-
-    // Show success modal
     setShowModal(true);
 
     // Reset form
@@ -141,7 +138,7 @@ export default function QuoteRequestForm() {
       email: '',
       phone: '',
       serviceType: '',
-      projectType: '',
+      projectTitle: '',
       description: '',
       budgetRange: '',
       timeline: '',
@@ -271,267 +268,301 @@ export default function QuoteRequestForm() {
           {/* Header */}
           <header className="text-center mb-12">
             <h1 className="text-4xl font-bold text-gray-900 mb-4">
-              Get Your Project Quote
+              Ready to start your project?
             </h1>
-            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-              Tell us about your project and we'll get back to you within 24-48 hours
-            </p>
           </header>
 
           <form onSubmit={handleSubmit}>
-            <div className="bg-white rounded-3xl shadow-sm border border-gray-100 p-8 space-y-8">
+            <div className="bg-white rounded-3xl shadow-sm border border-gray-100 p-8">
+              
+              {/* Two Column Layout - Project Details Left, User Info Right */}
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+                
+                {/* Left Column - Project/Service Details */}
+                <div className='bg-gray-50 p-6 rounded-2xl border border-gray-200'>
+                  <h2 className="text-lg font-semibold text-gray-900 mb-6">Project / Service Details</h2>
 
-              {/* User Information Section */}
-              <div className='bg-gray-50 p-6 rounded-2xl border border-gray-200'>
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
-                    <User className="w-4 h-4 text-blue-600" />
-                  </div>
-                  <h2 className="text-xl font-semibold text-gray-900">User Information</h2>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Name <span className="text-red-500">*</span>
-                    </label>
-                    <input
-                      type="text"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-gray-900 placeholder-gray-500"
-                      placeholder="Your full name"
-                      required
-                    />
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Email <span className="text-red-500">*</span>
-                    </label>
-                    <input
-                      type="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-gray-900 placeholder-gray-500"
-                      placeholder="your.email@company.com"
-                      required
-                    />
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Phone Number <span className="text-red-500">*</span>
-                    </label>
-                    <input
-                      type="tel"
-                      name="phone"
-                      value={formData.phone}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-gray-900 placeholder-gray-500"
-                      placeholder="+1 (555) 123-4567"
-                      required
-                    />
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Company Name <span className="text-gray-400">(Optional)</span>
-                    </label>
-                    <input
-                      type="text"
-                      name="companyName"
-                      value={formData.companyName}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-gray-900 placeholder-gray-500"
-                      placeholder="Your company name"
-                    />
-                  </div>
-                </div>
-              </div>
-
-              {/* Project/Service Details Section */}
-              <div className='bg-gray-50 p-6 rounded-2xl border border-gray-200'>
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
-                    <FileText className="w-4 h-4 text-green-600" />
-                  </div>
-                  <h2 className="text-xl font-semibold text-gray-900">Project / Service Details</h2>
-                </div>
-
-                <div className="space-y-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
-                        Select Service <span className="text-red-500">*</span>
-                      </label>
+                  <div className="space-y-6">
+                    {/* Service Selection with Settings Icon */}
+                    <div className="relative">
+                      <div className="absolute left-3 top-1/2 transform -translate-y-1/2 z-10">
+                        <img src="/heart.svg" alt="" className='w-5 h-5' />
+                      </div>
                       <select
                         name="serviceType"
                         value={formData.serviceType}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-gray-900 bg-white appearance-none cursor-pointer"
+                        className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-gray-500 bg-white appearance-none cursor-pointer"
                         required
                       >
-                        <option value="">Choose a service</option>
+                        <option value="">Select Service</option>
                         <option value="web-development">Web Development</option>
                         <option value="mobile-app">Mobile App Development</option>
                         <option value="ui-ux-design">UI/UX Design</option>
                         <option value="branding">Branding & Logo Design</option>
                         <option value="consultation">Technical Consultation</option>
                       </select>
+                      <div className='absolute right-3 top-1/2 transform -translate-y-1/2 z-10'>
+                        <img src="/updownIcons.png" alt="" />
+                      </div>
                     </div>
 
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
-                        Project Title
-                      </label>
+                    {/* Project Title with Text Icon */}
+                    <div className="relative">
+                      <div className="absolute left-3 w-6 top-1/2 transform -translate-y-1/2 z-10">
+                       <img src="/t.png" alt="" />
+                      </div>
                       <input
                         type="text"
                         name="projectTitle"
-                        value={formData.serviceType}
+                        value={formData.projectTitle}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-gray-900 placeholder-gray-500"
-                        placeholder="Brief project title"
+                        className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-gray-500 placeholder-gray-500"
+                        placeholder="Project Title"
                       />
                     </div>
-                  </div>
 
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Project Description
-                    </label>
-                    <textarea
-                      name="description"
-                      value={formData.description}
-                      onChange={handleInputChange}
-                      rows={5}
-                      className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-gray-900 placeholder-gray-500 resize-vertical"
-                      placeholder="Describe your project requirements, goals, and any specific features you need..."
-                      required
-                    />
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Drag / Drop <span className="text-gray-400">(Optional)</span>
-                    </label>
-                    <div
-                      className={`relative border-2 border-dashed rounded-lg p-8 transition-all duration-200 ${dragActive
+                    {/* Drag Drop with Upload Icon */}
+                    <div>
+                      <div
+                        className={`relative border-2 border-dashed rounded-lg p-2 transition-all duration-200 ${dragActive
                           ? 'border-blue-400 bg-blue-50'
-                          : 'border-gray-200 bg-gray-50 hover:border-gray-300'
+                          : 'border-gray-200 bg-white hover:border-gray-300'
                         }`}
-                      onDragEnter={handleDrag}
-                      onDragLeave={handleDrag}
-                      onDragOver={handleDrag}
-                      onDrop={handleDrop}
-                    >
-                      <input
-                        type="file"
-                        multiple
-                        onChange={handleFileInput}
-                        className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
-                      />
-                      <div className="text-center">
-                        <Upload className="mx-auto h-8 w-8 text-gray-400 mb-3" />
-                        <p className="text-sm text-gray-600 mb-1">
-                          <span className="font-medium text-blue-600">Click to upload</span> or drag and drop
-                        </p>
-                        <p className="text-xs text-gray-500">PNG, JPG, PDF up to 10MB each</p>
+                        onDragEnter={handleDrag}
+                        onDragLeave={handleDrag}
+                        onDragOver={handleDrag}
+                        onDrop={handleDrop}
+                      >
+                        <input
+                          type="file"
+                          multiple
+                          onChange={handleFileInput}
+                          className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
+                        />
+                        <div className="text-center">
+                          <p className="text-sm text-gray-500 flex justify-start gap-1">
+                          <Upload className="h-5 w-5 text-gray-400 mb-2" />
+                            Drag / Drop
+                          </p>
+                        </div>
                       </div>
+
+                      {formData.files.length > 0 && (
+                        <div className="mt-4 space-y-2">
+                          {formData.files.map((file, index) => (
+                            <div key={index} className="flex items-center justify-between bg-green-50 p-2 rounded-lg border border-green-200">
+                              <div className="flex items-center gap-3">
+                                <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
+                                  <Check className="w-4 h-4 text-green-600" />
+                                </div>
+                                <span className="text-sm text-gray-700 truncate">{file.name}</span>
+                              </div>
+                              <button
+                                type="button"
+                                onClick={() => removeFile(index)}
+                                className="text-gray-400 hover:text-red-500 transition-colors duration-200"
+                              >
+                                <X className="w-4 h-4" />
+                              </button>
+                            </div>
+                          ))}
+                        </div>
+                      )}
                     </div>
 
-                    {formData.files.length > 0 && (
-                      <div className="mt-4 space-y-2">
-                        {formData.files.map((file, index) => (
-                          <div key={index} className="flex items-center justify-between bg-green-50 p-3 rounded-lg border border-green-200">
-                            <div className="flex items-center gap-3">
-                              <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
-                                <Check className="w-4 h-4 text-green-600" />
-                              </div>
-                              <span className="text-sm text-gray-700 truncate">{file.name}</span>
-                            </div>
-                            <button
-                              type="button"
-                              onClick={() => removeFile(index)}
-                              className="text-gray-400 hover:text-red-500 transition-colors duration-200"
-                            >
-                              <X className="w-4 h-4" />
-                            </button>
-                          </div>
-                        ))}
+                    {/* Project Description */}
+                    <div>
+                      <textarea
+                        name="description"
+                        value={formData.description}
+                        onChange={handleInputChange}
+                        rows={4}
+                        className="w-full h-12 px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-gray-500 placeholder-gray-500 resize-none overflow-hidden"
+                        placeholder="Project Description"
+                        required
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                {/* Right Column - User Information */}
+                <div className='bg-gray-50 p-6 rounded-2xl border border-gray-200'>
+                  <h2 className="text-lg font-semibold text-gray-900 mb-6">User Information</h2>
+
+                  <div className="space-y-6">
+                    {/* Name with User Icon */}
+                    <div className="relative">
+                      <div className="absolute left-3 top-1/2 transform -translate-y-1/2 z-10">
+                        <User className="w-4 h-4 text-brand-ink" />
                       </div>
-                    )}
+                      <input
+                        type="text"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleInputChange}
+                        className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-gray-500 placeholder-gray-500"
+                        placeholder="Name"
+                        required
+                      />
+                    </div>
+
+                    {/* Company Name with Building Icon */}
+                    <div className="relative">
+                      <div className="absolute w-5 left-3 top-1/2 transform -translate-y-1/2 z-10">
+                        <img src="/company.svg" alt="" />
+                      </div>
+                      <input
+                        type="text"
+                        name="companyName"
+                        value={formData.companyName}
+                        onChange={handleInputChange}
+                        className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-gray-500 placeholder-gray-500"
+                        placeholder="Company Name (Optional)"
+                      />
+                    </div>
+
+                    {/* Email with Mail Icon */}
+                    <div className="relative">
+                      <div className="absolute left-3 top-1/2 transform -translate-y-1/2 z-10">
+                        <Mail className="w-4 h-4 text-brand-ink" />
+                      </div>
+                      <input
+                        type="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleInputChange}
+                        className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-gray-500 placeholder-gray-500"
+                        placeholder="Email"
+                        required
+                      />
+                    </div>
+
+                    {/* Phone with Phone Icon */}
+                    <div className="relative">
+                      <div className="absolute left-3 top-1/2 transform -translate-y-1/2 z-10">
+                        <Phone className="w-4 h-4 text-brand-ink" />
+                      </div>
+                      <input
+                        type="tel"
+                        name="phone"
+                        value={formData.phone}
+                        onChange={handleInputChange}
+                        className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-gray-500 placeholder-gray-500"
+                        placeholder="Phone Number"
+                        required
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
 
-              {/* Budget/Timeline Section */}
-            <div className='bg-gray-50 p-6 rounded-2xl border border-gray-200'>
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center">
-                    <DollarSign className="w-4 h-4 text-purple-600" />
-                  </div>
-                  <h2 className="text-xl font-semibold text-gray-900">Budget / Timeline</h2>
-                </div>
+              {/* Two Column Layout - Budget/Timeline Left, Additional Preferences Right */}
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+                
+                {/* Left Column - Budget/Timeline */}
+                <div className='bg-gray-50 p-6 rounded-2xl border border-gray-200'>
+                  <h2 className="text-lg font-semibold text-gray-900 mb-6">Budget / Timeline</h2>
 
-                {/* Budget Range */}
-                <div className="mb-8">
-                  <h3 className="text-lg font-medium text-gray-700 mb-4">Budget Range</h3>
-                  <div className="grid grid-cols-2 gap-4">
-                    {[
-                      { value: 'under-10k', label: '$5k - $10k' },
-                      { value: '10k-20k', label: '$10k - $20k' },
-                      { value: '20k-50k', label: '$20k - $50k' },
-                      { value: '50k-plus', label: '$50k+' }
-                    ].map((range) => (
-                      <label key={range.value} className="flex items-center p-4 border border-gray-200 rounded-lg cursor-pointer hover:border-blue-400 transition-all duration-200 group bg-white">
-                        <input
-                          type="radio"
-                          name="budgetRange"
-                          value={range.value}
-                          checked={formData.budgetRange === range.value}
-                          onChange={handleInputChange}
-                          className="w-4 h-4 text-blue-600 border-gray-300 focus:ring-blue-500 focus:ring-2"
-                        />
-                        <span className={`ml-3 text-sm font-medium ${formData.budgetRange === range.value ? 'text-blue-700' : 'text-gray-700'
-                          }`}>
-                          {range.label}
-                        </span>
-                      </label>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Timeline */}
-                <div>
-                  <div className="relative">
-                    <select
-                      name="timeline"
-                      value={formData.timeline}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-4 pr-12 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-gray-900 bg-white appearance-none cursor-pointer"
-                      required
-                    >
-                      <option value="">📅 Preferred Timeline</option>
-                      <option value="asap">ASAP (Rush Job)</option>
-                      <option value="1-month">Within 1 Month</option>
-                      <option value="2-3-months">2-3 Months</option>
-                      <option value="3-6-months">3-6 Months</option>
-                      <option value="flexible">Flexible</option>
-                    </select>
-                    <div className="absolute inset-y-0 right-0 flex items-center pr-4 pointer-events-none">
-                      <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                      </svg>
+                  <div className="space-y-6">
+                    <div>
+                      <div className="text-sm text-gray-600 mb-3">Budget Range</div>
+                      <div className="space-y-3">
+                        {[
+                          { value: 'under-10k', label: '$5k - $10k' },
+                          { value: '10k-20k', label: '$10k - $20k' },
+                          { value: '20k-50k', label: '$20k - $50k' },
+                          { value: '50k-plus', label: '$50k+' }
+                        ].map((range) => (
+                          <label key={range.value} className="flex items-center cursor-pointer">
+                            <input
+                              type="radio"
+                              name="budgetRange"
+                              value={range.value}
+                              checked={formData.budgetRange === range.value}
+                              onChange={handleInputChange}
+                              className="w-4 h-4 text-blue-600 border-gray-300 focus:ring-blue-500 focus:ring-2"
+                            />
+                            <span className="ml-3 text-sm text-gray-700">
+                              {range.label}
+                            </span>
+                          </label>
+                        ))}
+                      </div>
                     </div>
+
+                    {/* Preferred Timeline with Clock Icon */}
+                    <div className="relative">
+                      <div className="absolute left-3 top-1/2 transform -translate-y-1/2 z-10">
+                        <Clock className="w-4 h-4 text-brand-ink" />
+                      </div>
+                      <select
+                        name="timeline"
+                        value={formData.timeline}
+                        onChange={handleInputChange}
+                        className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-gray-500 bg-white appearance-none cursor-pointer"
+                        required
+                      >
+                        <option value="">Preferred Timeline</option>
+                        <option value="asap">ASAP (Rush Job)</option>
+                        <option value="1-month">Within 1 Month</option>
+                        <option value="2-3-months">2-3 Months</option>
+                        <option value="3-6-months">3-6 Months</option>
+                        <option value="flexible">Flexible</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Right Column - Additional Preferences */}
+                <div className='bg-gray-50 p-6 rounded-2xl border border-gray-200'>
+                  <h2 className="text-lg font-semibold text-gray-900 mb-6">Additional Preferences</h2>
+
+                  <div className="space-y-4">
+                    <label className="flex items-center cursor-pointer">
+                      <input
+                        type="checkbox"
+                        name="additionalPreferences.nda"
+                        checked={formData.additionalPreferences.nda}
+                        onChange={handleInputChange}
+                        className="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500 focus:ring-2"
+                      />
+                      <span className="ml-3 text-sm text-gray-700">
+                        NDA Required
+                      </span>
+                    </label>
+
+                    <label className="flex items-center cursor-pointer">
+                      <input
+                        type="checkbox"
+                        name="additionalPreferences.scheduleCall"
+                        checked={formData.additionalPreferences.scheduleCall}
+                        onChange={handleInputChange}
+                        className="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500 focus:ring-2"
+                      />
+                      <span className="ml-3 text-sm text-gray-700">
+                        Schedule Consultation Call
+                      </span>
+                    </label>
+
+                    <label className="flex items-center cursor-pointer">
+                      <input
+                        type="checkbox"
+                        name="additionalPreferences.ongoingSupport"
+                        checked={formData.additionalPreferences.ongoingSupport}
+                        onChange={handleInputChange}
+                        className="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500 focus:ring-2"
+                      />
+                      <span className="ml-3 text-sm text-gray-700">
+                        Ongoing Support
+                      </span>
+                    </label>
                   </div>
                 </div>
               </div>
 
               {/* Hero Image */}
-              <div className="rounded-2xl overflow-hidden">
+              <div className="rounded-2xl overflow-hidden mb-8">
                 <img
                   src={uiuxWorkflowBannerImg}
                   alt="Professional workspace with multiple monitors showing design work"
@@ -540,7 +571,7 @@ export default function QuoteRequestForm() {
               </div>
 
               {/* Submit Button */}
-              <div className="text-center pt-4">
+              <div className="text-center">
                 <button
                   type="submit"
                   disabled={!isFormValid()}
@@ -562,11 +593,10 @@ export default function QuoteRequestForm() {
         {/* Floating Chat Button */}
         <button
           onClick={handleChatClick}
-          className="fixed bottom-96 right-6 text-white rounded-full shadow-lg  transition-all duration-300 hover:scale-110 z-40 group"
-          aria-label="Open Chat"
+className="fixed lg:sticky bottom-4 md:-bottom-85 lg:bottom-80 right-4 md:right-8 lg:left-[96vw] rounded-full transition-all duration-300 hover:scale-110 z-40 group"          aria-label="Open Chat"
         >
           {/* Swan Logo Icon */}
-          <div className="w-16 h-16 bg-white  flex items-center  justify-center">
+          <div className="w-16 h-16 flex items-center  justify-center">
             <img 
               src="/msgIcon.png" 
               alt="Swan Logo" 
@@ -581,8 +611,8 @@ export default function QuoteRequestForm() {
         {/* Chatbot Modal - Bottom Right Corner */}
         {showChatbot && (
           <div className="fixed inset-0 z-50 pointer-events-none">
-            <div className="absolute bottom-3 right-6 pointer-events-auto">
-              <div className="bg-white rounded-2xl shadow-2xl w-96 h-[800px] flex flex-col overflow-hidden border border-gray-200">
+            <div className="absolute bottom-3 right-0 pointer-events-auto">
+              <div className="bg-white rounded-2xl shadow-2xl w-96  h-[600px] flex flex-col overflow-hidden border border-gray-200">
                 {/* Modal Header */}
                 <div className="flex items-center justify-between p-4 border-b border-gray-200 bg-white">
                   <div className="flex items-center gap-3">
@@ -824,7 +854,7 @@ export default function QuoteRequestForm() {
                         onChange={(e) => setInputValue(e.target.value)}
                         onKeyPress={handleKeyPress}
                         placeholder="Hola!"
-                        className="w-full px-4 py-2 bg-gray-100 rounded-full text-sm outline-none focus:bg-gray-200 transition-colors"
+                        className="w-full px-4 py-2 bg-gray-100 text-brand-ink rounded-full text-sm outline-none focus:bg-gray-200 transition-colors"
                         disabled={isTyping}
                       />
                     </div>
@@ -891,7 +921,7 @@ export default function QuoteRequestForm() {
             <div className="bg-white rounded-2xl p-8 max-w-md w-full mx-4 relative shadow-2xl">
               <button
                 onClick={closeModal}
-                className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors"
+                className="absolute top-4 right-4 text-brand-ink hover:text-gray-600 transition-colors"
               >
                 <X className="w-5 h-5" />
               </button>

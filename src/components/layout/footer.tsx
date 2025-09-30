@@ -33,7 +33,7 @@ export function Footer() {
           {/* Links Container - Fully responsive grid */}
           <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-10 lg:gap-12 xl:gap-16">
             {/* Explore Links */}
-            <div className="space-y-3 sm:space-y-4">
+            <div className="space-y-3 sm:space-y-4 mt-2 md:mt-0 ">
               <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl text-white font-bold mb-3 sm:mb-4 lg:mb-5 xl:mb-6">Explore</h3>
               <ul className="space-y-2 sm:space-y-3 lg:space-y-4" style={{ color: '#696969' }}>
                 <li>

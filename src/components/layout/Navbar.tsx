@@ -51,28 +51,28 @@ export function Navbar() {
 
   return (
     <nav className="sticky top-0 z-50 w-full bg-white/90 backdrop-blur shadow-sm supports-[backdrop-filter]:bg-white/70">
-      <div className="mx-auto flex max-w-[1400px] items-center justify-between px-6 py-4 md:px-10">
+      <div className="mx-auto flex max-w-[1200px] items-center justify-between px-6 py-4 md:px-12 lg:px-10 xl:px-12">
         {/* Left: Logo */}
         <button onClick={() => navigate("/")} className="flex items-center gap-3">
           <img
             src="/SwanLogics-logo.png"
             alt="SwanLogics logo"
-            className="h-16 w-auto"
+            className="h-10 w-auto md:h-12 lg:h-14 xl:h-16 "
           />
         </button>
 
-        {/* Mobile Menu Button */}
+        {/* Mobile/Tablet Menu Button */}
         <button
-          className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-black/10 md:hidden"
+          className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-black/10 lg:hidden"
           aria-label="Toggle menu"
           aria-expanded={open}
           onClick={() => setOpen((s) => !s)}
         >
-          {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          {open ? <X className="h-6 w-6 text-brand-ink" /> : <Menu className="h-6 w-6 text-brand-ink" />}
         </button>
 
-        {/* Desktop Links */}
-        <div className="relative hidden items-center gap-8 md:flex">
+        {/* Desktop Links - Change md:flex to lg:flex */}
+        <div className="relative hidden items-center gap-8 md:gap-6 lg:gap-6 xl:gap-10 lg:flex">
           {links.map((link, i) => (
             <button
               key={link.label}
@@ -103,8 +103,8 @@ export function Navbar() {
           </div>
         </div>
 
-        {/* Desktop CTA */}
-        <div className="hidden items-center gap-3 md:flex relative ">
+        {/* Desktop CTA - Change md:flex to lg:flex */}
+        <div className="hidden items-center gap-3 lg:flex relative ">
           <img src="/Vector.svg" alt="" className="h-5 w-5 opacity-80" />
           <Button 
   onClick={() => navigate("/quote")}
@@ -119,7 +119,7 @@ export function Navbar() {
 
       {/* Mobile Dropdown */}
       <div
-        className={`md:hidden transition-all duration-300 ease-in-out overflow-hidden ${
+        className={`lg:hidden transition-all duration-300 ease-in-out overflow-hidden ${
           open ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0"
         }`}
       >
