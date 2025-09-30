@@ -42,7 +42,7 @@ export function HeroSection() {
         {/* Video within rectangle frame */}
         <div className="relative mt-4 sm:mt-8">
           {/* Desktop Action Buttons - Floating above video */}
-          <div className="hidden sm:flex gap-4 md:gap-6 lg:gap-10 mb-2 relative top-8 sm:top-12 md:top-16 lg:top-22 left-4 sm:left-8 md:left-32 lg:left-44">
+          <div className="hidden sm:flex gap-4 md:gap-6 lg:gap-10 mb-2 relative top-8 sm:top-12 md:top-16 lg:top-26 left-4 sm:left-8 md:left-32 lg:left-60">
             <a
               href="#projects"
               className="inline-flex items-center gap-2 rounded-full bg-brand-purple px-3 sm:px-4 md:px-5 lg:px-4 py-2 sm:py-2.5 md:py-3 font-dewi text-xs sm:text-sm md:text-base text-white shadow hover:bg-brand-purple/90 transition-colors whitespace-nowrap"
