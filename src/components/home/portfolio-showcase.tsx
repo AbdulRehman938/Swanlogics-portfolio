@@ -228,7 +228,7 @@ export function PortfolioShowcase() {
                   >
                     View All Projects
                   </Button>
-                  <img src="/Arrow 1-1.svg" alt="arrow" className="p-4 rounded-full bg-lime-300 text-brand-ink absolute  left-32" />
+                  <img src="/Arrow 1-1.svg" alt="arrow" className="p-[14px] rounded-full bg-lime-300 text-brand-ink absolute  left-[123px]" />
                 </div>
       </div>
     </section>

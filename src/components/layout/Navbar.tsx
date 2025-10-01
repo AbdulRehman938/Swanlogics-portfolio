@@ -108,12 +108,12 @@ export function Navbar() {
           <img src="/Vector.svg" alt="" className="h-5 w-5 opacity-80" />
           <Button 
   onClick={() => navigate("/quote")}
-  className="flex !text-brand-ink items-center gap-2 rounded-full bg-lime-300 px-6 py-5 font-bold"
+  className="flex !text-brand-ink items-center gap-2 rounded-full bg-lime-300 px-5 py-4 font-bold"
 >
   Start A Project
 </Button>
 
-            <img src="/Arrow 1-1.svg" alt="arrow" className="p-4 rounded-full bg-lime-300 text-brand-ink absolute left-40 " />
+            <img src="/Arrow 1-1.svg" alt="arrow" className="p-[14px] rounded-full bg-lime-300 text-brand-ink absolute  left-[152px]" />
         </div>
       </div>
 

@@ -121,11 +121,11 @@ export function Footer() {
             <div className="hidden md:flex items-center gap-3 relative right-20 top-6 transform -translate-y-1/2">
                                   <Button 
                                     onClick={() => navigate("/quote")}
-                                    className="flex !text-brand-ink text-lg items-center gap-2 rounded-full bg-lime-300 px-8 py-6 font-bold"
+                                    className="flex !text-brand-ink text-lg items-center gap-2 rounded-full bg-lime-300 px-8 py-4 font-bold"
                                   >
                                     Get A Quote
                                   </Button>
-                                  <img src="/Arrow 1-1.svg" alt="arrow" className="p-4 rounded-full bg-lime-300 text-brand-ink absolute left-32" />
+                                  <img src="/Arrow 1-1.svg" alt="arrow" className="p-[14px] rounded-full bg-lime-300 text-brand-ink absolute  left-[132px]" />
                                 </div>
           </div>
 

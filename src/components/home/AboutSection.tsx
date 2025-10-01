@@ -53,8 +53,10 @@ export default function AboutSection() {
             >
               More About Us
             </Button>
-            <img src="/Arrow 1-1.svg" alt="arrow" className="p-4 rounded-full bg-lime-300 text-brand-ink absolute left-32 " />
-            <img src="/maskArrow.svg" alt="bend arrow" className="absolute top-32 md:left-32 lg:left-60" />
+            <span className='absolute left-32  bg-lime-300 p-4 rounded-full '>
+               <img src="/Arrow 1-1.svg" alt="arrow" className=" rounded-full text-brand-ink w-[10px] h-[10px]  " />
+</span>
+            <img src="/maskArrow.svg" alt="bend arrow" className="absolute top-32 md:left-32 lg:left-60 " />
           </div>
         </div>
       </div>

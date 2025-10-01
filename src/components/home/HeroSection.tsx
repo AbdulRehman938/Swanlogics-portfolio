@@ -47,15 +47,17 @@ export function HeroSection() {
           <div className="hidden sm:flex gap-4 md:gap-12 lg:gap-10 mb-2 relative top-8 sm:top-12 md:top-9 lg:left-32  lg:top-[74px] left-4 sm:left-8 md:left-20 xl:gap-14 xl:top-[88px] xl:left-56 ">
             <a
               href="#projects"
-              className="inline-flex items-center gap-2 rounded-full bg-brand-purple px-1 sm:px-4 md:px-4 lg:px-5 py-1 sm:py-2.5 md:py-3 font-dewi text-xs sm:text-sm md:text-sm text-white shadow hover:bg-brand-purple/90 transition-colors whitespace-nowrap xl:px-6"
+              className="inline-flex items-center gap-2 rounded-full bg-brand-purple px-1 sm:px-4 md:px-4 lg:px-5 py-1 sm:py-2.5 md:py-2 font-dewi text-xs sm:text-sm md:text-sm text-white shadow hover:bg-brand-purple/90 transition-colors whitespace-nowrap xl:px-6"
             >
               View Our Work
             </a>
-            <img
+            <div className='rounded-full bg-brand-purple  absolute p-2 sm:p-3  lg:p-4 left-24 sm:left-28 md:left-22 md:p-[19px] lg:-top-[0px]  lg:left-[116px] xl:-top-0 xl:left-32 xl:p-4'>
+              <img
               src="/Arrow white.svg"
               alt="arrow"
-              className="rounded-full bg-brand-purple  absolute p-2 sm:p-3 lg:p-4   left-24 sm:left-28 md:left-22 md:p-4  lg:left-32 xl:-top-1 xl:left-32 xl:p-5"
+              className=" w-[10px] h-[10px]"
             />
+            </div>
             <a
               href="#team"
               className="inline-flex items-center gap-1 rounded-full border border-black/20 bg-white px-3 sm:px-4 md:px-1 lg:py-0 lg:px-1 xl:px-6 py-2 sm:py-2.5 md:py-3 hover:border-black/30 hover:bg-gray-50 transition-colors whitespace-nowrap"
@@ -63,7 +65,7 @@ export function HeroSection() {
               <span className="font-dewi text-xs sm:text-sm md:text-base text-brand-ink px-2 sm:px-3 md:px-4 lg:px-2">
                 Meet The Team
               </span>
-              <img src="/Arrow 1-1.svg" alt="arrow" className="h-3 w-3 sm:h-4 sm:w-4" />
+              <img src="/Arrow 1-1.svg" alt="arrow" className="w-[13px] h-[13px]" />
             </a>
           </div>
 

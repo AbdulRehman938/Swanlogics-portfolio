@@ -76,7 +76,7 @@ export function ServicesSection() {
             >
               View All Services
             </Button>
-            <img src="/Arrow 1-1.svg" alt="arrow" className="p-3 rounded-full bg-lime-300 text-brand-ink absolute left-36" />             
+            <img src="/Arrow 1-1.svg" alt="arrow" className="p-[14px] rounded-full bg-lime-300 text-brand-ink absolute  left-[139px]" />             
           </div>
         </div>
 
@@ -165,7 +165,7 @@ export function ServicesSection() {
               >
                 View All Services
               </Button>
-              <img src="/Arrow 1-1.svg" alt="arrow" className="p-3 rounded-full bg-lime-300 text-brand-ink absolute left-36" />                                 
+              <img src="/Arrow 1-1.svg" alt="arrow" className="p-[14px] rounded-full bg-lime-300 text-brand-ink absolute  left-[141px]" />                                 
             </div>
           </div>
 
