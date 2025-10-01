@@ -6,6 +6,8 @@ export function HeroSection() {
       <div className="relative mx-auto max-w-[1400px] px-4 pb-8 pt-8 sm:px-6 sm:pb-12 sm:pt-10 md:px-10 md:pt-16 ">
         {/* Heading + Actions */}
         <div className="relative z-10 max-w-full md:w-[400px] lg:w-[700px] xl:w-full xl:max-w-4xl ">
+        <img src="/Star.png" alt="mask group" className="w-4 h-4 absolute -top-14 sm:w-8 sm:h-8" />
+
           <h1 className="font-rf-dewi text-3xl sm:text-4xl md:text-4xl lg:text-6xl font-bold leading-tight">
             A Web Design And Branding
             <br className="hidden xs:block" />
