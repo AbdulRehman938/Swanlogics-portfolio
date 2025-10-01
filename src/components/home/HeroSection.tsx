@@ -5,8 +5,8 @@ export function HeroSection() {
     <section id="home" className="w-full bg-white overflow-x-hidden">
       <div className="relative mx-auto max-w-[1400px] px-4 pb-8 pt-8 sm:px-6 sm:pb-12 sm:pt-10 md:px-10 md:pt-16 ">
         {/* Heading + Actions */}
-        <div className="relative z-10 max-w-full md:w-96  lg:w-96 xl:w-full xl:max-w-4xl ">
-          <h1 className="font-rf-dewi text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+        <div className="relative z-10 max-w-full md:w-[400px] lg:w-[700px] xl:w-full xl:max-w-4xl ">
+          <h1 className="font-rf-dewi text-3xl sm:text-4xl md:text-4xl lg:text-6xl font-bold leading-tight">
             A Web Design And Branding
             <br className="hidden xs:block" />
             <span className="block xs:inline">Agency In Manchester</span>
@@ -40,7 +40,7 @@ export function HeroSection() {
         </div>
 
         {/* Video within rectangle frame */}
-        <div className="relative mt-4 sm:mt-8">
+        <div className="relative -mt-10">
           {/* Desktop Action Buttons - Floating above video */}
           <div className="hidden sm:flex gap-4 md:gap-12 lg:gap-10 mb-2 relative top-8 sm:top-12 md:top-9 lg:left-32  lg:top-[74px] left-4 sm:left-8 md:left-20 xl:gap-14 xl:top-[88px] xl:left-56 ">
             <a
@@ -79,7 +79,7 @@ export function HeroSection() {
           </div>
 
           {/* Desktop Wheel decoration - only show on larger screens */}
-          <div className="absolute -top-20 sm:-top-30 md:-top-56 lg:-top-72 xl:-top-52  right-0 w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-auto lg:h-auto hidden sm:block ">
+          <div className="absolute -top-20 sm:-top-30 md:-top-28 lg:-top-48 xl:-top-32   right-24 w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-32 lg:h-32 hidden sm:block ">
             <img
               src="/wheel.png"
               alt="decorative wheel"
