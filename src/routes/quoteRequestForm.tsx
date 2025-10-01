@@ -515,7 +515,7 @@ export default function QuoteRequestForm() {
                 </div>
 
                 {/* Right Column - Additional Preferences */}
-                <div className='bg-gray-50 p-6 rounded-2xl border border-gray-200'>
+                <div className='bg-gray-50 p-6 rounded-2xl border border-gray-200 h-56 relative'>
                   <h2 className="text-lg font-semibold text-gray-900 mb-6">Additional Preferences</h2>
 
                   <div className="space-y-4">
@@ -545,7 +545,7 @@ export default function QuoteRequestForm() {
                       </span>
                     </label>
 
-                    <label className="flex items-center cursor-pointer">
+                    <label className="flex items-center cursor-pointer ">
                       <input
                         type="checkbox"
                         name="additionalPreferences.ongoingSupport"
@@ -558,26 +558,14 @@ export default function QuoteRequestForm() {
                       </span>
                     </label>
                   </div>
-                </div>
-              </div>
-
-              {/* Hero Image */}
-              <div className="rounded-2xl overflow-hidden mb-8">
-                <img
-                  src={uiuxWorkflowBannerImg}
-                  alt="Professional workspace with multiple monitors showing design work"
-                  className="w-full h-64 object-cover"
-                />
-              </div>
-
               {/* Submit Button */}
-              <div className="text-center">
+              <div className="text-center absolute top-60 left-22">
                 <button
                   type="submit"
                   disabled={!isFormValid()}
                   className={`px-12 py-4 rounded-2xl font-semibold text-lg transition-all duration-300 transform ${isFormValid()
                       ? 'bg-lime-500 hover:bg-lime-600 text-white hover:scale-105 shadow-lg hover:shadow-xl'
-                      : 'bg-gray-300 text-gray-500 cursor-not-allowed'
+                      : 'bg-lime-300 text-gray-500 cursor-not-allowed'
                     }`}
                 >
                   Get My Quote
@@ -586,6 +574,18 @@ export default function QuoteRequestForm() {
                   We'll respond within 24-48 hours
                 </p>
               </div>
+                </div>
+              </div>
+
+              {/* Hero Image */}
+              <div className="rounded-2xl overflow-hiddenmb-8  mt-36">
+                <img
+                  src={uiuxWorkflowBannerImg}
+                  alt="Professional workspace with multiple monitors showing design work"
+                  className="w-full h-full object-fit"
+                />
+              </div>
+
             </div>
           </form>
         </div>
