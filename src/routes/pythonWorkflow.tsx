@@ -54,7 +54,7 @@ export default function PythonWorkflow() {
               key={i}
               className="text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold text-gray-900" // 📈 larger than before
             >
-              Let’s Work Together.
+              Let's Build Something Amazing.
             </div>
           ))}
         </div>
@@ -63,42 +63,42 @@ export default function PythonWorkflow() {
     );
   };
 
-  // Services data for the web services section
-  const webServices = [
+  // Services data for the python services section
+  const pythonServices = [
     {
       icon: Monitor,
-      title: "Web Design",
-      description: "We craft visually stunning and strategically effective websites that capture your brand's unique identity and captivate your audience from the first click.",
+      title: "Web Development",
+      description: "Build robust web applications using Python frameworks like Django and Flask. We create scalable backends, RESTful APIs, and full-stack solutions that power modern digital experiences.",
       color: "bg-lime-400"
     },
     {
       icon: ShoppingCart,
-      title: "ECommerce",
-      description: "Transform your online store into a powerful sales engine with intuitive product discovery, seamless checkout flows, and a shopping experience built for conversion.",
+      title: "Data Analysis",
+      description: "Transform raw data into actionable insights with Python's powerful libraries like Pandas, NumPy, and Matplotlib. We help you analyze trends, visualize data, and make data-driven decisions.",
       color: "bg-lime-400"
     },
     {
       icon: Heart,
-      title: "UX Design",
-      description: "Our user-centered approach focuses on creating intuitive, efficient, and enjoyable journeys that keep users engaged and coming back for more.",
+      title: "Machine Learning",
+      description: "Leverage Python's ML ecosystem including scikit-learn, TensorFlow, and PyTorch to build intelligent applications. From predictive models to recommendation systems, we bring AI to your projects.",
       color: "bg-lime-400"
     },
     {
       icon: Smartphone,
-      title: "Responsive",
-      description: "Your website will provide a flawless experience on any device, from desktops to smartphones, ensuring you reach and engage every customer.",
+      title: "Automation",
+      description: "Streamline workflows with Python scripting and automation. We create custom tools, web scrapers, and automated processes that save time and reduce manual effort across your operations.",
       color: "bg-lime-400"
     },
     {
       icon: FileText,
-      title: "Wireframes",
-      description: "We build clear, structural blueprints to strategically map out user journeys and functionality, establishing a solid foundation before visual design begins.",
+      title: "API Development",
+      description: "Design and implement powerful APIs using Python. We build secure, well-documented endpoints that integrate seamlessly with frontend applications and third-party services.",
       color: "bg-lime-400"
     },
     {
       icon: Target,
-      title: "Strategy",
-      description: "We go beyond aesthetics by defining clear goals, understanding your audience, and aligning your website's design with your overarching business objectives.",
+      title: "DevOps & Deployment",
+      description: "Ensure smooth deployment and maintenance of Python applications. We handle containerization, CI/CD pipelines, cloud deployment, and monitoring to keep your applications running reliably.",
       color: "bg-lime-400"
     }
   ];
@@ -107,42 +107,42 @@ export default function PythonWorkflow() {
   const projects = [
     {
       id: 1,
-      title: "Refreshing Gary Neville's Digital Presence",
-      subtitle: "Where Art Meets Emotion In Every Shot",
+      title: "E-Commerce Analytics Dashboard",
+      subtitle: "Data-Driven Insights for Online Retail Success",
       year: "2025",
-      author: "Gary Neville",
+      author: "TechCorp Solutions",
       imageUrl: project01  // No curly braces
     },
     {
       id: 2,
-      title: "Furniture Designed To The Greatest Extent",
-      subtitle: "Driving Innovative Growth",
+      title: "AI-Powered Recommendation Engine",
+      subtitle: "Personalized User Experiences at Scale",
       year: "2025",
-      author: "Gary Neville",
+      author: "InnovateAI Labs",
       imageUrl: project02  // No curly braces
     },
     {
       id: 3,
-      title: "A Workplace Consultancy Creating Inspiring Environments",
-      subtitle: "Brand, Design & Development Agency",
+      title: "Automated Financial Reporting System",
+      subtitle: "Streamlining Compliance and Analysis",
       year: "2025",
-      author: "Gary Neville",
+      author: "FinanceFlow Inc",
       imageUrl: project03  // No curly braces; fixed variable name
     },
      {
       id: 4,
-      title: "Furniture Designed To The Greatest Extent",
-      subtitle: "Driving Innovative Growth",
+      title: "Smart Inventory Management",
+      subtitle: "IoT-Enabled Warehouse Optimization",
       year: "2025",
-      author: "Gary Neville",
+      author: "LogiTech Systems",
       imageUrl: project02  // No curly braces
     },
     {
       id: 5,
-      title: "A Workplace Consultancy Creating Inspiring Environments",
-      subtitle: "Brand, Design & Development Agency",
+      title: "Healthcare Data Pipeline",
+      subtitle: "Secure Patient Data Processing Platform",
       year: "2025",
-      author: "Gary Neville",
+      author: "MediData Solutions",
       imageUrl: project01  // No curly braces; fixed variable name
     },
     // Add more projects as needed
@@ -203,21 +203,21 @@ export default function PythonWorkflow() {
             {/* 1. Header Section */}
             <div className="px-8 pt-8 pb-4">
               <div className="text-sm text-gray-500 bg-slate-50 p-4 w-fit rounded-full uppercase tracking-wider mb-4">
-                UI/UX Design Workflow
+                Python Development Workflow
               </div>
 
               <div className="grid lg:grid-cols-2 gap-12 items-start">
                 {/* Left Content: Title */}
                 <div>
                   <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-8">
-                    A UI/UX Design Studio In Manchester
+                    A Python Development Studio In Manchester
                   </h1>
                 </div>
 
                 {/* Right Content: Short Description */}
                 <div className="text-gray-600 leading-relaxed">
                   <p className="mb-6">
-                    We believe great design goes beyond visuals—it's about creating smooth, meaningful interactions. By blending creativity with strategy, we ensure every project not only looks stunning but also provides an effortless user journey.
+                    We believe great software goes beyond code—it's about creating efficient, scalable solutions. By combining Python's versatility with strategic thinking, we ensure every project not only functions flawlessly but also delivers measurable business value.
                   </p>
                 </div>
               </div>
@@ -230,7 +230,7 @@ export default function PythonWorkflow() {
               <div className="mb-12">
                 <p className="text-lg text-gray-600 leading-relaxed">
                   {/* Increased text size for better reading flow */}
-                  Our Manchester-based UI/UX design studio is committed to transforming ideas into digital experiences that truly connect with people. We begin every project by understanding user behavior, business objectives, and market trends to ensure the foundation is strong. From research and wireframing to prototyping and usability testing, our process is designed to create intuitive and visually compelling interfaces. Each design is carefully crafted to provide seamless navigation, consistent branding, and accessibility across all devices. By blending creativity with strategy, we deliver solutions that are not only aesthetically pleasing but also practical and results-driven.
+                  Our Manchester-based Python development studio is committed to transforming ideas into powerful software solutions. We begin every project by understanding your technical requirements, business objectives, and scalability needs. From planning and architecture to coding, testing, and deployment, our process is designed to create robust, maintainable applications. Each solution is carefully built to provide optimal performance, security, and reliability across all environments. By blending Python's ecosystem with best practices, we deliver solutions that are not only functional but also future-proof and results-driven.
                 </p>
               </div>
 
@@ -245,7 +245,7 @@ export default function PythonWorkflow() {
                 <button
                   className="inline-flex items-center gap-2 bg-lime-300 hover:bg-lime-400 transition-colors px-6 py-3 rounded-full font-medium text-gray-900 group absolute top-0  z-10"
                 >
-                  Tell Me More
+                  Learn More
                   <ArrowUpRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </button>
 
@@ -253,7 +253,7 @@ export default function PythonWorkflow() {
                 {/* Image */}
                 <img
                   src={uiuxWorkflowBannerImg}
-                  alt="UI/UX Designer working at desk with multiple monitors"
+                  alt="Python Developer working at desk with multiple monitors"
                   // Added 'block' to the image to ensure it behaves correctly
                   className="w-full h-full object-cover transform transition-transform duration-[2000ms] ease-in-out hover:scale-110 block"
                 // Reduced hover scale for a more controlled effect (from 125 to 110)
@@ -272,15 +272,15 @@ export default function PythonWorkflow() {
                 {/* Left Content */}
                 <div>
                   <div className="text-sm text-gray-500 uppercase tracking-wider mb-4">
-                    Requirement Gathering
+                    Requirement Analysis
                   </div>
 
                   <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-6">
-                    Understand Client Goals & Target Audience
+                    Understand Project Goals & Technical Requirements
                   </h2>
 
                   <p className="text-gray-600 leading-relaxed mb-8">
-                    Effective requirement gathering is the foundation of any successful project. It involves in-depth discussions with stakeholders to identify business objectives, user needs, and functional expectations. This phase ensures that the final product aligns with the client's vision and delivers tangible value to the end-users.
+                    Effective requirement analysis is the foundation of any successful Python project. It involves in-depth discussions with stakeholders to identify technical specifications, performance needs, and integration requirements. This phase ensures that the final solution aligns with your vision and delivers tangible value to your users.
                   </p>
 
                   <div className="space-y-4">
@@ -298,7 +298,7 @@ export default function PythonWorkflow() {
                         <Check className="w-4 h-4 text-purple-600" />
                       </div>
                       <p className="text-gray-700">
-                        Define user personas and their specific needs
+                        Define technical specifications and performance requirements
                       </p>
                     </div>
 
@@ -329,7 +329,7 @@ export default function PythonWorkflow() {
                     <div className="absolute inset-0">
                       <img
                         src={uiuxWorkflow2ndImg}
-                        alt="Team meeting discussing client goals"
+                        alt="Team meeting discussing project goals"
                         className="w-full h-full object-fit rounded-2xl transition-opacity duration-0 group-hover:opacity-0 group-hover:delay-0 delay-700"
                       />
                     </div>
@@ -338,7 +338,7 @@ export default function PythonWorkflow() {
                     <div className="absolute inset-0 transform -translate-x-full translate-y-full group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-700 ease-out">
                       <img
                         src={uiuxWorkflow2ndImg}
-                        alt="Team meeting discussing client goals"
+                        alt="Team meeting discussing project goals"
                         className="w-full h-full object-fit rounded-2xl"
                       />
                     </div>
@@ -366,7 +366,7 @@ export default function PythonWorkflow() {
         </div>
 
 
-        {/* Research & Analysis Section */}
+        {/* Research & Planning Section */}
         <div className="py-16 px-4 sm:px-6 lg:px-8 ">
           <div className="max-w-7xl mx-auto">
             <div className="px-8">
@@ -378,7 +378,7 @@ export default function PythonWorkflow() {
                     {/* Main Background Image */}
                     <img
                       src={uiuxWorkflow3rdImg}
-                      alt="Research and Analysis Illustration"
+                      alt="Research and Planning Illustration"
                       className="w-full h-full object-cover transform transition-transform duration-[2000ms] ease-in-out hover:scale-125"
                     />
                     <div className="absolute bottom-0 right-0 w-[105px] h-[60px] bg-white rounded-tl-xl">
@@ -393,15 +393,15 @@ export default function PythonWorkflow() {
                 {/* Right Content */}
                 <div>
                   <div className="text-sm bg-slate-50 w-fit p-3 rounded-full text-gray-500 uppercase tracking-wider mb-4">
-                    Research & Analysis
+                    Research & Planning
                   </div>
 
                   <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-6">
-                    Competitor Study, User Personas, Design Trends
+                    Technology Stack, Architecture, And Best Practices
                   </h2>
 
                   <p className="text-gray-600 leading-relaxed mb-8">
-                    Through research and analysis are critical for making informed design decisions. This phase involves a deep dive into the market landscape to understand competitor strengths and weaknesses, creating detailed profiles of target users, and identifying current and emerging design trends to ensure the final product is both competitive and user-centric.
+                    Through research and planning are critical for making informed technical decisions. This phase involves a deep dive into the technology landscape to understand framework capabilities, architectural patterns, and industry best practices. This ensures the final product is both technically sound and aligned with modern development standards.
                   </p>
 
                   <div className="space-y-4">
@@ -410,7 +410,7 @@ export default function PythonWorkflow() {
                         <Check className="w-4 h-4 text-purple-600" />
                       </div>
                       <p className="text-gray-700">
-                        Conduct a SWOT analysis of key competitors
+                        Conduct a technology assessment of available Python frameworks
                       </p>
                     </div>
 
@@ -419,7 +419,7 @@ export default function PythonWorkflow() {
                         <Check className="w-4 h-4 text-purple-600" />
                       </div>
                       <p className="text-gray-700">
-                        Develop detailed user personas based on real data and interviews
+                        Design scalable architecture and database schemas
                       </p>
                     </div>
 
@@ -428,7 +428,7 @@ export default function PythonWorkflow() {
                         <Check className="w-4 h-4 text-purple-600" />
                       </div>
                       <p className="text-gray-700">
-                        Audit and document relevant UI/UX design patterns and trends
+                        Audit and document relevant Python libraries and tools
                       </p>
                     </div>
 
@@ -437,7 +437,7 @@ export default function PythonWorkflow() {
                         <Check className="w-4 h-4 text-purple-600" />
                       </div>
                       <p className="text-gray-700">
-                        Synthesize findings into actionable insights for the strategy phase
+                        Synthesize findings into actionable technical specifications
                       </p>
                     </div>
                   </div>
@@ -448,7 +448,7 @@ export default function PythonWorkflow() {
           </div>
         </div>
 
-        {/* Information Architecture Section */}
+        {/* Architecture & Design Section */}
         <div className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="px-8">
@@ -457,15 +457,15 @@ export default function PythonWorkflow() {
                 {/* Left Content */}
                 <div>
                   <div className="text-sm bg-slate-50 w-fit p-3 rounded-full text-gray-500 uppercase tracking-wider mb-4">
-                    Information Architecture
+                    Architecture & Design
                   </div>
 
                   <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-6">
-                    Sitemap, Navigation, And Content Flow
+                    System Design, Database Schema, And API Structure
                   </h2>
 
                   <p className="text-gray-600 leading-relaxed mb-8">
-                    This phase focuses on structuring the product's information architecture. It involves creating a clear sitemap outlining all pages and content sections, designing intuitive navigation systems for seamless user experience, and mapping the content flow to ensure users can complete their tasks efficiently and find information without friction.
+                    This phase focuses on creating a solid technical foundation for your Python application. It involves designing the overall system architecture, defining database schemas, and structuring APIs for seamless data flow. This ensures users can interact with your application efficiently and data is managed effectively throughout the system.
                   </p>
 
                   <div className="space-y-4">
@@ -474,7 +474,7 @@ export default function PythonWorkflow() {
                         <Check className="w-4 h-4 text-purple-600" />
                       </div>
                       <p className="text-gray-700">
-                        Develop a hierarchical sitemap outlining all pages and content sections
+                        Develop a hierarchical system architecture diagram
                       </p>
                     </div>
 
@@ -483,7 +483,7 @@ export default function PythonWorkflow() {
                         <Check className="w-4 h-4 text-purple-600" />
                       </div>
                       <p className="text-gray-700">
-                        Define primary and secondary global navigation menus
+                        Define database schemas and relationships
                       </p>
                     </div>
 
@@ -492,7 +492,7 @@ export default function PythonWorkflow() {
                         <Check className="w-4 h-4 text-purple-600" />
                       </div>
                       <p className="text-gray-700">
-                        Map user journeys and key task flows for critical user goals
+                        Map data flows and API endpoints for key functionalities
                       </p>
                     </div>
 
@@ -501,7 +501,7 @@ export default function PythonWorkflow() {
                         <Check className="w-4 h-4 text-purple-600" />
                       </div>
                       <p className="text-gray-700">
-                        Establish a clear content strategy and inventory for each page
+                        Establish a clear data strategy and security measures
                       </p>
                     </div>
                   </div>
@@ -513,7 +513,7 @@ export default function PythonWorkflow() {
                     {/* Main Background Image */}
                     <img
                       src={uiuxWorkflow4thImg}
-                      alt="Information Architecture Illustration"
+                      alt="Architecture & Design Illustration"
                       className="w-full h-full object-cover transform transition-transform duration-[2000ms] ease-in-out hover:scale-125"
                     />
                     <div className="absolute top-0 left-0 w-[105px] h-[60px] bg-white rounded-br-xl">
@@ -530,38 +530,34 @@ export default function PythonWorkflow() {
           </div>
         </div>
 
-        {/* Wireframing & User Flow Section */}
+        {/* Development & Implementation Section */}
         <div className="py-16 px-4 sm:px-6 lg:px-8 bg-black rounded-t-3xl">
           <div className="max-w-7xl mx-auto">
             <div className="px-8">
               <div className="grid lg:grid-cols-2 gap-8 items-stretch">
 
-                {/* Left Content - Wireframing */}
+                {/* Left Content - Development */}
                 <div className=" rounded-2xl p-8 relative overflow-hidden">
                   {/* Small label */}
                   <div className="text-sm text-lime-400 uppercase text-center tracking-wider mb-4 font-medium">
-                    Wireframing
+                    Development
                   </div>
 
                   {/* Title */}
                   <h3 className="text-5xl font-bold text-white leading-tight mb-4 text-center">
-                    Low-Fidelity Screen<br />Layouts
+                    Clean Code<br />Implementation
                   </h3>
 
                   {/* Description */}
                   <p className="text-gray-300 leading-relaxed mb-8 text-sm text-center">
-                    Low-fidelity layouts, such as wireframes, are used to establish the basic
-                    structure and layout of key screens without visual design details. This
-                    allows the team to focus on functionality, user flow, and element
-                    placement ensuring a solid foundational experience before investing in
-                    visual design and content.
+                    Clean code implementation focuses on writing maintainable, efficient Python code that follows best practices. This involves using appropriate design patterns, writing comprehensive unit tests, and ensuring code readability and scalability. This allows the team to focus on functionality while maintaining high code quality standards.
                   </p>
 
-                  {/* User Flow Image */}
+                  {/* Code Image */}
                   <div className="relative flex justify-center overflow-hidden rounded-xl">
                     <img
                       src={wireframe01}
-                      alt="Low-fidelity wireframe layouts"
+                      alt="Clean code implementation"
                       className="w-full h-auto object-cover transform transition-transform duration-[2000ms] ease-in-out hover:scale-125"
                     />
 
@@ -577,32 +573,28 @@ export default function PythonWorkflow() {
                   </div>
                 </div>
 
-                {/* Right Content - User Flow Mapping */}
+                {/* Right Content - Testing */}
                 <div className="rounded-2xl p-8 container relative overflow-hidden">
                   {/* Small label */}
                   <div className="text-sm text-lime-400 uppercase text-center tracking-wider mb-4 font-medium">
-                    User Flow Mapping
+                    Testing & Quality Assurance
                   </div>
 
                   {/* Title */}
                   <h3 className="text-5xl font-bold text-white leading-tight mb-4 text-center">
-                    Define Journeys For<br />Smooth Navigation
+                    Ensure Robust<br />Functionality
                   </h3>
 
                   {/* Description */}
                   <p className="text-gray-300 leading-relaxed mb-8 text-sm text-center">
-                    Mapping user journeys is essential for creating an intuitive experience.
-                    This process involves outlining the step-by-step paths users will take to
-                    complete key tasks, identifying potential pain points, and ensuring the
-                    navigation is logical and efficient. This helps in creating a seamless flow
-                    that guides users effortlessly to their goals.
+                    Comprehensive testing is essential for delivering reliable Python applications. This process involves writing and executing various types of tests to identify bugs, performance issues, and security vulnerabilities. This helps in creating a robust application that performs well under different conditions and scenarios.
                   </p>
 
-                  {/* User Flow Image */}
+                  {/* Testing Image */}
                   <div className="relative flex justify-center overflow-hidden rounded-xl">
                     <img
                       src={wireframe02}
-                      alt="User flow mapping and journey definition"
+                      alt="Testing and quality assurance"
                       className="w-full h-auto object-cover transform transition-transform duration-[2000ms] ease-in-out hover:scale-125"
                     />
 
@@ -624,28 +616,28 @@ export default function PythonWorkflow() {
           </div>
         </div>
 
-        {/* Prototyping*/}
+        {/* Prototyping & MVP Section */}
         <div className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
 
             {/* 1. Header Section */}
             <div className="px-8 pt-8 pb-4">
               <div className="text-sm bg-slate-50 w-fit p-3 rounded-full text-gray-500 uppercase tracking-wider mb-4">
-                Prototyping
+                Prototyping & MVP
               </div>
 
               <div className="grid lg:grid-cols-2 gap-12 items-start">
                 {/* Left Content: Title */}
                 <div>
                   <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-8">
-                    Clickable mid/high-fidelity prototypes
+                    Functional prototypes and minimum viable products
                   </h1>
                 </div>
 
                 {/* Right Content: Short Description */}
                 <div className="text-gray-600 leading-relaxed">
                   <p className="mb-6">
-                    Clickable mid and high-fidelity prototypes transform static designs into dynamic, interactive models that closely mimic the final product. They are essential for validating complex user flows, conducting effective usability testing to gather actionable feedback, and clearly communicating the intended functionality and experience to stakeholders and developers before committing to costly development.                  </p>
+                    Functional prototypes and MVPs transform abstract ideas into tangible, working software. They are essential for validating technical feasibility, gathering early user feedback, and demonstrating core functionality before investing in full-scale development.                  </p>
                 </div>
               </div>
             </div>
@@ -669,7 +661,7 @@ export default function PythonWorkflow() {
                 {/* Image */}
                 <img
                   src={uiuxWorkflow05}
-                  alt="UI/UX Designer working at desk with multiple monitors"
+                  alt="Python Developer working on prototype"
                   className="w-full h-full object-cover transform transition-transform duration-[2000ms] ease-in-out hover:scale-110 block"
                 />
               </div>
@@ -677,7 +669,7 @@ export default function PythonWorkflow() {
           </div>
         </div>
 
-        {/* Visual Design */}
+        {/* Deployment & Optimization Section */}
         <div className="py-16 px-4 sm:px-6 lg:px-8 ">
           <div className="max-w-7xl mx-auto">
             <div className="px-8">
@@ -689,7 +681,7 @@ export default function PythonWorkflow() {
                     {/* Main Background Image */}
                     <img
                       src={uiuxWorkflow06}
-                      alt="Research and Analysis Illustration"
+                      alt="Deployment & Optimization Illustration"
                       className="w-full h-full object-cover transform transition-transform duration-[2000ms] ease-in-out hover:scale-125"
                     />
                     <div className="absolute bottom-0 right-0 w-[105px] h-[60px] bg-white rounded-tl-xl">
@@ -704,15 +696,15 @@ export default function PythonWorkflow() {
                 {/* Right Content */}
                 <div>
                   <div className="text-sm bg-slate-50 w-fit p-3 rounded-full text-gray-500 uppercase tracking-wider mb-4">
-                    Visual Design
+                    Deployment & Optimization
                   </div>
 
                   <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-6">
-                    Branding, colors, typography, components
+                    Production deployment, monitoring, performance tuning
                   </h2>
 
                   <p className="text-gray-600 leading-relaxed mb-8">
-                    Our visual design process translates your brand's essence into a compelling and intuitive user interface. We craft pixel-perfect experiences by meticulously defining the core elements that users see and interact with. This includes establishing a cohesive color palette that reflects your brand identity and guides user behavior, selecting typography that ensures readability and personality, and building a robust library of reusable UI components.
+                    Our deployment process ensures your Python application launches successfully and performs optimally in production. We handle containerization, cloud deployment, performance monitoring, and continuous optimization to maintain high availability and user satisfaction.
                   </p>
 
                   <div className="space-y-4">
@@ -721,7 +713,7 @@ export default function PythonWorkflow() {
                         <Check className="w-4 h-4 text-purple-600" />
                       </div>
                       <p className="text-gray-700">
-                        Brand Identity & Logo Integration.
+                        Containerization with Docker and orchestration
                       </p>
                     </div>
 
@@ -730,7 +722,7 @@ export default function PythonWorkflow() {
                         <Check className="w-4 h-4 text-purple-600" />
                       </div>
                       <p className="text-gray-700">
-                        Color Palette & Accessibility Compliance.
+                        Cloud deployment on AWS, GCP, or Azure
                       </p>
                     </div>
 
@@ -739,7 +731,7 @@ export default function PythonWorkflow() {
                         <Check className="w-4 h-4 text-purple-600" />
                       </div>
                       <p className="text-gray-700">
-                        Typography Hierarchy & Web Fonts.
+                        Performance monitoring and optimization
                       </p>
                     </div>
 
@@ -748,7 +740,7 @@ export default function PythonWorkflow() {
                         <Check className="w-4 h-4 text-purple-600" />
                       </div>
                       <p className="text-gray-700">
-                        UI Component & Design System Creation.
+                        CI/CD pipeline setup and maintenance
                       </p>
                     </div>
                   </div>
@@ -759,7 +751,7 @@ export default function PythonWorkflow() {
           </div>
         </div>
 
-        {/* Usability testing */}
+        {/* Quality Assurance Section */}
         <div className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="px-8">
@@ -768,15 +760,15 @@ export default function PythonWorkflow() {
                 {/* Left Content */}
                 <div>
                   <div className="text-sm bg-slate-50 w-fit p-3 rounded-full text-gray-500 uppercase tracking-wider mb-4">
-                    Usability Testing
+                    Quality Assurance
                   </div>
 
                   <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-6">
-                    Validate design with users, collect feedback
+                    Comprehensive testing, security audits, performance validation
                   </h2>
 
                   <p className="text-gray-600 leading-relaxed mb-8">
-                    Usability testing is a crucial step that places your design directly in front of real users to identify pain points, uncover opportunities, and validate design decisions before launch. We facilitate structured tests where participants complete specific tasks while we observe their behavior, gather their feedback, and measure key metrics like success rates and task time.
+                    Quality assurance is a crucial step that places your Python application through rigorous testing to identify vulnerabilities, performance bottlenecks, and functionality issues. We facilitate structured testing phases where we validate code quality, security measures, and system performance before production deployment.
                   </p>
 
                   <div className="space-y-4">
@@ -785,7 +777,7 @@ export default function PythonWorkflow() {
                         <Check className="w-4 h-4 text-purple-600" />
                       </div>
                       <p className="text-gray-700">
-                        Recruit target users & develop test scenarios.
+                        Unit testing, integration testing, and end-to-end validation
                       </p>
                     </div>
 
@@ -794,7 +786,7 @@ export default function PythonWorkflow() {
                         <Check className="w-4 h-4 text-purple-600" />
                       </div>
                       <p className="text-gray-700">
-                        Conduct moderated or unmoderated testing sessions.
+                        Security audits and vulnerability assessments
                       </p>
                     </div>
 
@@ -803,7 +795,7 @@ export default function PythonWorkflow() {
                         <Check className="w-4 h-4 text-purple-600" />
                       </div>
                       <p className="text-gray-700">
-                        Analyze user behavior, feedback, and performance metrics.
+                        Load testing and performance benchmarking
                       </p>
                     </div>
 
@@ -812,7 +804,7 @@ export default function PythonWorkflow() {
                         <Check className="w-4 h-4 text-purple-600" />
                       </div>
                       <p className="text-gray-700">
-                        Synthesize findings into actionable insights for iteration.
+                        Code reviews and quality assurance checks
                       </p>
                     </div>
                   </div>
@@ -824,7 +816,7 @@ export default function PythonWorkflow() {
                     {/* Main Background Image */}
                     <img
                       src={uiuxWorkflow07}
-                      alt="Information Architecture Illustration"
+                      alt="Quality Assurance Illustration"
                       className="w-full h-full object-cover transform transition-transform duration-[2000ms] ease-in-out hover:scale-125"
                     />
                     <div className="absolute top-0 left-0 w-[105px] h-[60px] bg-white rounded-br-xl">
@@ -841,7 +833,7 @@ export default function PythonWorkflow() {
           </div>
         </div>
 
-        {/* Web Services Section - Integrated */}
+        {/* Python Services Section - Integrated */}
         <div className="relative min-h-screen bg-black text-white overflow-hidden">
           {/* Background Pattern */}
           <div className="absolute inset-0 opacity-10">
@@ -859,13 +851,13 @@ export default function PythonWorkflow() {
                 <span className="text-lime-400 text-sm font-medium">What We Can Help You With</span>
               </div>
               <h1 className="text-4xl md:text-5xl text-white lg:text-6xl xl:text-7xl font-bold leading-tight max-w-5xl mx-auto">
-                A Team Of Web Design Experts That Can Help You Design And Build A Website You're Proud Of
+                A Team Of Python Experts That Can Help You Build And Deploy Software You're Proud Of
               </h1>
             </div>
 
             {/* Services Grid */}
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 mb-16">
-              {webServices.map((service, index) => (
+              {pythonServices.map((service, index) => (
                 <div
                   key={index}
                   className="group cursor-pointer transition-all duration-300 hover:transform hover:scale-105"
@@ -901,7 +893,7 @@ export default function PythonWorkflow() {
           </div>
         </div>
 
-        {/* Iteration and refinement */}
+        {/* Iteration and Maintenance Section */}
         <div className="py-16 px-4 sm:px-6 lg:px-8 ">
           <div className="max-w-7xl mx-auto">
             <div className="px-8">
@@ -910,13 +902,13 @@ export default function PythonWorkflow() {
                 {/* Left Illustration */}
                 <div className="relative">
                   <div className="text-sm bg-slate-50 w-fit p-3 rounded-full text-gray-500 uppercase tracking-wider mb-4">
-                    Research & Analysis
+                    Iteration & Maintenance
                   </div>
                   <div className="relative rounded-3xl overflow-hidden ">
                     {/* Main Background Image */}
                     <img
                       src={uiuxWorkflow08}
-                      alt="Iteration and Refinement Illustration"
+                      alt="Iteration and Maintenance Illustration"
                       className="w-full h-full object-cover transform transition-transform duration-[2000ms] ease-in-out hover:scale-125"
                     />
                   </div>
@@ -925,11 +917,11 @@ export default function PythonWorkflow() {
                 {/* Right Content */}
                 <div>
                   <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-6">
-                    Improve Design Based On Feedback
+                    Continuous Improvement Based On Usage Data
                   </h2>
 
                   <p className="text-gray-600 leading-relaxed mb-8">
-                    True design excellence is achieved through a cycle of creation, feedback, and refinement. We systematically gather and analyze input from users and stakeholders to identify key areas for enhancement. This iterative process ensures the final product is not only beautiful but also highly functional, intuitive, and perfectly aligned with both user needs and business goals.
+                    True software excellence is achieved through a cycle of deployment, monitoring, and refinement. We systematically analyze usage patterns, performance metrics, and user feedback to identify key areas for enhancement. This iterative process ensures the final product is not only functional but also highly optimized and perfectly aligned with both user needs and business goals.
                   </p>
                 </div>
 
@@ -938,21 +930,21 @@ export default function PythonWorkflow() {
           </div>
         </div>
 
-        {/* Design Handoff*/}
+        {/* Documentation & Handoff Section */}
         <div className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
 
             {/* 1. Header Section */}
             <div className="px-8 pt-8 pb-4">
               <div className="text-sm bg-slate-50 w-fit p-3 rounded-full text-gray-500 uppercase tracking-wider mb-4">
-                Design Handoff
+                Documentation & Handoff
               </div>
 
               <div className="grid lg:grid-cols-2 gap-12 items-start">
                 {/* Left Content: Title */}
                 <div>
                   <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-8">
-                    Final assets, style guide & prototypes to devs
+                    Complete documentation, deployment guides & maintenance support
                   </h1>
                 </div>
               </div>
@@ -977,7 +969,7 @@ export default function PythonWorkflow() {
                 {/* Image */}
                 <img
                   src={uiuxWorkflow09}
-                  alt="UI/UX Designer working at desk with multiple monitors"
+                  alt="Python Developer documenting code"
                   className="w-full h-full object-cover transform transition-transform duration-[2000ms] ease-in-out hover:scale-110 block"
                 />
               </div>
@@ -991,7 +983,7 @@ export default function PythonWorkflow() {
           <div className="max-w-7xl mx-auto">
             <div className="flex justify-between items-center mb-6">
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
-                Our Favorite Web Design Projects
+                Our Favorite Python Development Projects
               </h2>
               <div className="flex gap-4">
                 <button
