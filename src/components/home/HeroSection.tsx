@@ -25,7 +25,7 @@ export function HeroSection() {
         </div>
 
         {/* Mobile Action Buttons - Show on mobile before video */}1
-        <div className="flex flex-col gap-3 mb-6 sm:hidden w-full mt-6">
+        <div className="flex flex-col gap-3 mb-16 sm:hidden w-full mt-6 ">
           <a
             href="#projects"
             className="inline-flex items-center justify-center gap-3 rounded-full bg-brand-purple px-6 py-3 font-dewi text-xs uppercase tracking-[0.2em] text-white shadow hover:bg-brand-purple/90 transition-colors w-full"
