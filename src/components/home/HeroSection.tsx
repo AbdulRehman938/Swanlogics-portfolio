@@ -51,7 +51,7 @@ export function HeroSection() {
             >
               View Our Work
             </a>
-            <div className='rounded-full bg-brand-purple  absolute p-2 sm:p-3  lg:p-4 left-24 sm:left-28 md:left-22 md:p-[19px] lg:-top-[0px]  lg:left-[116px] xl:-top-0 xl:left-32 xl:p-4'>
+            <div className='rounded-full bg-brand-purple  absolute p-2 sm:p-3  lg:p-[16px] left-24 sm:left-28 md:left-22 md:p-[19px] lg:-top-[2px]  lg:left-[116px] xl:-top-[3px] xl:left-32 xl:p-[16px]'>
               <img
               src="/Arrow white.svg"
               alt="arrow"
