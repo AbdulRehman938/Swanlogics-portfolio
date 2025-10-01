@@ -76,7 +76,7 @@ export function HeroSection() {
               loop
               playsInline
               className="w-full h-full object-cover min-h-[250px] sm:min-h-[350px] md:min-h-[450px] lg:min-h-[550px]"
-              poster="/Rectangle 31-2.png"
+              // poster="/Rectangle 31-2.png"
             />
           </div>
 
