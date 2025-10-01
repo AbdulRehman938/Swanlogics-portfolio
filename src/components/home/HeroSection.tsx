@@ -14,14 +14,6 @@ export function HeroSection() {
             <span className="block xs:inline">Agency In Manchester</span>
           </h1>
 
-          {/* Mobile Wheel decoration - in front of heading */}
-          <div className="absolute -top-8 right-0 w-16 h-16 sm:hidden">
-            <img
-              src="/wheel.png"
-              alt="decorative wheel"
-              className="h-full w-full object-contain opacity-80"
-            />
-          </div>
         </div>
 
         {/* Mobile Action Buttons - Show on mobile before video */}1
