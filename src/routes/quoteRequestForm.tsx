@@ -120,7 +120,7 @@ export default function QuoteRequestForm() {
     return requiredFields.every(field => formData[field].trim() !== '');
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (!isFormValid()) {
@@ -128,28 +128,61 @@ export default function QuoteRequestForm() {
       return;
     }
 
-    console.log('Form submitted:', formData);
-    setShowModal(true);
+    try {
+      const apiData = {
+        service: formData.serviceType,
+        projectTitle: formData.projectTitle,
+        projectDescription: formData.description,
+        budgetRange: formData.budgetRange,
+        preferredTimeline: formData.timeline,
+        name: formData.name,
+        companyName: formData.companyName,
+        email: formData.email,
+        phoneNumber: formData.phone,
+        ndaRequired: formData.additionalPreferences.nda,
+        scheduleProposalCall: formData.additionalPreferences.scheduleCall,
+        ongoingSupport: formData.additionalPreferences.ongoingSupport
+      };
 
-    // Reset form
-    setFormData({
-      name: '',
-      companyName: '',
-      email: '',
-      phone: '',
-      serviceType: '',
-      projectTitle: '',
-      description: '',
-      budgetRange: '',
-      timeline: '',
-      preferredTimeline: '',
-      additionalPreferences: {
-        nda: false,
-        scheduleCall: false,
-        ongoingSupport: false
-      },
-      files: []
-    });
+      const response = await fetch('https://swanlogics-backend.vercel.app/quote', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(apiData)
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to submit quote request');
+      }
+
+      const result = await response.json();
+      console.log('Quote submitted successfully:', result);
+      setShowModal(true);
+
+      // Reset form
+      setFormData({
+        name: '',
+        companyName: '',
+        email: '',
+        phone: '',
+        serviceType: '',
+        projectTitle: '',
+        description: '',
+        budgetRange: '',
+        timeline: '',
+        preferredTimeline: '',
+        additionalPreferences: {
+          nda: false,
+          scheduleCall: false,
+          ongoingSupport: false
+        },
+        files: []
+      });
+    } catch (error) {
+      console.error('Error submitting quote:', error);
+      alert('Failed to submit quote request. Please try again.');
+    }
   };
 
   const closeModal = () => {
@@ -175,7 +208,7 @@ export default function QuoteRequestForm() {
     inputRef.current?.focus();
   };
 
-  const handleSendMessage = () => {
+  const handleSendMessage = async () => {
     if (inputValue.trim()) {
       const newMessage = {
         id: Date.now(),
@@ -185,25 +218,50 @@ export default function QuoteRequestForm() {
       };
 
       setMessages(prev => [...prev, newMessage]);
+      const userMessage = inputValue.trim();
       setInputValue('');
       setShowEmojiPicker(false);
       setIsTyping(true);
 
-      // Simulate bot typing and response
-      setTimeout(() => {
+      try {
+        // Call the API endpoint
+        const response = await fetch('https://swanlogics-backend.vercel.app/chat', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            message: userMessage
+          })
+        });
+
+        if (!response.ok) {
+          throw new Error('API request failed');
+        }
+
+        const data = await response.json();
+        
         setIsTyping(false);
-        const randomResponse = botResponses[Math.floor(Math.random() * botResponses.length)];
         const botResponse = {
           id: Date.now() + 1,
-          text: randomResponse,
+          text: data.reply || "I'm here to help! Could you please rephrase your question?",
           isBot: true,
           time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
         };
         setMessages(prev => [...prev, botResponse]);
-      }, 2000 + Math.random() * 1000);
+      } catch (error) {
+        console.error('Error calling chat API:', error);
+        setIsTyping(false);
+        const errorResponse = {
+          id: Date.now() + 1,
+          text: "I'm having trouble connecting right now. Please try again in a moment.",
+          isBot: true,
+          time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+        };
+        setMessages(prev => [...prev, errorResponse]);
+      }
     }
   };
-
   const handleKeyPress = (e) => {
     if (e.key === 'Enter' && !e.shiftKey) {
       e.preventDefault();
@@ -943,12 +1001,12 @@ className="fixed lg:sticky bottom-4 md:-bottom-85 lg:bottom-80 right-4 md:right-
               </div>
 
               <div className="space-y-3">
-                <button
+                {/* <button
                   onClick={closeModal}
                   className="w-full bg-lime-400 hover:bg-lime-500 text-black font-semibold py-3 px-6 rounded-xl transition-colors"
                 >
                   Get My Quote
-                </button>
+                </button> */}
 
                 <button
                   onClick={handleSubmitAnother}

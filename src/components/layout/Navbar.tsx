@@ -57,7 +57,7 @@ export function Navbar() {
           <img
             src="/SwanLogics-logo.png"
             alt="SwanLogics logo"
-            className="h-10 w-auto md:h-12 lg:h-14 xl:h-16 "
+            className="h-6 w-auto md:h-7 lg:h-9 xl:h-13 "
           />
         </button>
 
@@ -82,11 +82,10 @@ export function Navbar() {
                 const targetPath = link.label === "Home" ? "/" : link.href;
                 navigate(targetPath);
               }}
-              className={`relative text-[18px] transition-colors ${
-                active === link.label
+              className={`relative text-[18px] transition-colors ${active === link.label
                   ? "text-brand-ink font-semibold"
                   : "text-brand-ink/70 hover:text-brand-ink"
-              }`}
+                }`}
             >
               {link.label}
             </button>
@@ -106,22 +105,21 @@ export function Navbar() {
         {/* Desktop CTA - Change md:flex to lg:flex */}
         <div className="hidden items-center gap-3 lg:flex relative ">
           <img src="/Vector.svg" alt="" className="h-5 w-5 opacity-80" />
-          <Button 
-  onClick={() => navigate("/quote")}
-  className="flex !text-brand-ink items-center gap-2 rounded-full bg-lime-300 px-5 py-4 font-bold"
->
-  Start A Project
-</Button>
+          <Button
+            onClick={() => navigate("/quote")}
+            className="flex !text-brand-ink items-center gap-2 rounded-full bg-lime-300 px-5 py-4 font-bold"
+          >
+            Start A Project
+          </Button>
 
-            <img src="/Arrow 1-1.svg" alt="arrow" className="p-[14px] rounded-full bg-lime-300 text-brand-ink absolute  left-[152px]" />
+          <img src="/Arrow 1-1.svg" alt="arrow" className="p-[14px] rounded-full bg-lime-300 text-brand-ink absolute  left-[152px]" />
         </div>
       </div>
 
       {/* Mobile Dropdown */}
       <div
-        className={`lg:hidden transition-all duration-300 ease-in-out overflow-hidden ${
-          open ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0"
-        }`}
+        className={`lg:hidden transition-all duration-300 ease-in-out overflow-hidden ${open ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0"
+          }`}
       >
         <div className="mx-auto flex max-w-[1400px] flex-col gap-4 px-6 py-3">
           {links.map((link) => (
@@ -132,16 +130,15 @@ export function Navbar() {
                 navigate(targetPath);
                 setOpen(false);
               }}
-              className={`text-base transition-colors ${
-                active === link.label
+              className={`text-base transition-colors ${active === link.label
                   ? "text-brand-ink font-semibold"
                   : "text-brand-ink/70 hover:text-brand-ink"
-              }`}
+                }`}
             >
               {link.label}
             </button>
           ))}
-          
+
         </div>
       </div>
     </nav>
