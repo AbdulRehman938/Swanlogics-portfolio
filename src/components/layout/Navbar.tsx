@@ -56,7 +56,6 @@ export function Navbar() {
         <button onClick={() => navigate("/")} className="flex items-center gap-3">
           <img
             src="/SwanLogics-logo.png"
-            alt="SwanLogics logo"
             className="h-6 w-auto md:h-7 lg:h-9 xl:h-13 "
           />
         </button>
