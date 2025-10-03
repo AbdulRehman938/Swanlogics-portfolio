@@ -2,16 +2,13 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useNavigate, useLocation } from "react-router-dom";
-
 export function Navbar() {
   const [open, setOpen] = React.useState(false);
   const [active, setActive] = React.useState("Home");
   const [starPos, setStarPos] = React.useState({ left: 0, width: 0 });
-
   const linkRefs = React.useRef([]);
   const navigate = useNavigate();
   const location = useLocation();
-
   const links = [
     { label: "Home", href: "/home" },
     { label: "Our Services", href: "/services" },
@@ -19,7 +16,6 @@ export function Navbar() {
     { label: "Quotation", href: "/quote" },
     { label: "Contact Us", href: "/contact" },
   ];
-
   // Sync active state with current pathname
   React.useEffect(() => {
     // Handle root path and /home as the same
@@ -35,7 +31,6 @@ export function Navbar() {
       }
     }
   }, [location.pathname]); // Removed links from dependency array
-
   React.useEffect(() => {
     const activeIndex = links.findIndex((l) => l.label === active);
     const el = linkRefs.current[activeIndex];
@@ -48,18 +43,17 @@ export function Navbar() {
       });
     }
   }, [active]);
-
   return (
-    <nav className="sticky top-0 z-50 w-full bg-white/90 backdrop-blur shadow-sm supports-[backdrop-filter]:bg-white/70">
-      <div className="mx-auto flex max-w-[1200px] items-center justify-between px-6 py-4 md:px-12 lg:px-10 xl:px-12">
+    <nav className="sticky top-0 z-50 w-full ml-auto items-center bg-white/90 backdrop-blur shadow-sm supports-[backdrop-filter]:bg-white/70">
+      <div className="flex mx-auto max-w-[1380px] items-center justify-between px-6 py-4 md:px-12 lg:px-10 xl:px-12">
         {/* Left: Logo */}
         <button onClick={() => navigate("/")} className="flex items-center gap-3">
           <img
-            src="/SwanLogics-logo.png"
+            src="/Swanlogics logo purple.png"
+            alt="SwanLogics logo"
             className="h-6 w-auto md:h-7 lg:h-9 xl:h-13 "
           />
         </button>
-
         {/* Mobile/Tablet Menu Button */}
         <button
           className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-black/10 lg:hidden"
@@ -69,9 +63,8 @@ export function Navbar() {
         >
           {open ? <X className="h-6 w-6 text-brand-ink" /> : <Menu className="h-6 w-6 text-brand-ink" />}
         </button>
-
         {/* Desktop Links - Change md:flex to lg:flex */}
-        <div className="relative hidden items-center gap-8 md:gap-6 lg:gap-6 xl:gap-10 lg:flex">
+        <div className="relative flex justify-center items-center gap-8 md:gap-6 lg:gap-6 xl:gap-10 lg:flex">
           {links.map((link, i) => (
             <button
               key={link.label}
@@ -89,7 +82,6 @@ export function Navbar() {
               {link.label}
             </button>
           ))}
-
           {/* Moving Star Indicator */}
           <div
             className="absolute top-full mt-1 h-3 w-3 -translate-x-1/2 transition-all duration-300"
@@ -100,21 +92,18 @@ export function Navbar() {
             <img src="/Star.png" alt="active indicator" className="h-3 w-3" />
           </div>
         </div>
-
         {/* Desktop CTA - Change md:flex to lg:flex */}
         <div className="hidden items-center gap-3 lg:flex relative ">
-          <img src="/Vector.svg" alt="" className="h-5 w-5 opacity-80" />
+          {/* <img src="/Vector.svg" alt="" className="h-5 w-5 opacity-80" /> */}
           <Button
             onClick={() => navigate("/quote")}
-            className="flex !text-brand-ink items-center gap-2 rounded-full bg-lime-300 px-5 py-4 font-bold"
+            className="flex !text-brand-ink items-center gap-2 rounded-full bg-lime-300 px-9 py-4 font-bold"
           >
             Start A Project
           </Button>
-
           <img src="/Arrow 1-1.svg" alt="arrow" className="p-[14px] rounded-full bg-lime-300 text-brand-ink absolute  left-[152px]" />
         </div>
       </div>
-
       {/* Mobile Dropdown */}
       <div
         className={`lg:hidden transition-all duration-300 ease-in-out overflow-hidden ${open ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0"
@@ -137,7 +126,6 @@ export function Navbar() {
               {link.label}
             </button>
           ))}
-
         </div>
       </div>
     </nav>
