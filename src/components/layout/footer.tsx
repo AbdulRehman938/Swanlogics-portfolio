@@ -33,14 +33,14 @@ export function Footer() {
         </div>
 
         {/* Social links - Fully responsive positioning */}
-        <div className="absolute bg-transparent z-20 -top-1 sm:-top-2 lg:-top-4 lg:left-20 sm:-left-2 rounded-lg sm:rounded-xl portfoliolg:rounded-2xl xl:rounded-3xl p-1 sm:p-2 xl:left-[2.5vw] xl:top-[-1vw] 2xl:top-[0vw] 2xl:left-[4vw]">
-          <div className="flex lg:flex-col items-center lg:items-start gap-1 sm:gap-2 lg:gap-3 xl:gap-5 p-1 sm:p-2 xl:h-[20vw]">
+        <div className="absolute bg-transparent z-20 -top-1 sm:-top-2 lg:-top-4 lg:left-20 sm:-left-2 rounded-lg sm:rounded-xl portfoliolg:rounded-2xl xl:rounded-3xl p-1 sm:p-2 xl:left-[2.5vw] xl:top-[-1vw] 2xl:top-[-1vw] 2xl:left-[4vw]">
+          <div className="flex lg:flex-col items-center lg:items-start gap-1 sm:gap-2 lg:gap-3 xl:gap-4 p-1 sm:p-2 xl:h-[20vw]">
             <button
               onClick={() =>
                 window.open("https://facebook.com/swanlogics", "_blank")
               }
               aria-label="Facebook"
-              className="grid h-6 w-6 sm:h-8 sm:w-8 lg:h-10 lg:w-10 xl:h-7 xl:w-7  place-items-center rounded-full bg-brand-purple hover:bg-brand-purple transition-colors"
+              className="grid h-6 w-6 sm:h-8 sm:w-8 lg:h-10 lg:w-10 xl:h-10 xl:w-10 place-items-center rounded-full bg-brand-purple hover:bg-brand-purple transition-colors"
             >
               <Facebook className="h-2.5 w-2.5 sm:h-3 sm:w-3 lg:h-4 lg:w-4 xl:h-4 xl:w-4 text-white" />
             </button>
@@ -49,7 +49,7 @@ export function Footer() {
                 window.open("https://instagram.com/swanlogics", "_blank")
               }
               aria-label="Instagram"
-              className="grid h-6 w-6 sm:h-8 sm:w-8 lg:h-10 lg:w-10 xl:h-7 xl:w-7 place-items-center rounded-full bg-brand-purple hover:bg-brand-purple transition-colors"
+              className="grid h-6 w-6 sm:h-8 sm:w-8 lg:h-10 lg:w-10 xl:h-10 xl:w-10 place-items-center rounded-full bg-brand-purple hover:bg-brand-purple transition-colors"
             >
               <Instagram className="h-2.5 w-2.5 sm:h-3 sm:w-3 lg:h-4 lg:w-4 xl:h-4 xl:w-4 text-white" />
             </button>
@@ -58,7 +58,7 @@ export function Footer() {
                 window.open("https://twitter.com/swanlogics", "_blank")
               }
               aria-label="Twitter/X"
-              className="grid h-6 w-6 sm:h-8 sm:w-8 lg:h-10 lg:w-10 xl:h-7 xl:w-7 place-items-center rounded-full bg-brand-purple hover:bg-brand-purple transition-colors"
+              className="grid h-6 w-6 sm:h-8 sm:w-8 lg:h-10 lg:w-10 xl:h-10 xl:w-10 place-items-center rounded-full bg-brand-purple hover:bg-brand-purple transition-colors"
             >
               <X className="h-2.5 w-2.5 sm:h-3 sm:w-3 lg:h-4 lg:w-4 xl:h-4 xl:w-4 text-white" />
             </button>
@@ -67,7 +67,7 @@ export function Footer() {
                 window.open("https://linkedin.com/company/swanlogics", "_blank")
               }
               aria-label="LinkedIn"
-              className="grid h-6 w-6 sm:h-8 sm:w-8 lg:h-10 lg:w-10 xl:h-7 xl:w-7  place-items-center rounded-full bg-brand-purple hover:bg-brand-purple transition-colors"
+              className="grid h-6 w-6 sm:h-8 sm:w-8 lg:h-10 lg:w-10 xl:h-10 xl:w-10  place-items-center rounded-full bg-brand-purple hover:bg-brand-purple transition-colors"
             >
               <Linkedin className="h-2.5 w-2.5 sm:h-3 sm:w-3 lg:h-4 lg:w-4 xl:h-4 xl:w-4 text-white" />
             </button>
@@ -78,7 +78,7 @@ export function Footer() {
           {/* Main content section */}
           <div className="mb-6 sm:mb-8 sm:mt-20 md:mb-10 lg:mb-12 xl:pt-10">
             {/* Links Container */}
-            <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-2 md:gap-4 lg:gap-6 xl:gap-8 2xl:gap-10  lg:ml-10">
+            <div className="w-[90%] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-2 md:gap-4 lg:gap-6 xl:gap-5 2xl:gap-10 lg:ml-10">
               {/* Explore Links */}
               <div className="space-y-3 sm:space-y-4 mt-2 md:mt-[-2vw] ">
                 <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl text-white font-bold mb-3 sm:mb-4 lg:mb-5 xl:mb-6">
@@ -201,7 +201,7 @@ export function Footer() {
                   <div className="flex items-start gap-2 sm:gap-3">
                     <MapPin className="w-6 h-6 text-lime-400 mt-1" />
                     <span className="text-xs sm:text-sm md:text-base leading-relaxed">
-                      1 Gibfield Park Avenue Atherton Manchester M46 0SU
+                      1 Gibfield Park Avenue <br /> Atherton Manchester M46 0SU
                     </span>
                   </div>
                 </div>
@@ -210,10 +210,10 @@ export function Footer() {
           </div>
 
           {/* Bottom Section */}
-          <div className="w-full absolute bottom-0 left-0 pt-4 sm:pt-6 md:pt-8 xl:bottom-[-2vw] 2xl:bottom-[1vw]">
+          <div className="w-full absolute bottom-0 left-0 pt-4 sm:pt-6 md:pt-8 xl:bottom-[-2vw] 2xl:bottom-[-2vw]">
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center lg:px-32 gap-4 sm:gap-6 mb-4 sm:mb-6 border-white/40 border-b pb-10 px-20 xl:px-16 xl:pb-5">
               <div className="w-full md:w-auto">
-                <h2 className="text-sm sm:text-xl md:text-4xl lg:text-6xl xl:text-5xl 2xl:text-2xl text-white font-bold font-rf-dewi">
+                <h2 className="text-sm sm:text-xl md:text-4xl lg:text-6xl xl:text-5xl 2xl:text-6xl text-white font-bold font-rf-dewi">
                   Where Quotes Meet Purpose.
                 </h2>
               </div>
@@ -224,7 +224,7 @@ export function Footer() {
                 >
                   Get A Quote
                 </Button>
-                <GoArrowUpRight className="p-[1.3vw] rounded-full bg-lime-300 text-brand-ink absolute left-[11vw] xl:p-[0.5vw] xl:h-[3vw] xl:w-10 2xl:left-[11vw] 2xl:w-[3vw] 2xl:h-[3vw] 2xl:p-4" />
+                <GoArrowUpRight className="p-[1.3vw] rounded-full bg-lime-300 text-brand-ink absolute left-[11vw] 2xl:text-5xl xl:p-[0.5vw] xl:h-[3vw] xl:w-10 2xl:left-[11vw] 2xl:w-[3vw] 2xl:h-[3vw] 2xl:p-4" />
                 {/* <img
                   src="/Arrow 1-1.svg"
                   alt="arrow"
