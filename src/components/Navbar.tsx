@@ -72,7 +72,7 @@ export function Navbar() {
         </button>
 
         {/* Desktop Links */}
-        <div className="relative hidden items-center gap-6 md:flex md:gap-8 lg:gap-10 xl:gap-12">
+        <div className="relative flex justify-center items-center gap-6 md:flex md:gap-8 lg:gap-10 xl:gap-12">
           {links.map((link, i) => (
             <button
               key={link.label}

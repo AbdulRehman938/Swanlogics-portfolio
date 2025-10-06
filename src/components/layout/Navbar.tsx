@@ -50,12 +50,12 @@ export function Navbar() {
   }, [active]);
 
   return (
-    <nav className="sticky top-0 z-50 w-full bg-white/90 backdrop-blur shadow-sm supports-[backdrop-filter]:bg-white/70">
-      <div className="mx-auto flex max-w-[1200px] items-center justify-between px-6 py-4 md:px-12 lg:px-10 xl:px-12">
+    <nav className="sticky top-0 z-50 w-full ml-auto items-center bg-white/90 backdrop-blur shadow-sm supports-[backdrop-filter]:bg-white/70">
+      <div className="flex mx-auto max-w-[1380px] items-center justify-between px-6 py-4 md:px-12 lg:px-10 xl:px-12">
         {/* Left: Logo */}
         <button onClick={() => navigate("/")} className="flex items-center gap-3">
           <img
-            src="/SwanLogics-logo.png"
+            src="/Swanlogics logo purple.png"
             alt="SwanLogics logo"
             className="h-6 w-auto md:h-7 lg:h-9 xl:h-13 "
           />
@@ -72,7 +72,7 @@ export function Navbar() {
         </button>
 
         {/* Desktop Links - Change md:flex to lg:flex */}
-        <div className="relative hidden items-center gap-8 md:gap-6 lg:gap-6 xl:gap-10 lg:flex">
+        <div className="relative flex justify-center items-center gap-8 md:gap-6 lg:gap-6 xl:gap-10 lg:flex">
           {links.map((link, i) => (
             <button
               key={link.label}
@@ -104,10 +104,10 @@ export function Navbar() {
 
         {/* Desktop CTA - Change md:flex to lg:flex */}
         <div className="hidden items-center gap-3 lg:flex relative ">
-          <img src="/Vector.svg" alt="" className="h-5 w-5 opacity-80" />
+          {/* <img src="/Vector.svg" alt="" className="h-5 w-5 opacity-80" /> */}
           <Button
             onClick={() => navigate("/quote")}
-            className="flex !text-brand-ink items-center gap-2 rounded-full bg-lime-300 px-5 py-4 font-bold"
+            className="flex !text-brand-ink items-center gap-2 rounded-full bg-lime-300 px-9 py-4 font-bold"
           >
             Start A Project
           </Button>

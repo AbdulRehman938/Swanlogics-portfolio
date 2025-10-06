@@ -65,10 +65,10 @@ export function ServicesSection() {
         {/* Header */}
         <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-8 sm:mb-12 lg:mb-16 gap-4">
           <div className="space-y-2">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold">Our Services</h2>
-            <p className="text-xs sm:text-sm text-gray-400 sm:hidden">We design and develop digital experiences that drive growth.</p>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white">Our Services</h2>
+            <p className="text-xs sm:text-sm text-white sm:hidden">We design and develop digital experiences that drive growth.</p>
           </div>
-          <p className="hidden sm:block text-sm text-gray-400 max-w-md">We design and develop digital experiences that drive growth.</p>
+          <p className="hidden sm:block text-sm text-white max-w-md">We design and develop digital experiences that drive growth.</p>
           <div className="hidden lg:flex items-center gap-3 relative">
             <Button 
               onClick={() => navigate("/services")}
