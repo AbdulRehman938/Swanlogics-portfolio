@@ -13,12 +13,13 @@ export function Footer() {
         {/* Footer right design - Hidden on mobile and tablets */}
         <div className="absolute flex items-center justify-around bg-white z-10 -top-1 sm:-top-4 lg:-top-4 -right-6 sm:-right-1 rounded-xl sm:rounded-2xl lg:rounded-3xl px-4 sm:px-6 lg:px-8 w-48 sm:w-80 lg:w-[32rem] xl:w-[42rem] h-10 sm:h-12 lg:h-16 font-black text-brand-ink">
           <span className="text-3xl sm:text-xl lg:text-3xl whitespace-nowrap">
-            Sh* I’ve Gone Too Far, Send Me Back Up
+            Sh*T I’ve Gone Too Far, Send Me Back Up
           </span>
           <img
             src="/footer-hand.png"
             alt="footer-hand"
-            className="w-6 h-6 sm:w-8 sm:h-8 ml-2"
+            className="w-6 h-6 sm:w-8 sm:h-8 ml-2 cursor-pointer hover:scale-110 transition-transform"
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           />
         </div>
 
@@ -226,7 +227,7 @@ export function Footer() {
             <div className="flex w-full sm:flex-row lg:flex-row justify-between gap-2 items-start sm:items-center pb-6 text-xs sm:text-sm text-white sm:gap-4 px-20">
               <div className="flex">
                 <span className="w-36">
-                  <img src="/SwanLogics-logo-black.png" alt="" />
+                  <img src="/Swanlogics logo purple.png" alt="logo" />
                 </span>
               </div>
               <div className="flex flex-col sm:flex-row gap-2 text-center sm:text-left">
@@ -246,11 +247,24 @@ export function Footer() {
       </footer>
 
       {/* ---------------- MOBILE VIEW FOOTER ---------------- */}
-      <footer className="md:hidden bg-black text-white px-6 py-10 rounded-t-3xl space-y-10 mx-2 mb-2 relative z-10 w-full">
+      <footer className="md:hidden bg-black text-white px-6 pb-10 rounded-3xl  space-y-10 mx-2 mb-2 border-transparent relative z-10 w-full">
+        {/* Scroll to top section - Mobile version */}
+        <div className="flex items-center justify-center bg-white rounded-b-xl relative top-[-5vw] w-full h-[20vw] px-4 py-3 mr-4 font-black text-brand-ink">
+          <span className="text-lg whitespace-nowrap">
+            Sh*T I've Gone Too Far, Send Me Back Up
+          </span>
+          <img
+            src="/footer-hand.png"
+            alt="footer-hand"
+            className="w-6 h-6 ml-2 cursor-pointer hover:scale-110 transition-transform"
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          />
+        </div>
+
         {/* Logo and tagline */}
         <div className="flex flex-col items-center text-center space-y-4">
           <img
-            src="/SwanLogics-logo-black.png"
+            src="/Swanlogics logo purple.png"
             alt="SwanLogics logo"
             className="w-24 h-auto"
           />

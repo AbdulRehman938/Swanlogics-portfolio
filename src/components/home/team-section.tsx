@@ -62,7 +62,7 @@ export function TeamSection() {
                 <div className="absolute inset-x-3 -bottom-2 transform translate-y-full opacity-0 transition-all duration-300 ease-out group-hover:translate-y-0 group-hover:opacity-100">
                   <div className="rounded-xl bg-white p-4 shadow-lg border border-gray-100">
                     {/* Purple icon circle */}
-                    <div className="absolute -top-52 right-4 w-16 h-16  bg-brand-purple rounded-full flex items-center justify-center">
+                    <div className="absolute -top-20 right-4 w-16 h-16  bg-brand-purple rounded-full flex items-center justify-center sm:-top-10 sm:w-10 sm:h-10 ">
                       <img src={arrow} alt="Arrow" className="" />
                     </div>
 

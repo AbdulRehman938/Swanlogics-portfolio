@@ -53,7 +53,7 @@ export function Navbar() {
           className="flex items-center gap-3"
         >
           <img
-            src="/Swanlogics logo purple.png"
+            src="/Swanlogics logo purple head.png"
             alt="SwanLogics logo"
             className="h-6 w-auto md:h-7 lg:h-9 xl:h-13 "
           />
