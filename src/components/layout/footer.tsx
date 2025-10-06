@@ -8,7 +8,7 @@ export function Footer() {
   return (
     <footer className="mx-2 sm:mx-4 lg:mx-10 mb-2 sm:mb-4 rounded-b-xl sm:rounded-b-2xl lg:rounded-b-3xl  bg-black text-white relative overflow-hidden h-[35vw] lg:h-[40vw] xl:h-[55vw] 2xl:h-[40vw] md:h-[40vw]">
        {/* Footer right design - Hidden on mobile and tablets */}
-       <div className="absolute flex justify-between items-center bg-white z-10 -top-1 text-[1.8rem] border-transparent sm:-top-4 lg:-top-4 -right-6 sm:-right-1 rounded-xl sm:rounded-2xl lg:rounded-3xl p-1 sm:p-2 w-32 sm:w-64 lg:w-96 xl:w-[650px] h-7 sm:h-8 lg:h-14 xl:h-20 font-black lg:block text-brand-ink text-center pt-6"><span className="relative top-4 right-6">Sh* I’ve Gone Too Far, Send Me Back Up</span><img src="public\footer-hand.png" alt="footer-hand" className="relative left-[30vw] bottom-[1vw] w-6 h-6" /></div>
+       <div className="absolute flex justify-between items-center bg-white z-10 -top-1 text-[1.8rem] border-transparent sm:-top-4 lg:-top-4 -right-6 sm:-right-1 rounded-xl sm:rounded-2xl lg:rounded-3xl p-1 sm:p-2 w-32 sm:w-64 lg:w-96 xl:w-[650px] h-7 sm:h-8 lg:h-14 xl:h-20 font-black lg:block text-brand-ink text-center pt-6"><span className="relative top-4 right-6">Sh* I’ve Gone Too Far, Send Me Back Up</span><img src="/footer-hand.png" alt="footer-hand" className="relative left-[30vw] bottom-[1vw] w-6 h-6" /></div>
 
         {/* Social links - Fully responsive positioning */}
         <div className="absolute bg-white z-20 -top-1 sm:-top-2 lg:-top-4  lg:-left-4 sm:-left-2 rounded-lg sm:rounded-xl portfoliolg:rounded-2xl xl:rounded-3xl p-1 sm:p-2">
