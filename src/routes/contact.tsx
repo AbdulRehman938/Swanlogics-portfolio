@@ -9,47 +9,39 @@ function contact() {
   });
   const [isLoading, setIsLoading] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-<<<<<<< HEAD
-
-=======
->>>>>>> c7faef7d3663f3db6bbd51f9d830d59aacba7d47
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-<<<<<<< HEAD
-
-=======
->>>>>>> c7faef7d3663f3db6bbd51f9d830d59aacba7d47
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsLoading(true);
-    setSubmitStatus('idle');
+const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const { name, value } = e.target;
+  setFormData(prev => ({
+    ...prev,
+    [name]: value
+  }));
+};
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+  setIsLoading(true);
+  setSubmitStatus('idle');
+  
+  try {
+    const response = await fetch('https://swanlogics-backend.vercel.app/contact', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData),
+    });
     
-    try {
-      const response = await fetch('https://swanlogics-backend.vercel.app/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
-      
-      if (response.ok) {
-        setSubmitStatus('success');
-        setFormData({ name: '', email: '', message: '' });
-      } else {
-        setSubmitStatus('error');
-      }
-    } catch (error) {
+    if (response.ok) {
+      setSubmitStatus('success');
+      setFormData({ name: '', email: '', message: '' });
+    } else {
       setSubmitStatus('error');
-    } finally {
-      setIsLoading(false);
     }
-  };
+  } catch (error) {
+    setSubmitStatus('error');
+  } finally {
+    setIsLoading(false);
+  }
+};
   return (
     <div className="min-h-screen bg-white">
       <Navbar />

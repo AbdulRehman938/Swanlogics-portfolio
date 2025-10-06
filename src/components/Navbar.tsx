@@ -62,16 +62,11 @@ export function Navbar() {
           onClick={() => setOpen((s) => !s)}
         >
           {open ? <X className="h-6 w-6 text-brand-ink" /> : <Menu className="h-6 w-6 text-brand-ink" />}
-        </button>
-<<<<<<< HEAD
+</button>
 
-        {/* Desktop Links */}
-        <div className="relative flex justify-center items-center gap-6 md:flex md:gap-8 lg:gap-10 xl:gap-12">
-=======
-        {/* Desktop Links - Change md:flex to lg:flex */}
-        <div className="relative flex justify-center items-center gap-8 md:gap-6 lg:gap-6 xl:gap-10 lg:flex">
->>>>>>> c7faef7d3663f3db6bbd51f9d830d59aacba7d47
-          {links.map((link, i) => (
+{/* Desktop Links */}
+<div className="relative flex justify-center items-center gap-6 md:flex md:gap-8 lg:gap-10 xl:gap-12">
+  {links.map((link, i) => (
             <button
               key={link.label}
               ref={(el) => { linkRefs.current[i] = el; }}
