@@ -1,8 +1,6 @@
 import React, { useState } from 'react'
 import { Navbar } from '../components/layout/Navbar';
 import { Footer as FooterSimple } from '../components/layout/footer';
-
-
 function contact() {
   const [formData, setFormData] = useState({
     name: '',
@@ -11,7 +9,10 @@ function contact() {
   });
   const [isLoading, setIsLoading] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+<<<<<<< HEAD
 
+=======
+>>>>>>> c7faef7d3663f3db6bbd51f9d830d59aacba7d47
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
@@ -19,7 +20,10 @@ function contact() {
       [name]: value
     }));
   };
+<<<<<<< HEAD
 
+=======
+>>>>>>> c7faef7d3663f3db6bbd51f9d830d59aacba7d47
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
@@ -46,7 +50,6 @@ function contact() {
       setIsLoading(false);
     }
   };
-
   return (
     <div className="min-h-screen bg-white">
       <Navbar />
@@ -70,7 +73,6 @@ function contact() {
                 required
               />
             </div>
-
             <div>
               <label htmlFor="email" className="block text-gray-600 text-sm mb-2">
                 Your Email
@@ -86,7 +88,6 @@ function contact() {
                 required
               />
             </div>
-
             <div>
               <label htmlFor="message" className="block text-gray-600 text-sm mb-2">
                 Message
@@ -102,7 +103,6 @@ function contact() {
                 required
               />
             </div>
-
             <button
               type="submit"
               disabled={isLoading}
@@ -139,5 +139,4 @@ function contact() {
     </div>
   )
 }
-
 export default contact

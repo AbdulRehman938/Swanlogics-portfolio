@@ -2,16 +2,13 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useNavigate, useLocation } from "react-router-dom";
-
 export function Navbar() {
   const [open, setOpen] = React.useState(false);
   const [active, setActive] = React.useState("Home");
   const [starPos, setStarPos] = React.useState({ left: 0, width: 0 });
-
   const linkRefs = React.useRef([]);
   const navigate = useNavigate();
   const location = useLocation();
-
   const links = [
     { label: "Home", href: "/home" },
     { label: "Our Services", href: "/services" },
@@ -19,7 +16,6 @@ export function Navbar() {
     { label: "Quotation", href: "/quote" },
     { label: "Contact Us", href: "/contact" },
   ];
-
   // Sync active state with current pathname
   React.useEffect(() => {
     // Handle root path and /home as the same
@@ -35,7 +31,6 @@ export function Navbar() {
       }
     }
   }, [location.pathname]); // Removed links from dependency array
-
   React.useEffect(() => {
     const activeIndex = links.findIndex((l) => l.label === active);
     const el = linkRefs.current[activeIndex];
@@ -48,31 +43,34 @@ export function Navbar() {
       });
     }
   }, [active]);
-
   return (
-    <nav className="sticky top-0 z-50 w-full bg-white/90 backdrop-blur shadow-sm supports-[backdrop-filter]:bg-white/70">
-      <div className="mx-auto flex max-w-[1400px] items-center justify-between px-4 py-4 sm:px-6 md:px-10 lg:px-12 xl:px-26">
+    <nav className="sticky top-0 z-50 w-full ml-auto items-center bg-white/90 backdrop-blur shadow-sm supports-[backdrop-filter]:bg-white/70">
+      <div className="flex mx-auto max-w-[1380px] items-center justify-between px-6 py-4 md:px-12 lg:px-10 xl:px-12">
         {/* Left: Logo */}
         <button onClick={() => navigate("/")} className="flex items-center gap-3">
           <img
-            src="/SwanLogics-logo.png"
+            src="/Swanlogics logo purple.png"
             alt="SwanLogics logo"
-            className="h-12 w-auto sm:h-14 md:h-16"
+            className="h-6 w-auto md:h-7 lg:h-9 xl:h-13 "
           />
         </button>
-
-        {/* Mobile Menu Button */}
+        {/* Mobile/Tablet Menu Button */}
         <button
-          className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-black/10 md:hidden"
+          className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-black/10 lg:hidden"
           aria-label="Toggle menu"
           aria-expanded={open}
           onClick={() => setOpen((s) => !s)}
         >
-          {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          {open ? <X className="h-6 w-6 text-brand-ink" /> : <Menu className="h-6 w-6 text-brand-ink" />}
         </button>
+<<<<<<< HEAD
 
         {/* Desktop Links */}
         <div className="relative flex justify-center items-center gap-6 md:flex md:gap-8 lg:gap-10 xl:gap-12">
+=======
+        {/* Desktop Links - Change md:flex to lg:flex */}
+        <div className="relative flex justify-center items-center gap-8 md:gap-6 lg:gap-6 xl:gap-10 lg:flex">
+>>>>>>> c7faef7d3663f3db6bbd51f9d830d59aacba7d47
           {links.map((link, i) => (
             <button
               key={link.label}
@@ -82,16 +80,14 @@ export function Navbar() {
                 const targetPath = link.label === "Home" ? "/" : link.href;
                 navigate(targetPath);
               }}
-              className={`relative text-sm md:text-base lg:text-lg transition-colors ${
-                active === link.label
+              className={`relative text-[18px] transition-colors ${active === link.label
                   ? "text-brand-ink font-semibold"
                   : "text-brand-ink/70 hover:text-brand-ink"
-              }`}
+                }`}
             >
               {link.label}
             </button>
           ))}
-
           {/* Moving Star Indicator */}
           <div
             className="absolute top-full mt-1 h-3 w-3 -translate-x-1/2 transition-all duration-300"
@@ -102,28 +98,24 @@ export function Navbar() {
             <img src="/Star.png" alt="active indicator" className="h-3 w-3" />
           </div>
         </div>
-
-        {/* Desktop CTA */}
-        <div className="hidden items-center gap-2 md:flex md:gap-3 lg:gap-2 xl:gap-5 relative">
-          <img src="/Vector.svg" alt="" className="h-4 w-4 sm:h-5 sm:w-5 opacity-80" />
-          <Button 
+        {/* Desktop CTA - Change md:flex to lg:flex */}
+        <div className="hidden items-center gap-3 lg:flex relative ">
+          {/* <img src="/Vector.svg" alt="" className="h-5 w-5 opacity-80" /> */}
+          <Button
             onClick={() => navigate("/quote")}
-            className="flex !text-brand-ink items-center gap-2 rounded-full bg-lime-300 px-4 py-3 md:px-6 md:py-5 lg:px-8 lg:py-6 xl:px-10 xl:py-7 font-bold"
+            className="flex !text-brand-ink items-center gap-2 rounded-full bg-lime-300 px-9 py-4 font-bold"
           >
             Start A Project
           </Button>
-
-          <img src="/Arrow 1-1.svg" alt="arrow" className="p-3 md:p-4 rounded-full bg-lime-300 text-brand-ink absolute left-28 sm:left-32 md:left-36 lg:left-22 xl:left-44" />
+          <img src="/Arrow 1-1.svg" alt="arrow" className="p-[14px] rounded-full bg-lime-300 text-brand-ink absolute  left-[152px]" />
         </div>
       </div>
-
       {/* Mobile Dropdown */}
       <div
-        className={`md:hidden transition-all duration-300 ease-in-out overflow-hidden ${
-          open ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0"
-        }`}
+        className={`lg:hidden transition-all duration-300 ease-in-out overflow-hidden ${open ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0"
+          }`}
       >
-        <div className="mx-auto flex max-w-[1400px] flex-col gap-4 px-4 sm:px-6 py-3">
+        <div className="mx-auto flex max-w-[1400px] flex-col gap-4 px-6 py-3">
           {links.map((link) => (
             <button
               key={link.label}
@@ -132,16 +124,14 @@ export function Navbar() {
                 navigate(targetPath);
                 setOpen(false);
               }}
-              className={`text-base transition-colors ${
-                active === link.label
+              className={`text-base transition-colors ${active === link.label
                   ? "text-brand-ink font-semibold"
                   : "text-brand-ink/70 hover:text-brand-ink"
-              }`}
+                }`}
             >
               {link.label}
             </button>
           ))}
-          
         </div>
       </div>
     </nav>
