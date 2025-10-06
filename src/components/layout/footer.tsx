@@ -13,69 +13,69 @@ export function Footer() {
         className="hidden md:block mx-2 sm:mx-4 lg:mx-10 mb-2 sm:mb-4 rounded-b-xl sm:rounded-b-2xl lg:rounded-b-3xl text-white relative overflow-hidden h-[35vw] lg:h-[40vw] xl:h-[55vw] 2xl:h-[40vw] md:h-[40vw]"
         style={{
           backgroundImage: "url(/footer-box.png)",
-          backgroundSize: "cover",
+          backgroundSize: "contain",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
         }}
       >
         {/* Footer right design - Hidden on mobile and tablets */}
-        <div className="absolute flex items-center justify-around bg-transparent z-10 -top-1 sm:-top-4 lg:-top-4 -right-6 sm:-right-1  px-4 sm:px-6 lg:px-8 w-48 sm:w-80 lg:w-[32rem] xl:w-[42rem] h-10 sm:h-12 lg:h-16 font-black text-brand-ink">
-          <span className="text-3xl sm:text-xl lg:text-3xl whitespace-nowrap">
+        <div className="absolute flex items-center justify-center bg-transparent z-10 -top-1 sm:-top-4 lg:top-2 lg:right-16 sm:-right-1 px-4 sm:px-6 lg:pr-8 w-20 sm:w-80 lg:w-[25rem] xl:w-[30rem] h-10 sm:h-12 lg:h-16 font-black text-brand-ink xl:top-[6vw] xl:right-[-5vw] 2xl:top-[0vw] 2xl:right-[3vw]">
+          <span className="text-xl sm:text-sm lg:text-[22px] inline-block whitespace-nowrap xl:text-[18px] 2xl:text-[23px]">
             Sh*T I’ve Gone Too Far, Send Me Back Up
           </span>
           <img
             src="/footer-hand.png"
             alt="footer-hand"
-            className="w-6 h-6 sm:w-8 sm:h-8 ml-2 cursor-pointer hover:scale-110 transition-transform"
+            className="w-auto h-4 sm:w-auto sm:h-8 ml-20 lg:relative lg:right-12 lg:h-6 cursor-pointer hover:scale-110 transition-transform xl:right-16"
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           />
         </div>
 
         {/* Social links - Fully responsive positioning */}
-        <div className="absolute bg-white z-20 -top-1 sm:-top-2 lg:-top-4 lg:-left-4 sm:-left-2 rounded-lg sm:rounded-xl portfoliolg:rounded-2xl xl:rounded-3xl p-1 sm:p-2">
-          <div className="flex lg:flex-col items-center lg:items-start gap-1 sm:gap-2 lg:gap-3 xl:gap-5 p-1 sm:p-2">
+        <div className="absolute bg-transparent z-20 -top-1 sm:-top-2 lg:-top-4 lg:left-20 sm:-left-2 rounded-lg sm:rounded-xl portfoliolg:rounded-2xl xl:rounded-3xl p-1 sm:p-2 xl:left-[0vw] xl:top-[4vw] 2xl:top-[0vw] 2xl:left-[4vw]">
+          <div className="flex lg:flex-col items-center lg:items-start gap-1 sm:gap-2 lg:gap-3 xl:gap-5 p-1 sm:p-2 xl:h-[20vw]">
             <button
               onClick={() =>
                 window.open("https://facebook.com/swanlogics", "_blank")
               }
               aria-label="Facebook"
-              className="grid h-6 w-6 sm:h-8 sm:w-8 lg:h-10 lg:w-10 xl:h-12 xl:w-12 place-items-center rounded-full bg-brand-purple hover:bg-brand-purple transition-colors"
+              className="grid h-6 w-6 sm:h-8 sm:w-8 lg:h-10 lg:w-10 xl:h-18 xl:w-18  place-items-center rounded-full bg-brand-purple hover:bg-brand-purple transition-colors"
             >
-              <Facebook className="h-2.5 w-2.5 sm:h-3 sm:w-3 lg:h-4 lg:w-4 xl:h-6 xl:w-6 text-white" />
+              <Facebook className="h-2.5 w-2.5 sm:h-3 sm:w-3 lg:h-4 lg:w-4 xl:h-5 xl:w-5 text-white" />
             </button>
             <button
               onClick={() =>
                 window.open("https://instagram.com/swanlogics", "_blank")
               }
               aria-label="Instagram"
-              className="grid h-6 w-6 sm:h-8 sm:w-8 lg:h-10 lg:w-10 xl:h-12 xl:w-12 place-items-center rounded-full bg-brand-purple hover:bg-brand-purple transition-colors"
+              className="grid h-6 w-6 sm:h-8 sm:w-8 lg:h-10 lg:w-10 xl:h-18 xl:w-18 place-items-center rounded-full bg-brand-purple hover:bg-brand-purple transition-colors"
             >
-              <Instagram className="h-2.5 w-2.5 sm:h-3 sm:w-3 lg:h-4 lg:w-4 xl:h-6 xl:w-6 text-white" />
+              <Instagram className="h-2.5 w-2.5 sm:h-3 sm:w-3 lg:h-4 lg:w-4 xl:h-5 xl:w-5 text-white" />
             </button>
             <button
               onClick={() =>
                 window.open("https://twitter.com/swanlogics", "_blank")
               }
               aria-label="Twitter/X"
-              className="grid h-6 w-6 sm:h-8 sm:w-8 lg:h-10 lg:w-10 xl:h-12 xl:w-12 place-items-center rounded-full bg-brand-purple hover:bg-brand-purple transition-colors"
+              className="grid h-6 w-6 sm:h-8 sm:w-8 lg:h-10 lg:w-10 xl:h-18 xl:w-18 place-items-center rounded-full bg-brand-purple hover:bg-brand-purple transition-colors"
             >
-              <X className="h-2.5 w-2.5 sm:h-3 sm:w-3 lg:h-4 lg:w-4 xl:h-6 xl:w-6 text-white" />
+              <X className="h-2.5 w-2.5 sm:h-3 sm:w-3 lg:h-4 lg:w-4 xl:h-5 xl:w-5 text-white" />
             </button>
             <button
               onClick={() =>
                 window.open("https://linkedin.com/company/swanlogics", "_blank")
               }
               aria-label="LinkedIn"
-              className="grid h-6 w-6 sm:h-8 sm:w-8 lg:h-10 lg:w-10 xl:h-12 xl:w-12 place-items-center rounded-full bg-brand-purple hover:bg-brand-purple transition-colors"
+              className="grid h-6 w-6 sm:h-8 sm:w-8 lg:h-10 lg:w-10 xl:h-18 xl:w-18  place-items-center rounded-full bg-brand-purple hover:bg-brand-purple transition-colors"
             >
-              <Linkedin className="h-2.5 w-2.5 sm:h-3 sm:w-3 lg:h-4 lg:w-4 xl:h-6 xl:w-6 text-white" />
+              <Linkedin className="h-2.5 w-2.5 sm:h-3 sm:w-3 lg:h-4 lg:w-4 xl:h-5 xl:w-5 text-white" />
             </button>
           </div>
         </div>
 
-        <div className="container mx-auto px-3 sm:px-4 md:px-6 lg:px-20 py-6 sm:py-20 md:py-10 lg:py-14">
+        <div className="container mx-auto px-3 sm:px-4 md:px-6 lg:pl-40 py-6 sm:py-20 md:py-10 lg:py-14 xl:mt-8 xl:pb-0 2xl:-mt-8">
           {/* Main content section */}
-          <div className="mb-6 sm:mb-8 sm:mt-20 md:mb-10 lg:mb-12">
+          <div className="mb-6 sm:mb-8 sm:mt-20 md:mb-10 lg:mb-12 xl:p-0">
             {/* Links Container */}
             <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 lg:gap-10 xl:gap-10">
               {/* Explore Links */}
@@ -209,30 +209,30 @@ export function Footer() {
           </div>
 
           {/* Bottom Section */}
-          <div className="w-full absolute bottom-0 left-0 pt-4 sm:pt-6 md:pt-8">
-            <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 sm:gap-6 mb-4 sm:mb-6 border-white/40 border-b pb-10 px-20">
+          <div className="w-full absolute bottom-0 left-0 pt-4 sm:pt-6 md:pt-8 xl:bottom-[7vw] 2xl:bottom-[1vw]">
+            <div className="flex flex-col md:flex-row justify-between items-start md:items-center lg:px-32 gap-4 sm:gap-6 mb-4 sm:mb-6 border-white/40 border-b pb-10 px-20 xl:top-[-5rem]">
               <div className="w-full md:w-auto">
-                <h2 className="text-sm sm:text-xl md:text-4xl lg:text-5xl xl:text-[4rem] text-white font-bold font-rf-dewi">
+                <h2 className="text-sm sm:text-xl md:text-4xl lg:text-6xl xl:text-[4rem] text-white font-bold font-rf-dewi">
                   Where Quotes Meet Purpose.
                 </h2>
               </div>
-              <div className="hidden md:flex items-center relative right-40 top-6 transform -translate-y-[35%]">
+              <div className="hidden md:flex items-center relative right-40 top-6 xl:right-0 transform -translate-y-[35%] 2xl:right-40">
                 <Button
                   onClick={() => navigate("/quote")}
-                  className="flex !text-brand-ink text-lg items-center rounded-full bg-lime-300 w-[10vw] py-6 font-black"
+                  className="flex !text-brand-ink text-xl items-center rounded-full bg-lime-300 w-[12vw] py-8 font-black"
                 >
                   Get A Quote
                 </Button>
                 <img
                   src="/Arrow 1-1.svg"
                   alt="arrow"
-                  className="p-[18px] rounded-full bg-lime-300 text-brand-ink absolute left-[9vw]"
+                  className="p-[1.3vw] rounded-full bg-lime-300 text-brand-ink absolute left-[11vw] xl:p-[1.8vw] xl:w-16 2xl:left-[11vw] 2xl:w-[3vw] 2xl:h-[3vw] 2xl:p-4"
                 />
               </div>
             </div>
 
             {/* Copyright section */}
-            <div className="flex w-full sm:flex-row lg:flex-row justify-between gap-2 items-start sm:items-center pb-6 text-xs sm:text-sm text-white sm:gap-4 px-20">
+            <div className="flex w-full sm:flex-row lg:flex-row justify-between gap-2 lg:px-32 items-start sm:items-center pb-6 text-xs sm:text-sm text-white sm:gap-4 px-20">
               <div className="flex">
                 <span className="w-36">
                   <img src="/Swanlogics logo purple.png" alt="logo" />
@@ -240,7 +240,7 @@ export function Footer() {
               </div>
               <div className="flex flex-col sm:flex-row gap-2 text-center sm:text-left">
                 <span className="whitespace-nowrap text-base sm:text-base sm:pr-5 lg:pr-10">
-                  © Mercury Sole Ltd 2025
+                  © SwanLogics Ltd 2025
                 </span>
                 <span className="whitespace-nowrap text-base sm:text-base border-l border-[#d0ff7194] sm:px-5 lg:px-10">
                   Web Design Manchester
@@ -433,7 +433,7 @@ export function Footer() {
 
         {/* Copyright */}
         <div className="pt-6 border-t border-white/20 text-center text-sm text-gray-400 space-y-2">
-          <p>© Mercury Sole Ltd 2025</p>
+          <p>© SwanLogics Ltd 2025</p>
           <p>Web Design Manchester</p>
           <p>All Rights Reserved</p>
         </div>
