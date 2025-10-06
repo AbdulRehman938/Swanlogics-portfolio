@@ -9,9 +9,17 @@ export function Footer() {
   return (
     <>
       {/* Desktop Footer */}
-      <footer className="hidden md:block mx-2 sm:mx-4 lg:mx-10 mb-2 sm:mb-4 rounded-b-xl sm:rounded-b-2xl lg:rounded-b-3xl bg-black text-white relative overflow-hidden h-[35vw] lg:h-[40vw] xl:h-[55vw] 2xl:h-[40vw] md:h-[40vw]">
+      <footer
+        className="hidden md:block mx-2 sm:mx-4 lg:mx-10 mb-2 sm:mb-4 rounded-b-xl sm:rounded-b-2xl lg:rounded-b-3xl text-white relative overflow-hidden h-[35vw] lg:h-[40vw] xl:h-[55vw] 2xl:h-[40vw] md:h-[40vw]"
+        style={{
+          backgroundImage: "url(/footer-box.png)",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
         {/* Footer right design - Hidden on mobile and tablets */}
-        <div className="absolute flex items-center justify-around bg-white z-10 -top-1 sm:-top-4 lg:-top-4 -right-6 sm:-right-1 rounded-xl sm:rounded-2xl lg:rounded-3xl px-4 sm:px-6 lg:px-8 w-48 sm:w-80 lg:w-[32rem] xl:w-[42rem] h-10 sm:h-12 lg:h-16 font-black text-brand-ink">
+        <div className="absolute flex items-center justify-around bg-transparent z-10 -top-1 sm:-top-4 lg:-top-4 -right-6 sm:-right-1  px-4 sm:px-6 lg:px-8 w-48 sm:w-80 lg:w-[32rem] xl:w-[42rem] h-10 sm:h-12 lg:h-16 font-black text-brand-ink">
           <span className="text-3xl sm:text-xl lg:text-3xl whitespace-nowrap">
             Sh*T I’ve Gone Too Far, Send Me Back Up
           </span>
