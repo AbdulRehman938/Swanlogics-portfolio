@@ -203,7 +203,7 @@ export function Footer() {
           <div className="w-full absolute bottom-0 left-0 pt-4 sm:pt-6 md:pt-8">
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 sm:gap-6 mb-4 sm:mb-6 border-white/40 border-b pb-10 px-20">
               <div className="w-full md:w-auto">
-                <h2 className="text-base sm:text-2xl md:text-6xl lg:text-7xl xl:text-[5rem] text-white font-bold font-rf-dewi">
+                <h2 className="text-sm sm:text-xl md:text-4xl lg:text-5xl xl:text-[4rem] text-white font-bold font-rf-dewi">
                   Where Quotes Meet Purpose.
                 </h2>
               </div>
