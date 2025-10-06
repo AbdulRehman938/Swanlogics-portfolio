@@ -74,11 +74,11 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="container mx-auto px-3 sm:px-4 md:px-6 lg:pl-40 py-6 sm:py-20 md:py-10 lg:py-14 xl:mt-[-5vw] xl:pb-0 2xl:-mt-8">
+        <div className="container mx-auto px-3 sm:px-4 md:px-6 lg:pl-40 py-6 sm:py-20 md:py-10 lg:py-14 xl:mt-[-7vw] xl:pb-0 2xl:-mt-5">
           {/* Main content section */}
-          <div className="mb-6 sm:mb-8 sm:mt-20 md:mb-10 lg:mb-12 xl:p-0">
+          <div className="mb-6 sm:mb-8 sm:mt-20 md:mb-10 lg:mb-12 xl:pt-10">
             {/* Links Container */}
-            <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 lg:gap-10 xl:gap-10">
+            <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-4 md:gap-6 lg:gap-8 xl:gap-10 2xl:gap-12 xl:ml-20 lg:ml-10">
               {/* Explore Links */}
               <div className="space-y-3 sm:space-y-4 mt-2 md:mt-[-2vw] ">
                 <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl text-white font-bold mb-3 sm:mb-4 lg:mb-5 xl:mb-6">

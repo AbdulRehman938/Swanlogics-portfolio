@@ -47,14 +47,14 @@ export function TeamSection() {
             >
               {/* Team member card */}
               <div
-                className={`relative overflow-hidden rounded-2xl h-[55vw] sm:h-[25vw] w-full transition-all duration-300 group-hover:shadow-xl ${index === 1 ? "sm:w-[20vw]" : "sm:w-[15vw]"}`}
+                className={`relative overflow-hidden rounded-2xl h-[55vw] sm:h-[25vw] w-full transition-all duration-500 ease-in-out group-hover:shadow-xl ${index === 1 ? "sm:w-[15vw] sm:group-hover:w-[18vw]" : "sm:w-[15vw] sm:group-hover:w-[18vw]"}`}
               >
                 {/* Image container */}
-                <div className="aspect-square overflow-hidden h-full w-full">
+                <div className="aspect-square overflow-hidden h-full w-full transition-all duration-500 ease-in-out">
                   <img
                     src={member.src}
                     alt={member.name}
-                    className="h-full w-full object-fill transition-transform duration-300 group-hover:scale-105"
+                    className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
                   />
                 </div>
 
@@ -62,7 +62,7 @@ export function TeamSection() {
                 <div className="absolute inset-x-3 -bottom-2 transform translate-y-full opacity-0 transition-all duration-300 ease-out group-hover:translate-y-0 group-hover:opacity-100">
                   <div className="rounded-xl bg-white p-4 shadow-lg border border-gray-100">
                     {/* Purple icon circle */}
-                    <div className="absolute 2xl:top-[-19vw] right-4 w-16 h-16  bg-brand-purple rounded-full flex items-center justify-center sm:-top-10 sm:w-10 sm:h-10 ">
+                    <div className="absolute 2xl:top-[-19vw] right-4 w-16 h-16  bg-brand-purple rounded-full flex items-center justify-center sm:-top-10 sm:w-10 sm:h-10 xl:top-[-10rem] ">
                       <img src={arrow} alt="Arrow" className="" />
                     </div>
 
