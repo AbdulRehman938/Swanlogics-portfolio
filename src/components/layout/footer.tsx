@@ -25,34 +25,42 @@ export function Footer() {
         {/* Social links - Fully responsive positioning */}
         <div className="absolute bg-white z-20 -top-1 sm:-top-2 lg:-top-4 lg:-left-4 sm:-left-2 rounded-lg sm:rounded-xl portfoliolg:rounded-2xl xl:rounded-3xl p-1 sm:p-2">
           <div className="flex lg:flex-col items-center lg:items-start gap-1 sm:gap-2 lg:gap-3 xl:gap-5 p-1 sm:p-2">
-            <a
-              href="#"
+            <button
+              onClick={() =>
+                window.open("https://facebook.com/swanlogics", "_blank")
+              }
               aria-label="Facebook"
               className="grid h-6 w-6 sm:h-8 sm:w-8 lg:h-10 lg:w-10 xl:h-12 xl:w-12 place-items-center rounded-full bg-brand-purple hover:bg-brand-purple transition-colors"
             >
               <Facebook className="h-2.5 w-2.5 sm:h-3 sm:w-3 lg:h-4 lg:w-4 xl:h-6 xl:w-6 text-white" />
-            </a>
-            <a
-              href="#"
+            </button>
+            <button
+              onClick={() =>
+                window.open("https://instagram.com/swanlogics", "_blank")
+              }
               aria-label="Instagram"
               className="grid h-6 w-6 sm:h-8 sm:w-8 lg:h-10 lg:w-10 xl:h-12 xl:w-12 place-items-center rounded-full bg-brand-purple hover:bg-brand-purple transition-colors"
             >
               <Instagram className="h-2.5 w-2.5 sm:h-3 sm:w-3 lg:h-4 lg:w-4 xl:h-6 xl:w-6 text-white" />
-            </a>
-            <a
-              href="#"
+            </button>
+            <button
+              onClick={() =>
+                window.open("https://twitter.com/swanlogics", "_blank")
+              }
               aria-label="Twitter/X"
               className="grid h-6 w-6 sm:h-8 sm:w-8 lg:h-10 lg:w-10 xl:h-12 xl:w-12 place-items-center rounded-full bg-brand-purple hover:bg-brand-purple transition-colors"
             >
               <X className="h-2.5 w-2.5 sm:h-3 sm:w-3 lg:h-4 lg:w-4 xl:h-6 xl:w-6 text-white" />
-            </a>
-            <a
-              href="#"
+            </button>
+            <button
+              onClick={() =>
+                window.open("https://linkedin.com/company/swanlogics", "_blank")
+              }
               aria-label="LinkedIn"
               className="grid h-6 w-6 sm:h-8 sm:w-8 lg:h-10 lg:w-10 xl:h-12 xl:w-12 place-items-center rounded-full bg-brand-purple hover:bg-brand-purple transition-colors"
             >
               <Linkedin className="h-2.5 w-2.5 sm:h-3 sm:w-3 lg:h-4 lg:w-4 xl:h-6 xl:w-6 text-white" />
-            </a>
+            </button>
           </div>
         </div>
 
@@ -71,44 +79,44 @@ export function Footer() {
                   style={{ color: "#696969" }}
                 >
                   <li>
-                    <a
-                      href="#"
-                      className="hover:text-white transition-colors text-xs sm:text-sm md:text-base block py-1"
+                    <button
+                      onClick={() => navigate("/")}
+                      className="hover:text-white transition-colors text-xs sm:text-sm md:text-base block py-1 text-left"
                     >
                       Home
-                    </a>
+                    </button>
                   </li>
                   <li>
-                    <a
-                      href="#"
-                      className="hover:text-white transition-colors text-xs sm:text-sm md:text-base block py-1"
+                    <button
+                      onClick={() => navigate("/")}
+                      className="hover:text-white transition-colors text-xs sm:text-sm md:text-base block py-1 text-left"
                     >
                       About Us
-                    </a>
+                    </button>
                   </li>
                   <li>
-                    <a
-                      href="#"
-                      className="hover:text-white transition-colors text-xs sm:text-sm md:text-base block py-1"
+                    <button
+                      onClick={() => navigate("/services")}
+                      className="hover:text-white transition-colors text-xs sm:text-sm md:text-base block py-1 text-left"
                     >
                       Our Services
-                    </a>
+                    </button>
                   </li>
                   <li>
-                    <a
-                      href="#"
-                      className="hover:text-white transition-colors text-xs sm:text-sm md:text-base block py-1"
+                    <button
+                      onClick={() => navigate("/")}
+                      className="hover:text-white transition-colors text-xs sm:text-sm md:text-base block py-1 text-left"
                     >
                       Our Team
-                    </a>
+                    </button>
                   </li>
                   <li>
-                    <a
-                      href="#"
-                      className="hover:text-white transition-colors text-xs sm:text-sm md:text-base block py-1"
+                    <button
+                      onClick={() => navigate("/portfolio")}
+                      className="hover:text-white transition-colors text-xs sm:text-sm md:text-base block py-1 text-left"
                     >
                       Portfolio
-                    </a>
+                    </button>
                   </li>
                 </ul>
               </div>
@@ -123,36 +131,38 @@ export function Footer() {
                   style={{ color: "#696969" }}
                 >
                   <li>
-                    <a
-                      href="#"
-                      className="hover:text-white transition-colors text-xs sm:text-sm md:text-base block py-1"
+                    <button
+                      onClick={() => alert("Privacy Policy page coming soon!")}
+                      className="hover:text-white transition-colors text-xs sm:text-sm md:text-base block py-1 text-left"
                     >
                       Privacy Policy
-                    </a>
+                    </button>
                   </li>
                   <li>
-                    <a
-                      href="#"
-                      className="hover:text-white transition-colors text-xs sm:text-sm md:text-base block py-1"
+                    <button
+                      onClick={() =>
+                        alert("Terms & Conditions page coming soon!")
+                      }
+                      className="hover:text-white transition-colors text-xs sm:text-sm md:text-base block py-1 text-left"
                     >
                       Terms And Conditions
-                    </a>
+                    </button>
                   </li>
                   <li>
-                    <a
-                      href="#"
-                      className="hover:text-white transition-colors text-xs sm:text-sm md:text-base block py-1"
+                    <button
+                      onClick={() => alert("FAQ page coming soon!")}
+                      className="hover:text-white transition-colors text-xs sm:text-sm md:text-base block py-1 text-left"
                     >
                       FAQ's
-                    </a>
+                    </button>
                   </li>
                   <li>
-                    <a
-                      href="#"
-                      className="hover:text-white transition-colors text-xs sm:text-sm md:text-base block py-1"
+                    <button
+                      onClick={() => navigate("/contact")}
+                      className="hover:text-white transition-colors text-xs sm:text-sm md:text-base block py-1 text-left"
                     >
                       Contact Us
-                    </a>
+                    </button>
                   </li>
                 </ul>
               </div>
@@ -255,29 +265,44 @@ export function Footer() {
             <h3 className="text-white font-bold text-lg mb-3">Explore</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="hover:text-white">
+                <button
+                  onClick={() => navigate("/")}
+                  className="hover:text-white text-left"
+                >
                   Home
-                </a>
+                </button>
               </li>
               <li>
-                <a href="#" className="hover:text-white">
+                <button
+                  onClick={() => navigate("/")}
+                  className="hover:text-white text-left"
+                >
                   About Us
-                </a>
+                </button>
               </li>
               <li>
-                <a href="#" className="hover:text-white">
+                <button
+                  onClick={() => navigate("/services")}
+                  className="hover:text-white text-left"
+                >
                   Our Services
-                </a>
+                </button>
               </li>
               <li>
-                <a href="#" className="hover:text-white">
+                <button
+                  onClick={() => navigate("/")}
+                  className="hover:text-white text-left"
+                >
                   Our Team
-                </a>
+                </button>
               </li>
               <li>
-                <a href="#" className="hover:text-white">
+                <button
+                  onClick={() => navigate("/portfolio")}
+                  className="hover:text-white text-left"
+                >
                   Portfolio
-                </a>
+                </button>
               </li>
             </ul>
           </div>
@@ -285,24 +310,36 @@ export function Footer() {
             <h3 className="text-white font-bold text-lg mb-3">Useful Links</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="hover:text-white">
+                <button
+                  onClick={() => alert("Privacy Policy page coming soon!")}
+                  className="hover:text-white text-left"
+                >
                   Privacy Policy
-                </a>
+                </button>
               </li>
               <li>
-                <a href="#" className="hover:text-white">
+                <button
+                  onClick={() => alert("Terms & Conditions page coming soon!")}
+                  className="hover:text-white text-left"
+                >
                   Terms & Conditions
-                </a>
+                </button>
               </li>
               <li>
-                <a href="#" className="hover:text-white">
+                <button
+                  onClick={() => alert("FAQ page coming soon!")}
+                  className="hover:text-white text-left"
+                >
                   FAQ's
-                </a>
+                </button>
               </li>
               <li>
-                <a href="#" className="hover:text-white">
+                <button
+                  onClick={() => navigate("/contact")}
+                  className="hover:text-white text-left"
+                >
                   Contact Us
-                </a>
+                </button>
               </li>
             </ul>
           </div>
@@ -327,18 +364,38 @@ export function Footer() {
 
         {/* Social Icons */}
         <div className="flex justify-center gap-5">
-          <a href="#" className="bg-brand-purple p-3 rounded-full">
+          <button
+            onClick={() =>
+              window.open("https://facebook.com/swanlogics", "_blank")
+            }
+            className="bg-brand-purple p-3 rounded-full"
+          >
             <Facebook className="w-4 h-4 text-white" />
-          </a>
-          <a href="#" className="bg-brand-purple p-3 rounded-full">
+          </button>
+          <button
+            onClick={() =>
+              window.open("https://instagram.com/swanlogics", "_blank")
+            }
+            className="bg-brand-purple p-3 rounded-full"
+          >
             <Instagram className="w-4 h-4 text-white" />
-          </a>
-          <a href="#" className="bg-brand-purple p-3 rounded-full">
+          </button>
+          <button
+            onClick={() =>
+              window.open("https://twitter.com/swanlogics", "_blank")
+            }
+            className="bg-brand-purple p-3 rounded-full"
+          >
             <X className="w-4 h-4 text-white" />
-          </a>
-          <a href="#" className="bg-brand-purple p-3 rounded-full">
+          </button>
+          <button
+            onClick={() =>
+              window.open("https://linkedin.com/company/swanlogics", "_blank")
+            }
+            className="bg-brand-purple p-3 rounded-full"
+          >
             <Linkedin className="w-4 h-4 text-white" />
-          </a>
+          </button>
         </div>
 
         {/* CTA Button */}

@@ -10,7 +10,7 @@ export function Navbar() {
   const navigate = useNavigate();
   const location = useLocation();
   const links = [
-    { label: "Home", href: "/home" },
+    { label: "Home", href: "/" },
     { label: "Our Services", href: "/services" },
     { label: "Portfolio", href: "/portfolio" },
     { label: "Quotation", href: "/quote" },
@@ -18,15 +18,14 @@ export function Navbar() {
   ];
   // Sync active state with current pathname
   React.useEffect(() => {
-    // Handle root path and /home as the same
-    const currentPath = location.pathname === "/" ? "/home" : location.pathname;
+    const currentPath = location.pathname;
     const currentLink = links.find((link) => link.href === currentPath);
     if (currentLink) {
       setActive(currentLink.label);
     } else {
       // Handle nested routes (e.g., /services/javascript-workflow should show "Our Services")
-      const parentLink = links.find((link) =>
-        currentPath.startsWith(link.href)
+      const parentLink = links.find(
+        (link) => link.href !== "/" && currentPath.startsWith(link.href)
       );
       if (parentLink) {
         setActive(parentLink.label);
@@ -82,9 +81,7 @@ export function Navbar() {
                 linkRefs.current[i] = el;
               }}
               onClick={() => {
-                // Navigate to root for Home, otherwise use the href
-                const targetPath = link.label === "Home" ? "/" : link.href;
-                navigate(targetPath);
+                navigate(link.href);
               }}
               className={`relative text-[18px] transition-colors ${
                 active === link.label
@@ -132,8 +129,7 @@ export function Navbar() {
             <button
               key={link.label}
               onClick={() => {
-                const targetPath = link.label === "Home" ? "/" : link.href;
-                navigate(targetPath);
+                navigate(link.href);
                 setOpen(false);
               }}
               className={`text-base transition-colors ${
