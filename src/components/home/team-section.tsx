@@ -39,7 +39,7 @@ export function TeamSection() {
           Teamwork Makes The Dream Work
         </h2>
 
-        <div className="mb-8 sm:mb-10 md:mb-12 flex flex-col sm:flex-row sm:flex-wrap lg:flex-nowrap justify-center items-center gap-3 sm:gap-4 w-[70vw] mx-auto">
+        <div className="mb-8 sm:mb-10 md:mb-12 grid grid-cols-2 sm:flex sm:flex-row sm:flex-wrap lg:flex-nowrap justify-center items-center gap-3 sm:gap-4 w-full sm:w-[70vw] mx-auto">
           {members.map((member, index) => (
             <div
               key={member.name}
@@ -47,7 +47,7 @@ export function TeamSection() {
             >
               {/* Team member card */}
               <div
-                className={`relative overflow-hidden rounded-2xl h-[25vw] transition-all duration-300 group-hover:shadow-xl ${index === 1 ? "w-[20vw]" : "w-[15vw]"}`}
+                className={`relative overflow-hidden rounded-2xl h-[55vw] sm:h-[25vw] w-full transition-all duration-300 group-hover:shadow-xl ${index === 1 ? "sm:w-[20vw]" : "sm:w-[15vw]"}`}
               >
                 {/* Image container */}
                 <div className="aspect-square overflow-hidden h-full w-full">
