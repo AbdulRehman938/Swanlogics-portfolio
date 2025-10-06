@@ -78,7 +78,7 @@ export function Footer() {
           {/* Main content section */}
           <div className="mb-6 sm:mb-8 sm:mt-20 md:mb-10 lg:mb-12 xl:pt-10">
             {/* Links Container */}
-            <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-4 md:gap-6 lg:gap-8 xl:gap-10 2xl:gap-12 xl:ml-20 lg:ml-10">
+            <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-2 md:gap-4 lg:gap-6 xl:gap-8 2xl:gap-10  lg:ml-10">
               {/* Explore Links */}
               <div className="space-y-3 sm:space-y-4 mt-2 md:mt-[-2vw] ">
                 <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl text-white font-bold mb-3 sm:mb-4 lg:mb-5 xl:mb-6">

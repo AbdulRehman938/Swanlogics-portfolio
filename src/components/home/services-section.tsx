@@ -19,10 +19,7 @@ export function ServicesSection() {
       description:
         "We craft intuitive and engaging user experiences through meticulous research, wireframing, and prototyping. Our process is designed to understand user behavior deeply, ensuring the final product is not only visually appealing but also easy to navigate and highly effective at achieving your business objectives, leading to increased user satisfaction and conversion.",
       highlights: [
-        "User Research",
-        "Wireframing",
-        "Prototyping",
-        "Visual Design",
+        
       ],
     },
     {
@@ -97,12 +94,12 @@ export function ServicesSection() {
   const navigate = useNavigate();
 
   return (
-    <section className="bg-black text-white py-8 sm:py-12 lg:py-16 px-4 sm:px-6 lg:px-8 min-h-[500px] lg:h-[696px] rounded-t-3xl">
+    <section className="bg-black text-white py-8 sm:py-12 lg:py-16 px-4 sm:px-6 lg:px-8 min-h-[500px] lg:h-[696px] rounded-t-[4rem]">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-8 sm:mb-12 lg:mb-16 gap-4">
+        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-8 sm:mb-12 lg:mb-16 gap-4 lg:px-16">
           <div className="space-y-2">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white">
+            <h2 className="text-2xl sm:text-3xl lg:text-5xl font-bold text-white">
               Our Services
             </h2>
             <p className="text-xs sm:text-sm text-white sm:hidden">
@@ -138,10 +135,10 @@ export function ServicesSection() {
                   <button
                     key={service.id}
                     onClick={() => setSelected(service.id)}
-                    className={`flex-shrink-0 py-2 px-4 rounded-full transition-all text-sm font-medium ${
+                    className={`flex-shrink-0 py-2 px-2 font-black rounded-lg transition-all text-sm ${
                       isActive
-                        ? "bg-lime-400 text-black"
-                        : "bg-white text-black hover:bg-gray-100"
+                        ? "bg-lime-400 text-black font-black"
+                        : "bg-white text-black hover:bg-gray-100 font-black"
                     }`}
                   >
                     {service.label}
@@ -151,17 +148,17 @@ export function ServicesSection() {
             </div>
 
             {/* Desktop: Vertical buttons */}
-            <div className="hidden lg:flex lg:flex-col space-y-4">
+            <div className="hidden lg:flex lg:flex-col space-y-3">
               {services.map((service) => {
                 const isActive = selected === service.id;
                 return (
                   <button
                     key={service.id}
                     onClick={() => setSelected(service.id)}
-                    className={`w-full text-center py-3 px-4 rounded-full transition-all ${
+                    className={`w-[50%] relative left-[5vw] text-center py-[17px] px-2 rounded-lg transition-all ${
                       isActive
-                        ? "bg-lime-400 text-black font-medium"
-                        : "bg-white text-black hover:bg-gray-100"
+                        ? "bg-lime-400 text-black font-black"
+                        : "bg-white text-black hover:bg-gray-100 font-black"
                     }`}
                   >
                     {service.label}
@@ -172,7 +169,7 @@ export function ServicesSection() {
           </div>
 
           {/* Service Detail Card */}
-          <div className="lg:col-span-5 order-1 lg:order-2 bg-black border border-lime-400/50 rounded-2xl p-4 sm:p-6 lg:p-8">
+          <div className="lg:col-span-5 order-1 lg:order-2 bg-black border border-lime-400/50 rounded-2xl p-4 sm:p-6 relative right-[6vw] lg:p-8 w-[85%] h-[80%]">
             <div className="flex items-center gap-3 mb-4">
               <div className="bg-lime-400 p-2 rounded-full flex-shrink-0">
                 <active.icon className="w-4 h-4 sm:w-5 sm:h-5 text-black" />
@@ -186,20 +183,7 @@ export function ServicesSection() {
               {active.description}
             </p>
 
-            {/* Key Features */}
-            <div className="mb-6">
-              <h4 className="text-xs sm:text-sm font-medium uppercase text-gray-400 mb-3">
-                Key Features
-              </h4>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2">
-                {active.highlights.map((highlight, idx) => (
-                  <div key={idx} className="flex items-center gap-2">
-                    <div className="w-1 h-1 bg-lime-400 rounded-full flex-shrink-0"></div>
-                    <span className="text-xs sm:text-sm">{highlight}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
+           
 
             {/* Mobile CTA Button */}
             <div className="flex lg:hidden items-center justify-center">
@@ -229,8 +213,8 @@ export function ServicesSection() {
           </div>
 
           {/* Service Wheel */}
-          <div className="lg:col-span-4 order-3 flex justify-center items-center">
-            <div className="w-full max-w-[400px] sm:max-w-[450px] lg:max-w-[550px] xl:max-w-[600px]">
+          <div className="lg:col-span-4 order-3 flex justify-center items-center relative right-20 top-[-4vw]">
+            <div className="w-full max-w-[450px] sm:max-w-[450px] lg:max-w-[600px] xl:min-w-[500px]">
               <img
                 src="/circle.png"
                 alt="langs wheel"
