@@ -1,21 +1,24 @@
-import { ArrowUpRight } from 'lucide-react';
+import "./HeroSection.dpi.css";
+import { ArrowUpRight } from "lucide-react";
 
 export function HeroSection() {
   return (
     <section id="home" className="w-full bg-white overflow-x-hidden">
-      <div className="relative mx-auto max-w-[1400px] px-4 pb-8 pt-8 sm:px-6 sm:pb-12 sm:pt-10 md:px-10 md:pt-16 ">
+      <div className="relative mx-auto max-w-[90vw] px-4 pb-8 pt-8 sm:px-6 sm:pb-12 sm:pt-10 md:px-10 md:pt-16 ">
         {/* Heading + Actions */}
         <div className="relative z-10 max-w-full md:w-[400px] lg:w-[700px] xl:w-full xl:max-w-4xl ">
-        <img src="/Star.png" alt="mask group" className="w-4 h-4 absolute -top-14 sm:w-8 sm:h-8" />
+          <img
+            src="/Star.png"
+            alt="mask group"
+            className="w-4 h-4 absolute -top-14 sm:w-8 sm:h-8"
+          />
 
           <h1 className="font-rf-dewi text-3xl sm:text-4xl md:text-4xl lg:text-6xl font-bold leading-tight">
             A Web Design And Branding
             <br className="hidden xs:block" />
             <span className="block xs:inline">Agency In Manchester</span>
           </h1>
-
         </div>
-
         {/* Mobile Action Buttons - Show on mobile before video */}1
         <div className="flex flex-col gap-3 mb-16 sm:hidden w-full mt-6 ">
           <a
@@ -28,41 +31,46 @@ export function HeroSection() {
             href="#team"
             className="inline-flex items-center justify-center gap-2 rounded-full border border-black/10 px-5 py-3 hover:border-black/20 transition-colors w-full"
           >
-            <span className="font-dewi text-xs uppercase tracking-[0.2em] text-brand-ink">Meet The Team</span>
+            <span className="font-dewi text-xs uppercase tracking-[0.2em] text-brand-ink">
+              Meet The Team
+            </span>
             <ArrowUpRight className="h-4 w-4" />
           </a>
         </div>
-
         {/* Video within rectangle frame */}
-        <div className="relative -mt-10">
+        <div className="relative w-full -mt-10 mx-auto">
           {/* Desktop Action Buttons - Floating above video */}
-          <div className="hidden sm:flex gap-4 md:gap-12 lg:gap-10 mb-2 relative top-8 sm:top-12 md:top-9 lg:left-32 lg:top-[74px] left-4 sm:left-8 md:left-20 xl:gap-14 xl:top-[88px] xl:left-60 ">
+          <div className="hidden sm:flex hero-actions xl:mt-2">
             <a
               href="#projects"
-              className="inline-flex items-center gap-2 rounded-full bg-brand-purple px-1 sm:px-4 md:px-4 lg:px-5 py-1 sm:py-2.5 md:py-2 font-dewi text-xs sm:text-sm md:text-sm text-white shadow hover:bg-brand-purple/90 transition-colors whitespace-nowrap xl:px-10 xl:py-4"
+              className="inline-flex items-center gap-2 rounded-full bg-brand-purple hero-btn font-dewi text-white shadow hover:bg-brand-purple/90 transition-colors"
             >
               View Our Work
             </a>
-            <div className='rounded-full bg-brand-purple absolute p-2 sm:p-3  lg:p-[16px] left-24 sm:left-28 md:left-22 md:p-[19px] lg:-top-[2px]  lg:left-[116px] xl:top-[1px] xl:left-40 xl:p-[18px]'>
+            <div className="rounded-full bg-brand-purple absolute hero-btn-arrow-bg">
               <img
-              src="/Arrow white.svg"
-              alt="arrow"
-              className=" w-[10px] h-[10px]"
-            />
+                src="/Arrow white.svg"
+                alt="arrow"
+                className="hero-btn-arrow"
+              />
             </div>
             <a
               href="#team"
-              className="inline-flex items-center gap-1 rounded-full border border-black/20 bg-white px-3 sm:px-4 md:px-1 lg:py-0 lg:px-1 xl:px-6 py-2 sm:py-2.5 md:py-3 hover:border-black/30 hover:bg-gray-50 transition-colors whitespace-nowrap"
+              className="inline-flex items-center gap-1 rounded-full border border-black/20 bg-white hero-btn-secondary hover:border-black/30 hover:bg-gray-50 transition-colors"
             >
-              <span className="font-dewi text-xs sm:text-sm md:text-base text-brand-ink px-2 sm:px-3 md:px-4 lg:px-2">
-                Meet The Team
+              <span className="font-dewi text-brand-ink">Meet The Team</span>
+              <span className="hero-btn-arrow-wrapper">
+                <img
+                  src="/Arrow 1-1.svg"
+                  alt="arrow"
+                  className="hero-btn-arrow"
+                />
               </span>
-              <img src="/Arrow 1-1.svg" alt="arrow" className="w-[13px] h-[13px]" />
             </a>
           </div>
 
           {/* Video Container */}
-          <div className="relative w-full sm:w-[85vw] md:w-[90vw] lg:w-[90vw] 2xl:w-[75vw] h-auto bg-brand-purple [mask-image:url('/Rectangle.png')] [mask-repeat:no-repeat] [mask-size:cover] [mask-position:center] overflow-hidden">
+          <div className="relative w-full h-auto mt-10 bg-brand-purple [mask-image:url('/Rectangle.png')] [mask-repeat:no-repeat] [mask-size:cover] [mask-position:center] overflow-hidden">
             <video
               src="/video/Neostalgia Design & Webflow Development Agency.mp4"
               autoPlay
