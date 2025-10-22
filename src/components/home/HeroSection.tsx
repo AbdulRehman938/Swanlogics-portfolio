@@ -36,14 +36,14 @@ export function HeroSection() {
         {/* Video within rectangle frame */}
         <div className="relative -mt-10">
           {/* Desktop Action Buttons - Floating above video */}
-          <div className="hidden sm:flex gap-4 md:gap-12 lg:gap-10 mb-2 relative top-8 sm:top-12 md:top-9 lg:left-32  lg:top-[74px] left-4 sm:left-8 md:left-20 xl:gap-14 xl:top-[88px] xl:left-56 ">
+          <div className="hidden sm:flex gap-4 md:gap-12 lg:gap-10 mb-2 relative top-8 sm:top-12 md:top-9 lg:left-32 lg:top-[74px] left-4 sm:left-8 md:left-20 xl:gap-14 xl:top-[88px] xl:left-60 ">
             <a
               href="#projects"
-              className="inline-flex items-center gap-2 rounded-full bg-brand-purple px-1 sm:px-4 md:px-4 lg:px-5 py-1 sm:py-2.5 md:py-2 font-dewi text-xs sm:text-sm md:text-sm text-white shadow hover:bg-brand-purple/90 transition-colors whitespace-nowrap xl:px-6"
+              className="inline-flex items-center gap-2 rounded-full bg-brand-purple px-1 sm:px-4 md:px-4 lg:px-5 py-1 sm:py-2.5 md:py-2 font-dewi text-xs sm:text-sm md:text-sm text-white shadow hover:bg-brand-purple/90 transition-colors whitespace-nowrap xl:px-10 xl:py-4"
             >
               View Our Work
             </a>
-            <div className='rounded-full bg-brand-purple  absolute p-2 sm:p-3  lg:p-[16px] left-24 sm:left-28 md:left-22 md:p-[19px] lg:-top-[2px]  lg:left-[116px] xl:-top-[3px] xl:left-32 xl:p-[16px]'>
+            <div className='rounded-full bg-brand-purple absolute p-2 sm:p-3  lg:p-[16px] left-24 sm:left-28 md:left-22 md:p-[19px] lg:-top-[2px]  lg:left-[116px] xl:top-[1px] xl:left-40 xl:p-[18px]'>
               <img
               src="/Arrow white.svg"
               alt="arrow"
