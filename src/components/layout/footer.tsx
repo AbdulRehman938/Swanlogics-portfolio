@@ -4,6 +4,7 @@ import { Facebook, Instagram, X, Linkedin } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { CiMobile1 } from "react-icons/ci";
 import { GoArrowUpRight } from "react-icons/go";
+import "../../styles/dpi-responsive.css";
 
 export function Footer() {
   const navigate = useNavigate();
@@ -11,7 +12,7 @@ export function Footer() {
     <>
       {/* Desktop Footer */}
       <footer
-        className="hidden md:block mx-2 sm:mx-4 lg:mx-10 mb-2 sm:mb-4 rounded-b-xl sm:rounded-b-2xl lg:rounded-b-3xl text-white relative  h-[35vw] lg:h-[41vw] xl:h-[42vw] 2xl:h-[40vw] md:h-[40vw] "
+        className="hidden md:block mx-2 sm:mx-4 lg:mx-10 mb-2 sm:mb-4 rounded-b-xl sm:rounded-b-2xl lg:rounded-b-3xl text-white relative isolate z-30 overflow-visible h-[35vw] lg:h-[41vw] xl:h-[42vw] 2xl:h-[35vw] md:h-[40vw] "
         style={{
           backgroundImage: "url(/footer-box.png)",
           backgroundSize: "contain",
@@ -20,9 +21,9 @@ export function Footer() {
         }}
       >
         {/* Footer right design - Hidden on mobile and tablets */}
-        <div className="absolute flex items-center justify-center bg-transparent z-10 -top-1 sm:-top-4 lg:-top-3 lg:-right-24 sm:-right-1 px-4 sm:px-6 lg:pr-8 w-20 sm:w-80 lg:w-[25rem] xl:w-[30rem] h-10 sm:h-12 lg:h-16 font-black text-brand-ink xl:top-[-1vw] xl:right-[-5vw] 2xl:top-[0vw] 2xl:right-[3vw] md:right-[-8vw]">
-          <span className="text-xl sm:text-sm lg:text-[12px] inline-block whitespace-nowrap xl:text-[16px] 2xl:text-[23px] md:text-[8px]">
-            Sh*T I’ve Gone Too Far, Send Me Back Up
+        <div className="footer-right-div absolute flex items-center justify-center bg-transparent z-10 -top-1 sm:-top-4 lg:-top-3 lg:-right-24 sm:-right-1 px-4 sm:px-6 lg:pr-8 w-20 sm:w-80 lg:w-[20rem] xl:w-[30rem] h-10 sm:h-12 lg:h-16 font-black text-brand-ink xl:top-[-1vw] xl:right-[-5vw] 2xl:top-[0vw] 2xl:right-[7vw] md:right-[-8vw]">
+          <span className="text-xl sm:text-sm lg:text-[12px] inline-block whitespace-nowrap xl:text-[16px] 2xl:text-[19px] md:text-[8px]">
+            Sh*T I've Gone Too Far, Send Me Back Up
           </span>
           <img
             src="/footer-hand.png"
@@ -33,7 +34,7 @@ export function Footer() {
         </div>
 
         {/* Social links - Fully responsive positioning */}
-        <div className=" absolute bg-transparent  -top-1 sm:-top-2 lg:-top-6 lg:-left-0 sm:-left-2 rounded-lg sm:rounded-xl lg:rounded-2xl xl:rounded-3xl p-1 sm:p-2 xl:left-[1.5vw] xl:top-[-1vw] 2xl:top-[-1vw] 2xl:left-[4vw] md:right-[82vw] md:top-[-2vw] ">
+        <div className="footer-left-div absolute bg-transparent  -top-1 sm:-top-2 lg:-top-6 lg:-left-0 sm:-left-2 rounded-lg sm:rounded-xl lg:rounded-2xl xl:rounded-3xl p-1 sm:p-2 xl:left-[1.5vw] xl:top-[-1vw] 2xl:top-[0vw] 2xl:left-[9vw] md:right-[82vw] md:top-[-2vw] ">
           <div className="flex lg:flex-col md:flex-col items-center lg:items-start gap-1 sm:gap-2 lg:gap-2 xl:gap-4 p-1 sm:p-2 xl:h-[20vw] ">
             <button
               onClick={() =>
@@ -80,7 +81,7 @@ export function Footer() {
             {/* Links Container */}
             <div className="w-[90%] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-3 gap-2 sm:gap-2 md:gap-6 lg:gap-6 xl:gap-5 2xl:gap-10 lg:ml-10 md:ml-[20vw]">
               {/* Explore Links */}
-              <div className="space-y-3 sm:space-y-4 mt-2 md:mt-[0vw]  ">
+              <div className="space-y-3 sm:space-y-4 mt-2 md:mt-[-1vw]  ">
                 <h3 className="text-lg sm:text-xl md:text-sm lg:text-2xl xl:text-4xl 2xl:text-5xl text-white font-bold mb-3 sm:mb-4 lg:mb-5 xl:mb-6">
                   Explore
                 </h3>
@@ -132,7 +133,7 @@ export function Footer() {
               </div>
 
               {/* Useful Links */}
-              <div className="space-y-3 sm:space-y-4  md:mt-[0vw] md:space-y-1 ">
+              <div className="space-y-3 sm:space-y-4  md:mt-[-1vw] md:space-y-1 ">
                 <h3 className="text-lg sm:text-xl md:text-sm lg:text-2xl xl:text-4xl 2xl:text-5xl text-white font-bold mb-3 sm:mb-4 lg:mb-5 xl:mb-6">
                   Useful Links
                 </h3>
@@ -200,7 +201,7 @@ export function Footer() {
                   </div>
                   <div className="flex items-start gap-2 sm:gap-3">
                     <MapPin className="w-6 h-6 text-lime-400 mt-1" />
-                    <span className='text-xs sm:text-sm md:text-xs hover:text-white transition-colors xl:text-base '>
+                    <span className="text-xs sm:text-sm md:text-xs hover:text-white transition-colors xl:text-base ">
                       1 Gibfield Park Avenue Atherton Manchester M46 0SU
                     </span>
                   </div>
@@ -210,8 +211,8 @@ export function Footer() {
           </div>
 
           {/* Bottom Section */}
-          <div className="w-full absolute bottom-0 left-0 pt-4 sm:pt-6 md:pt-10 xl:bottom-[-1vw] 2xl:bottom-[-2vw]">
-            <div className="flex flex-col md:flex-row justify-between items-start md:items-center lg:px-14 gap-4 sm:gap-6 mb-4 md:mb-2 sm:mb-6 border-white/40 border-b pb-10 px-20 xl:px-16 xl:pb-5 md:pb-2">
+          <div className="w-full absolute bottom-0 left-0 pt-4 sm:pt-6  2xl:px-40">
+            <div className="flex flex-col md:flex-row justify-between items-start md:items-center lg:px-14 gap-4 sm:gap-6 mb-4 md:mb-2 sm:mb-6 2xl:-mt-10 border-white/40 border-b pb-10 px-20 xl:px-16 xl:pb-5 md:pb-2">
               <div className="w-full md:w-auto  ">
                 <h2 className="text-sm sm:text-xl md:text-lg lg:text-4xl xl:text-[46px] 2xl:text-6xl text-white font-bold font-rf-dewi">
                   Where Quotes Meet Purpose.
@@ -234,20 +235,20 @@ export function Footer() {
             </div>
 
             {/* Copyright section */}
-            <div className="flex w-full sm:flex-row lg:flex-row justify-between gap-2 lg:px-14 xl:px-16 items-start sm:items-center pb-6  md:pb-4 xl:pb-10 md:px-16 text-xs sm:text-sm md:pt-0 text-white sm:gap-4">
+            <div className="flex w-full sm:flex-row lg:flex-row justify-between gap-2 lg:px-14 xl:px-16 items-start sm:items-center pb-6  md:pb-4 xl:pb-5 md:px-16 text-xs sm:text-sm md:pt-0 text-white sm:gap-4">
               <div className="flex">
-                <span className="w-38 md:w-[100px] lg:w-32 xl:w-36 2xl:w-40">
-                  <img src="/Swanlogics logo purple.png" alt="logo" />
+                <span className="w-56 md:w-[100px] lg:w-32 xl:w-36 2xl:w-56">
+                  <img src="/Group 53.png" alt="" className="w-full h-auto" />
                 </span>
               </div>
               <div className="flex flex-col sm:flex-row gap-2 text-center sm:text-left xl:p-0">
-                <span className="whitespace-nowrap text-base sm:text-base sm:pr-5 lg:pr-10 xl:pr-2 md:text-xs">
-                  © SwanLogics Ltd 2025
+                <span className="whitespace-nowrap text-base sm:text-base sm:pr-5 lg:pr-10 xl:pr-2 md:text-base">
+                  © Swanlogics Ltd 2025
                 </span>
-                <span className="whitespace-nowrap text-base sm:text-base border-l border-[#d0ff7194] sm:px-5 lg:px-10 xl:px-4  md:text-xs">
+                <span className="whitespace-nowrap text-base sm:text-base border-l border-[#d0ff7194] sm:px-5 lg:px-10 xl:px-4  md:text-base">
                   Web Design Manchester
                 </span>
-                <span className="whitespace-nowrap text-base sm:text-base mt-2 sm:mt-0 border-l border-[#d0ff7194] sm:pl-5 lg:pl-10 xl:px-4  md:text-xs">
+                <span className="whitespace-nowrap text-base sm:text-base mt-2 sm:mt-0 border-l border-[#d0ff7194] sm:pl-5 lg:pl-10 xl:px-4  md:text-base">
                   All Rights Reserved
                 </span>
               </div>

@@ -1,0 +1,87 @@
+/* DPI-based responsive positioning for footer elements */
+
+/* Standard DPI (96dpi - 100% zoom) */
+@media (resolution: 96dpi) {
+  .footer-right-div {
+    top: 0vw;
+    right: 7vw;
+  }
+  .footer-left-div {
+    top: 0vw;
+    left: 9vw;
+    height: 20vw;
+  }
+  .footer-left-div button {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+
+/* 125% zoom (120dpi) */
+@media (resolution: 120dpi) {
+  .footer-right-div {
+    top: -0.5vw;
+    right: 1vw;
+    font-size: 0.2vw;
+  }
+  .footer-left-div {
+    top: -1vw;
+    left: 8vw;
+    height: 2vw;
+  }
+  .footer-left-div button {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+/* 150% zoom (144dpi) */
+@media (resolution: 144dpi) {
+  .footer-right-div {
+    top: -1vw;
+    right: -7vw;
+  }
+  .footer-left-div {
+    top: -1vw;
+    left: 0vw;
+    height: 15vw;
+  }
+  .footer-left-div button {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+/* 175% zoom (168dpi) */
+@media (resolution: 168dpi) {
+  .footer-right-div {
+    top: -1.5vw;
+    right: 2vw;
+  }
+  .footer-left-div {
+    top: -1.5vw;
+    left: 3vw;
+    height: 12vw;
+  }
+  .footer-left-div button {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+
+/* 200% zoom (192dpi) */
+@media (resolution: 192dpi) {
+  .footer-right-div {
+    top: -2vw;
+    right: 1vw;
+  }
+  .footer-left-div {
+    top: -2vw;
+    left: 2vw;
+    height: 10vw;
+  }
+  .footer-left-div button {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+}
