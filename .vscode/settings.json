@@ -1,6 +1,6 @@
 {
   "git.ignoreLimitWarning": true,
-  "task.allowAutomaticTasks": true,
+  "task.allowAutomaticTasks": "off",
   "debug.openDebug": "neverOpen",
   "terminal.integrated.inheritEnv": false,
   "tasks": {
